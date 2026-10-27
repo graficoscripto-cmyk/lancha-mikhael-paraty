@@ -9,7 +9,7 @@
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <link rel="canonical" href="https://lancha-mikhael-paraty.vercel.app/" />
 
-  <!-- Open Graph / Facebook / WhatsApp -->
+  <!-- Open Graph / WhatsApp / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pt_BR" />
   <meta property="og:site_name" content="Lancha Mikhael Paraty" />
@@ -26,7 +26,7 @@
   <!-- Preload Hero Image 4K -->
   <link rel="preload" as="image" href="img/lancha-mikhael-aguas-verdes.webp" type="image/webp" fetchpriority="high" />
 
-  <!-- Google Fonts: Fraunces (Editorial Marítimo) + Plus Jakarta Sans + JetBrains Mono -->
+  <!-- Google Fonts: Fraunces + Plus Jakarta Sans + JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -185,7 +185,7 @@
   </script>
 
   <style>
-    /* CSS Reset & Variáveis Náuticas Lancha Mikhael */
+    /* CSS Náutico Cinematográfico — Padrão Levanta Caixa / Pro Max */
     :root {
       --navy: #0A2342;
       --navy-deep: #051324;
@@ -194,7 +194,7 @@
       --emerald-light: #16A09E;
       --gold: #C88A36;
       --gold-light: #E5B25D;
-      --gold-soft: rgba(200, 138, 54, 0.15);
+      --gold-soft: rgba(200, 138, 54, 0.16);
       --sand: #F7F5F0;
       --sand-soft: #EDE8DE;
       --surface: #FFFFFF;
@@ -205,6 +205,8 @@
       --line-light: rgba(247, 245, 240, 0.15);
       --whatsapp: #25D366;
       --whatsapp-dark: #1EBE5D;
+
+      --ease: cubic-bezier(0.16, 1, 0.3, 1);
 
       --font-display: 'Fraunces', Georgia, serif;
       --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -218,7 +220,6 @@
       --shadow-sm: 0 4px 12px rgba(10, 35, 66, 0.06);
       --shadow-md: 0 10px 28px rgba(10, 35, 66, 0.10);
       --shadow-lg: 0 20px 45px rgba(10, 35, 66, 0.15);
-      --shadow-glow: 0 0 35px rgba(14, 124, 123, 0.25);
     }
 
     *, *::before, *::after {
@@ -264,6 +265,86 @@
       background: none;
     }
 
+    /* 1. Abertura Cinematográfica (.intro) */
+    .intro {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: var(--navy-deep);
+      display: grid;
+      place-items: center;
+      pointer-events: none;
+      animation: introOut 0.65s var(--ease) 1s forwards;
+    }
+
+    .intro-in {
+      display: grid;
+      justify-items: center;
+      gap: 12px;
+      color: #FFFFFF;
+      animation: introIn 0.75s var(--ease) both;
+    }
+
+    .intro-logo {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      background: #0A2342;
+      border: 2px solid var(--gold);
+      display: grid;
+      place-items: center;
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.55);
+    }
+
+    .intro b {
+      font-family: var(--font-display);
+      font-size: 1.65rem;
+      letter-spacing: 0.04em;
+    }
+
+    .intro b em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+
+    .intro-tag {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--emerald-light);
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin-top: -6px;
+    }
+
+    .intro-wave {
+      width: 140px;
+      height: 18px;
+      margin-top: 4px;
+    }
+
+    .intro-wave path {
+      fill: none;
+      stroke: var(--gold);
+      stroke-width: 2.4;
+      stroke-linecap: round;
+      stroke-dasharray: 1;
+      stroke-dashoffset: 1;
+      animation: draw 1s var(--ease) 0.2s forwards;
+    }
+
+    @keyframes draw {
+      to { stroke-dashoffset: 0; }
+    }
+
+    @keyframes introIn {
+      from { opacity: 0; transform: scale(0.85) translateY(12px); }
+      to { opacity: 1; transform: none; }
+    }
+
+    @keyframes introOut {
+      to { opacity: 0; transform: translateY(-100%); visibility: hidden; }
+    }
+
     /* Barra de Progresso no Topo */
     .scroll-progress {
       position: fixed;
@@ -272,32 +353,48 @@
       height: 3px;
       width: 0%;
       background: linear-gradient(90deg, var(--gold), var(--emerald-light));
-      z-index: 1000;
-      transition: width 0.1s linear;
+      z-index: 999;
+      transform-origin: left;
     }
 
-    /* Topo Fixo Mobile-First */
-    .site-header {
+    /* 3. Topo Flutuante Inteligente (.nav-wrap auto-hide) */
+    .nav-wrap {
       position: fixed;
-      top: 0;
+      top: 10px;
       left: 0;
       right: 0;
       z-index: 900;
-      background: rgba(10, 35, 66, 0.92);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 0.65rem 1rem;
-      transition: background 0.3s ease, padding 0.3s ease;
+      padding: 0 12px;
+      transition: transform 0.45s var(--ease);
+      pointer-events: none;
     }
 
-    .nav-container {
-      max-width: 1180px;
+    .nav-wrap.hide {
+      transform: translateY(-130%);
+    }
+
+    @media (min-width: 768px) {
+      .nav-wrap {
+        top: 16px;
+        padding: 0 24px;
+      }
+    }
+
+    .nav-bar {
+      max-width: 1140px;
       margin: 0 auto;
+      background: rgba(10, 35, 66, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-pill);
+      padding: 0.55rem 1rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 0.75rem;
+      box-shadow: 0 10px 30px rgba(5, 19, 36, 0.35);
+      pointer-events: auto;
     }
 
     .nav-brand {
@@ -308,16 +405,16 @@
     }
 
     .brand-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 10px;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
       background: #0A2342;
-      border: 1px solid var(--gold);
+      border: 1.5px solid var(--gold);
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     }
 
     .brand-text {
@@ -342,10 +439,28 @@
       color: var(--gold-light);
     }
 
-    .nav-actions {
-      display: flex;
+    .nav-links {
+      display: none;
       align-items: center;
-      gap: 0.5rem;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    @media (min-width: 820px) {
+      .nav-links {
+        display: flex;
+      }
+    }
+
+    .nav-links a {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #CBD5E1;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #FFFFFF;
     }
 
     .btn-nav-wa {
@@ -356,7 +471,7 @@
       color: #FFFFFF;
       font-weight: 700;
       font-size: 0.82rem;
-      padding: 0.5rem 0.85rem;
+      padding: 0.5rem 0.95rem;
       border-radius: var(--radius-pill);
       box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
       transition: transform 0.2s, background 0.2s;
@@ -368,13 +483,13 @@
       transform: translateY(-1px);
     }
 
-    /* Hero Section */
+    /* 2. Hero Section & Split Headline */
     .hero {
       position: relative;
       min-height: 100vh;
       display: flex;
       align-items: flex-end;
-      padding: 6.5rem 1.25rem 3.5rem;
+      padding: 7rem 1.25rem 4rem;
       background-color: var(--navy-deep);
       color: #FFFFFF;
       overflow: hidden;
@@ -391,9 +506,14 @@
       height: 100%;
       object-fit: cover;
       object-position: center 35%;
-      filter: brightness(0.92) contrast(1.04);
-      transform: scale(1.03);
-      transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+      filter: brightness(0.92) contrast(1.05);
+      transform: scale(1.14);
+      animation: heroIn 1.8s var(--ease) 0.6s forwards;
+    }
+
+    @keyframes heroIn {
+      from { transform: scale(1.14); opacity: 0.001; }
+      to { transform: scale(1.03); opacity: 1; }
     }
 
     .hero-overlay {
@@ -404,7 +524,7 @@
         180deg,
         rgba(5, 19, 36, 0.45) 0%,
         rgba(5, 19, 36, 0.30) 40%,
-        rgba(5, 19, 36, 0.85) 80%,
+        rgba(5, 19, 36, 0.88) 80%,
         rgba(5, 19, 36, 0.98) 100%
       );
     }
@@ -412,7 +532,7 @@
     .hero-content {
       position: relative;
       z-index: 3;
-      max-width: 900px;
+      max-width: 960px;
       margin: 0 auto;
       width: 100%;
     }
@@ -421,12 +541,14 @@
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      background: rgba(10, 35, 66, 0.75);
+      background: rgba(10, 35, 66, 0.8);
       backdrop-filter: blur(10px);
       border: 1px solid var(--gold);
-      padding: 0.35rem 0.85rem;
+      padding: 0.38rem 0.95rem;
       border-radius: var(--radius-pill);
       margin-bottom: 1.25rem;
+      opacity: 0;
+      animation: fadeUp 0.8s var(--ease) 0.8s forwards;
     }
 
     .pulse-dot {
@@ -451,14 +573,15 @@
       color: #FFFFFF;
     }
 
+    /* Split de Palavras (.split -> .w > .wi) */
     .hero-title {
       font-family: var(--font-display);
-      font-size: clamp(2.1rem, 6.5vw, 3.8rem);
-      line-height: 1.1;
+      font-size: clamp(2.15rem, 6.8vw, 4rem);
+      line-height: 1.08;
       font-weight: 700;
       color: #FFFFFF;
-      margin-bottom: 1rem;
-      letter-spacing: -0.01em;
+      margin-bottom: 1.15rem;
+      letter-spacing: -0.015em;
     }
 
     .hero-title em {
@@ -467,25 +590,53 @@
       font-weight: 600;
     }
 
+    .w {
+      display: inline-block;
+      overflow: hidden;
+      vertical-align: top;
+      padding-bottom: 0.08em;
+    }
+
+    .wi {
+      display: inline-block;
+    }
+
+    .js .hero .wi {
+      animation: wordUp 0.9s var(--ease) both;
+      animation-delay: calc(0.9s + var(--i, 0) * 65ms);
+    }
+
+    @keyframes wordUp {
+      from { transform: translateY(105%); }
+      to { transform: none; }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: none; }
+    }
+
     .hero-quote {
-      font-size: clamp(1rem, 2.8vw, 1.2rem);
+      font-size: clamp(1rem, 2.6vw, 1.22rem);
       line-height: 1.5;
       color: #E2E8F0;
-      max-width: 720px;
-      margin-bottom: 1.75rem;
+      max-width: 740px;
+      margin-bottom: 1.85rem;
       border-left: 3px solid var(--emerald-light);
-      padding-left: 1rem;
+      padding: 0.5rem 1rem;
       background: rgba(10, 35, 66, 0.45);
-      padding-top: 0.4rem;
-      padding-bottom: 0.4rem;
       border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      opacity: 0;
+      animation: fadeUp 0.8s var(--ease) 1.2s forwards;
     }
 
     .hero-highlights {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 0.65rem;
-      margin-bottom: 2rem;
+      gap: 0.75rem;
+      margin-bottom: 2.25rem;
+      opacity: 0;
+      animation: fadeUp 0.8s var(--ease) 1.35s forwards;
     }
 
     @media (min-width: 640px) {
@@ -499,17 +650,26 @@
       backdrop-filter: blur(8px);
       border: 1px solid rgba(255, 255, 255, 0.12);
       border-radius: var(--radius-md);
-      padding: 0.75rem 0.85rem;
+      padding: 0.85rem 0.95rem;
       display: flex;
       flex-direction: column;
       gap: 0.2rem;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .highlight-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--gold);
     }
 
     .highlight-card .val {
       font-family: var(--font-display);
-      font-size: 1.15rem;
+      font-size: 1.3rem;
       font-weight: 700;
       color: var(--gold-light);
+      display: flex;
+      align-items: baseline;
+      gap: 0.15rem;
     }
 
     .highlight-card .lbl {
@@ -522,6 +682,8 @@
       display: flex;
       flex-direction: column;
       gap: 0.85rem;
+      opacity: 0;
+      animation: fadeUp 0.8s var(--ease) 1.5s forwards;
     }
 
     @media (min-width: 480px) {
@@ -540,7 +702,7 @@
       color: #FFFFFF;
       font-weight: 700;
       font-size: 1rem;
-      padding: 0.95rem 1.75rem;
+      padding: 0.95rem 1.85rem;
       border-radius: var(--radius-pill);
       box-shadow: 0 10px 25px rgba(37, 211, 102, 0.35);
       transition: all 0.25s ease;
@@ -575,9 +737,53 @@
       border-color: rgba(255, 255, 255, 0.4);
     }
 
-    /* Estrutura de Seções Padrão */
+    /* 4. Onda Divisória SVG que se desenha no scroll (.wave.reveal-wave) */
+    .wave {
+      display: block;
+      width: 100%;
+      height: 38px;
+      margin-top: -1px;
+      overflow: visible;
+    }
+
+    .wave path {
+      fill: none;
+      stroke: var(--gold);
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-dasharray: 1;
+      stroke-dashoffset: 1;
+      transition: stroke-dashoffset 1.8s var(--ease);
+    }
+
+    .wave.in path {
+      stroke-dashoffset: 0;
+    }
+
+    /* 5. Revelação no Scroll (.reveal & .clip) */
+    .js .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.85s var(--ease), transform 0.85s var(--ease);
+    }
+
+    .js .reveal.in {
+      opacity: 1;
+      transform: none;
+    }
+
+    .js .clip {
+      clip-path: inset(8% 6% 8% 6% round 22px);
+      transition: clip-path 1.25s var(--ease);
+    }
+
+    .js .clip.in {
+      clip-path: inset(0 round 22px);
+    }
+
+    /* Seções Globais */
     section {
-      padding: 4.5rem 1.25rem;
+      padding: 5rem 1.25rem;
     }
 
     .container {
@@ -636,7 +842,7 @@
     .about-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 2.25rem;
+      gap: 2.5rem;
       align-items: center;
     }
 
@@ -662,11 +868,8 @@
       width: 100%;
       aspect-ratio: 4/3;
       object-fit: cover;
+      transform: scale(1.04);
       transition: transform 0.6s ease;
-    }
-
-    .about-main-photo:hover img {
-      transform: scale(1.03);
     }
 
     .about-badge-card {
@@ -686,7 +889,7 @@
 
     .about-badge-card .num {
       font-family: var(--font-display);
-      font-size: 1.6rem;
+      font-size: 1.7rem;
       font-weight: 700;
       color: var(--gold-light);
       line-height: 1;
@@ -712,8 +915,8 @@
     }
 
     .info-icon {
-      width: 40px;
-      height: 40px;
+      width: 42px;
+      height: 42px;
       border-radius: var(--radius-sm);
       background: var(--gold-soft);
       color: var(--gold);
@@ -760,7 +963,7 @@
       font-weight: 700;
       color: #E1306C;
       border: 1px solid rgba(225, 48, 108, 0.3);
-      padding: 0.4rem 0.8rem;
+      padding: 0.4rem 0.85rem;
       border-radius: var(--radius-pill);
       transition: all 0.2s;
     }
@@ -770,7 +973,7 @@
       color: #FFFFFF;
     }
 
-    /* Seção dos 4 Roteiros Exclusivos */
+    /* 6. Os 4 Roteiros Exclusivos com Linha e Paradas que se Desenham no Scroll (.stops) */
     .roteiros-section {
       background: #FFFFFF;
       position: relative;
@@ -779,7 +982,7 @@
     .roteiros-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 1.5rem;
+      gap: 1.75rem;
     }
 
     @media (min-width: 768px) {
@@ -792,7 +995,7 @@
       background: var(--sand);
       border: 1px solid var(--line);
       border-radius: var(--radius-lg);
-      padding: 1.75rem 1.5rem;
+      padding: 1.85rem 1.6rem;
       display: flex;
       flex-direction: column;
       position: relative;
@@ -801,7 +1004,7 @@
     }
 
     .roteiro-card:hover {
-      transform: translateY(-4px);
+      transform: translateY(-5px);
       box-shadow: var(--shadow-md);
       border-color: var(--emerald);
     }
@@ -845,29 +1048,38 @@
     .roteiro-tagline {
       font-size: 0.85rem;
       color: var(--ink-muted);
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.35rem;
     }
 
-    /* Linha do Mapa de Paradas */
-    .paradas-timeline {
+    /* Linha de Rota que se Desenha no Scroll (.stops) */
+    .stops {
       position: relative;
-      padding-left: 1.5rem;
-      margin-bottom: 1.5rem;
+      display: grid;
+      padding-left: 28px;
+      list-style: none;
+      margin-bottom: 1.6rem;
       flex-grow: 1;
     }
 
-    .paradas-timeline::before {
+    .stops::before {
       content: '';
       position: absolute;
-      top: 8px;
-      bottom: 8px;
-      left: 6px;
+      left: 7px;
+      top: 10px;
+      bottom: 10px;
       width: 2px;
-      background: linear-gradient(180deg, var(--gold), var(--emerald));
       border-radius: 2px;
+      background: linear-gradient(180deg, var(--gold), var(--emerald));
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: transform 1.2s var(--ease);
     }
 
-    .parada-item {
+    .stops.in::before {
+      transform: none;
+    }
+
+    .stops li {
       position: relative;
       padding-bottom: 0.85rem;
       font-size: 0.92rem;
@@ -878,14 +1090,14 @@
       justify-content: space-between;
     }
 
-    .parada-item:last-child {
+    .stops li:last-child {
       padding-bottom: 0;
     }
 
-    .parada-item::before {
+    .stops li::before {
       content: '';
       position: absolute;
-      left: -1.5rem;
+      left: -28px;
       top: 5px;
       width: 14px;
       height: 14px;
@@ -893,12 +1105,21 @@
       background: #FFFFFF;
       border: 3px solid var(--emerald);
       box-shadow: 0 0 0 2px rgba(14, 124, 123, 0.2);
+      transform: scale(0.6);
+      opacity: 0.4;
+      transition: transform 0.4s var(--ease), border-color 0.4s, opacity 0.4s;
     }
 
-    .parada-item:hover::before {
-      background: var(--gold);
-      border-color: var(--navy);
+    .stops.in li::before {
+      transform: scale(1);
+      opacity: 1;
+      border-color: var(--gold);
     }
+
+    .stops li:nth-child(1)::before { transition-delay: 0.1s; }
+    .stops li:nth-child(2)::before { transition-delay: 0.3s; }
+    .stops li:nth-child(3)::before { transition-delay: 0.5s; }
+    .stops li:nth-child(4)::before { transition-delay: 0.7s; }
 
     .parada-badge {
       font-family: var(--font-mono);
@@ -941,14 +1162,15 @@
       font-weight: 700;
       padding: 0.75rem 1rem;
       border-radius: var(--radius-md);
-      transition: background 0.2s;
+      transition: background 0.2s, transform 0.2s;
     }
 
     .btn-roteiro-select:hover {
       background: var(--emerald);
+      transform: translateY(-1px);
     }
 
-    /* Seção Embarcação & O que está Incluso */
+    /* Seção Embarcação & Bento Grid */
     .boat-specs-section {
       background: var(--sand);
     }
@@ -956,7 +1178,7 @@
     .boat-bento {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 1.25rem;
+      gap: 1.35rem;
       margin-bottom: 3.5rem;
     }
 
@@ -990,7 +1212,7 @@
 
     .bento-photo-wrap {
       position: relative;
-      height: 280px;
+      height: 290px;
       overflow: hidden;
     }
 
@@ -998,11 +1220,12 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.5s ease;
+      transform: scale(1.06);
+      transition: transform 0.6s var(--ease);
     }
 
     .bento-photo-wrap:hover img {
-      transform: scale(1.04);
+      transform: scale(1.1);
     }
 
     .bento-photo-tag {
@@ -1037,12 +1260,12 @@
       line-height: 1.5;
     }
 
-    /* Grid dos 7 Itens Inclusos */
+    /* Caixa dos 7 Itens Inclusos */
     .inclusos-box {
       background: var(--navy);
       color: #FFFFFF;
       border-radius: var(--radius-lg);
-      padding: 2.5rem 1.75rem;
+      padding: 2.75rem 1.75rem;
       box-shadow: var(--shadow-lg);
       position: relative;
       overflow: hidden;
@@ -1053,9 +1276,9 @@
       position: absolute;
       top: -100px;
       right: -100px;
-      width: 300px;
-      height: 300px;
-      background: radial-gradient(circle, rgba(14, 124, 123, 0.3) 0%, transparent 70%);
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, rgba(14, 124, 123, 0.32) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -1107,13 +1330,14 @@
       align-items: flex-start;
       background: rgba(255, 255, 255, 0.05);
       border: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 1rem;
+      padding: 1.05rem;
       border-radius: var(--radius-md);
-      transition: background 0.2s;
+      transition: background 0.25s, transform 0.25s;
     }
 
     .incluso-item:hover {
       background: rgba(255, 255, 255, 0.09);
+      transform: translateY(-2px);
     }
 
     .incluso-num {
@@ -1326,7 +1550,7 @@
     footer {
       background: var(--navy-deep);
       color: #FFFFFF;
-      padding: 4rem 1.25rem 5.5rem;
+      padding: 4.5rem 1.25rem 5.5rem;
       border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
 
@@ -1387,44 +1611,94 @@
       color: #64748B;
     }
 
-    /* Floating WhatsApp Button no Mobile */
-    .floating-wa {
+    /* 7. Floating WhatsApp Button (.fab) com Ping e Auto-Hide (.fab.away) */
+    .fab {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
+      right: 18px;
+      bottom: calc(18px + env(safe-area-inset-bottom));
       z-index: 800;
-      background: var(--whatsapp);
-      color: #FFFFFF;
       width: 60px;
       height: 60px;
       border-radius: 50%;
+      background: var(--whatsapp);
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
-      transition: transform 0.25s, box-shadow 0.25s;
+      box-shadow: 0 10px 28px rgba(37, 211, 102, 0.45);
+      transition: transform 0.35s var(--ease), opacity 0.35s var(--ease);
     }
 
-    .floating-wa:hover {
-      transform: scale(1.08);
-      box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
-    }
-
-    .floating-wa svg {
-      width: 32px;
-      height: 32px;
+    .fab svg {
+      width: 30px;
+      height: 30px;
       fill: #FFFFFF;
+      position: relative;
+      z-index: 2;
+    }
+
+    .fab::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: var(--whatsapp);
+      animation: ping 2.6s ease-out infinite;
+      z-index: 1;
+    }
+
+    @keyframes ping {
+      0% { transform: scale(1); opacity: 0.7; }
+      70% { transform: scale(1.45); opacity: 0; }
+      100% { transform: scale(1.45); opacity: 0; }
+    }
+
+    .fab:hover {
+      transform: scale(1.08);
+    }
+
+    .fab.away {
+      opacity: 0;
+      transform: scale(0.6) translateY(20px);
+      pointer-events: none;
+    }
+
+    /* Micro-animação bump nos seletores */
+    .bump {
+      animation: bumpAnim 0.35s var(--ease);
+    }
+
+    @keyframes bumpAnim {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.06); }
+      100% { transform: scale(1); }
     }
   </style>
 </head>
 <body>
 
+  <!-- 1. Abertura Cinematográfica (.intro) -->
+  <div class="intro" id="intro" aria-hidden="true">
+    <div class="intro-in">
+      <div class="intro-logo">
+        <svg width="58" height="58" viewBox="0 0 64 64" fill="none">
+          <circle cx="32" cy="32" r="26" stroke="#C88A36" stroke-width="1.5" stroke-dasharray="2 2" opacity="0.6"/>
+          <path d="M32 14L43 36C38 33 26 33 21 36L32 14Z" fill="#FFFFFF"/>
+          <path d="M20 40C26 37 38 37 44 40C40 43 24 43 20 40Z" fill="#0E7C7B"/>
+          <path d="M16 46C24 43 40 43 48 46C42 49 22 49 16 46Z" fill="#C88A36"/>
+        </svg>
+      </div>
+      <b>Lancha <em>Mikhael</em></b>
+      <span class="intro-tag">Paraty · RJ</span>
+      <svg class="intro-wave" viewBox="0 0 140 18"><path pathLength="1" d="M2 9c11 0 11-6 22-6s11 12 22 12 11-12 22-12 11 12 22 12 11-12 22-12 11 6 22 6"/></svg>
+    </div>
+  </div>
+
   <!-- Barra de Progresso no Scroll -->
   <div class="scroll-progress" id="scrollProgress"></div>
 
-  <!-- Header Fixo Mobile-First -->
-  <header class="site-header">
-    <div class="nav-container">
+  <!-- 3. Topo Flutuante Inteligente (.nav-wrap auto-hide) -->
+  <div class="nav-wrap" id="navWrap">
+    <header class="nav-bar">
       <a href="#" class="nav-brand" aria-label="Lancha Mikhael Paraty">
         <div class="brand-icon">
           <svg width="22" height="22" viewBox="0 0 64 64" fill="none">
@@ -1438,23 +1712,30 @@
           <span class="brand-tag">Paraty · 21 Pés</span>
         </div>
       </a>
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="#sobre">A Lancha & David</a>
+        <a href="#roteiros">4 Roteiros</a>
+        <a href="#embarcacao">7 Inclusos</a>
+        <a href="#simulador">Simular Passeio</a>
+        <a href="#faq">Dúvidas</a>
+      </nav>
       <div class="nav-actions">
-        <a href="https://wa.me/5524999790893?text=Ol%C3%A1%20David%20Henrique%2C%20gostaria%20de%20consultar%20disponibilidade%20para%20o%20passeio%20de%20lancha%20em%20Paraty%20a%20bordo%20da%20Lancha%20Mikhael!" target="_blank" rel="noopener noreferrer" class="btn-nav-wa" aria-label="Chamar no WhatsApp">
+        <a href="https://wa.me/5524999790893?text=Ol%C3%A1%20David%20Henrique%2C%20vim%20pelo%20site%20da%20Lancha%20Mikhael%20e%20gostaria%20de%20consultar%20disponibilidade%20para%20passeio%20em%20Paraty!" target="_blank" rel="noopener noreferrer" class="btn-nav-wa" data-mag aria-label="Chamar no WhatsApp">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
           </svg>
           WhatsApp
         </a>
       </div>
-    </div>
-  </header>
+    </header>
+  </div>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-bg">
+  <!-- 2. Hero Section com Headline Split de Palavras (.split -> .w > .wi) -->
+  <section class="hero" id="topo">
+    <div class="hero-bg photo">
       <picture>
         <source srcset="img/lancha-mikhael-aguas-verdes.webp" type="image/webp">
-        <img src="img/lancha-mikhael-aguas-verdes.jpg" alt="Lancha Mikhael ancorada nas águas cristalinas de Paraty com David Henrique" width="2000" height="1500" fetchpriority="high">
+        <img id="heroImg" data-par src="img/lancha-mikhael-aguas-verdes.jpg" alt="Lancha Mikhael ancorada nas águas cristalinas de Paraty com David Henrique" width="2000" height="1500" fetchpriority="high">
       </picture>
     </div>
     <div class="hero-overlay"></div>
@@ -1465,7 +1746,7 @@
         <span class="hero-badge-text">Lancha 21 Pés · Paraty - RJ</span>
       </div>
 
-      <h1 class="hero-title">
+      <h1 class="hero-title split">
         A Baía de Paraty a bordo da <em>Lancha Mikhael</em>
       </h1>
 
@@ -1475,65 +1756,70 @@
 
       <div class="hero-highlights">
         <div class="highlight-card">
-          <span class="val">5 Horas</span>
-          <span class="lbl">Duração de passeio com paradas de ~40min</span>
+          <span class="val"><span data-count="5">5</span>h</span>
+          <span class="lbl">Duração de passeio com paradas de ~<span data-count="40">40</span>min</span>
         </div>
         <div class="highlight-card">
-          <span class="val">Cais Turismo</span>
-          <span class="lbl">Embarque no Centro Histórico de Paraty</span>
+          <span class="val"><span data-count="21">21</span>'</span>
+          <span class="lbl">Pés de estabilidade com motor Yamaha 115</span>
         </div>
         <div class="highlight-card">
-          <span class="val">7 Inclusos</span>
-          <span class="lbl">Cooler c/ gelo, som, água, snorkel e ducha</span>
+          <span class="val"><span data-count="4">4</span></span>
+          <span class="lbl">Roteiros exclusivos e paradas a combinar</span>
         </div>
         <div class="highlight-card">
-          <span class="val">50% no Pix</span>
-          <span class="lbl">Restante quitado direto no embarque</span>
+          <span class="val"><span data-count="7">7</span></span>
+          <span class="lbl">Itens inclusos (cooler c/ gelo, som, água...)</span>
         </div>
       </div>
 
       <div class="hero-actions">
-        <a href="https://wa.me/5524999790893?text=Ol%C3%A1%20David%20Henrique%2C%20quero%20agendar%20um%20passeio%20na%20Lancha%20Mikhael%20em%20Paraty!" target="_blank" rel="noopener noreferrer" class="btn-primary-wa">
+        <a href="https://wa.me/5524999790893?text=Ol%C3%A1%20David%20Henrique%2C%20quero%20agendar%20um%20passeio%20na%20Lancha%20Mikhael%20em%20Paraty!" target="_blank" rel="noopener noreferrer" class="btn-primary-wa" data-mag>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
           </svg>
           Agendar no WhatsApp
         </a>
-        <a href="#roteiros" class="btn-secondary">
+        <a href="#roteiros" class="btn-secondary" data-mag>
           Conhecer os 4 Roteiros ↓
         </a>
       </div>
     </div>
   </section>
 
+  <!-- 4. Onda Divisória que se desenha no scroll -->
+  <svg class="wave reveal-wave" viewBox="0 0 1200 36" preserveAspectRatio="none">
+    <path pathLength="1" d="M0,18 C150,34 300,2 450,18 C600,34 750,2 900,18 C1050,34 1150,6 1200,18" />
+  </svg>
+
   <!-- Seção Sobre / David Henrique -->
   <section class="about-section" id="sobre">
     <div class="container">
       <div class="about-grid">
-        <div class="about-photos-stack">
-          <div class="about-main-photo">
+        <div class="about-photos-stack reveal">
+          <div class="about-main-photo clip photo">
             <picture>
               <source srcset="img/lancha-mikhael-cais-paraty.webp" type="image/webp">
-              <img src="img/lancha-mikhael-cais-paraty.jpg" alt="David Henrique a bordo da Lancha Mikhael no Cais de Turismo de Paraty" loading="lazy" width="1024" height="576">
+              <img data-par src="img/lancha-mikhael-cais-paraty.jpg" alt="David Henrique a bordo da Lancha Mikhael no Cais de Turismo de Paraty" loading="lazy" width="1024" height="576">
             </picture>
           </div>
-          <div class="about-badge-card">
-            <span class="num">21'</span>
+          <div class="about-badge-card reveal">
+            <span class="num"><span data-count="21">21</span>'</span>
             <span class="txt">Pés de Pura<br>Estabilidade & Conforto</span>
           </div>
         </div>
 
-        <div class="about-content">
+        <div class="about-content reveal">
           <span class="section-eyebrow">Experiência Privativa & Confiável</span>
-          <h2 class="section-title">
+          <h2 class="section-title split">
             Navegue no seu ritmo com quem conhece cada recanto de <em>Paraty</em>
           </h2>
           <p class="section-desc">
-            Comandada pelo marinheiro e proprietário <strong>David Henrique</strong>, a Lancha Mikhael oferece uma experiência exclusiva longe de aglomerações. Você decide o tempo do mergulho, a trilha sonora no som Bluetooth e o momento exato de relaxar ou almoçar numa ilha paradisíaca.
+            Comandada pelo marinheiro e proprietário <strong>David Henrique</strong>, a Lancha Mikhael oferece uma experiência exclusiva longe de aglomerações. Você decide o tempo do mergulho, a playlist no som Bluetooth e o momento exato de relaxar ou almoçar numa ilha paradisíaca.
           </p>
 
           <div class="about-info-list">
-            <div class="about-info-item">
+            <div class="about-info-item reveal">
               <div class="info-icon">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/>
@@ -1546,7 +1832,7 @@
               </div>
             </div>
 
-            <div class="about-info-item">
+            <div class="about-info-item reveal">
               <div class="info-icon">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <circle cx="12" cy="12" r="10"/>
@@ -1554,25 +1840,25 @@
                 </svg>
               </div>
               <div>
-                <div class="info-title">5 Horas de Passeio Completo</div>
-                <div class="info-desc">Tempo médio de 40 minutos em cada parada para mergulhar, curtir as praias ou saborear frutos do mar frescos.</div>
+                <div class="info-title"><span data-count="5">5</span> Horas de Passeio Completo</div>
+                <div class="info-desc">Tempo médio de ~<span data-count="40">40</span> minutos em cada parada para mergulhar, curtir as praias ou saborear frutos do mar frescos.</div>
               </div>
             </div>
 
-            <div class="about-info-item">
+            <div class="about-info-item reveal">
               <div class="info-icon">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                 </svg>
               </div>
               <div>
-                <div class="info-title">Roteiros e Paradas Personalizáveis</div>
+                <div class="info-title"><span data-count="4">4</span> Roteiros e Paradas Personalizáveis</div>
                 <div class="info-desc">Você pode escolher um dos 4 Roteiros consagrados ou combinar paradas customizadas com o David Henrique.</div>
               </div>
             </div>
           </div>
 
-          <div class="instagram-card">
+          <div class="instagram-card reveal">
             <div class="ig-brand">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E1306C" stroke-width="2">
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
@@ -1584,7 +1870,7 @@
                 <span style="font-size: 0.75rem; color: var(--ink-muted);">Fotos reais e bastidores em Paraty</span>
               </div>
             </div>
-            <a href="https://www.instagram.com/lanchamikhael/" target="_blank" rel="noopener noreferrer" class="ig-btn">
+            <a href="https://www.instagram.com/lanchamikhael/" target="_blank" rel="noopener noreferrer" class="ig-btn" data-mag>
               Seguir no Insta
             </a>
           </div>
@@ -1593,12 +1879,17 @@
     </div>
   </section>
 
-  <!-- Seção dos 4 Roteiros Exclusivos -->
+  <!-- 4. Onda Divisória -->
+  <svg class="wave reveal-wave" viewBox="0 0 1200 36" preserveAspectRatio="none">
+    <path pathLength="1" d="M0,18 C150,2 300,34 450,18 C600,2 750,34 900,18 C1050,2 1150,30 1200,18" />
+  </svg>
+
+  <!-- 6. Seção dos 4 Roteiros Exclusivos com Linhas de Paradas Desenham no Scroll (.stops) -->
   <section class="roteiros-section" id="roteiros">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span class="section-eyebrow">Roteiros Consagrados</span>
-        <h2 class="section-title">
+        <h2 class="section-title split">
           Os 4 Roteiros Exclusivos na <em>Lancha Mikhael</em>
         </h2>
         <p class="section-desc">
@@ -1608,32 +1899,32 @@
 
       <div class="roteiros-grid">
         <!-- Roteiro 1: Norte -->
-        <div class="roteiro-card">
+        <div class="roteiro-card reveal">
           <div class="roteiro-header">
             <span class="roteiro-badge">Roteiro 01</span>
-            <span class="roteiro-duration">5h de Passeio</span>
+            <span class="roteiro-duration"><span data-count="5">5</span>h de Passeio</span>
           </div>
           <h3 class="roteiro-title">Roteiro Norte</h3>
           <p class="roteiro-tagline">Águas abrigadas, natureza exuberante e mergulho relaxante.</p>
 
-          <div class="paradas-timeline">
-            <div class="parada-item">
+          <ul class="stops">
+            <li>
               <span>1. Ilha Malvão</span>
               <span class="parada-badge">~40 min</span>
-            </div>
-            <div class="parada-item">
+            </li>
+            <li>
               <span>2. Ilha Comprida do Norte</span>
               <span class="parada-badge">~40 min</span>
-            </div>
-            <div class="parada-item">
+            </li>
+            <li>
               <span>3. Praia Salvador Moreira</span>
               <span class="parada-badge">~40 min</span>
-            </div>
-            <div class="parada-item">
+            </li>
+            <li>
               <span>4. Ilha Ventura</span>
               <span class="parada-badge">~40 min</span>
-            </div>
-          </div>
+            </li>
+          </ul>
 
           <div class="roteiro-footer">
             <div class="roteiro-features">
@@ -1641,39 +1932,39 @@
               <span class="roteiro-pill">Mergulho com Snorkel</span>
               <span class="roteiro-pill">Flutuantes Inclusos</span>
             </div>
-            <a href="https://wa.me/5524999790893?text=Ol%C3%A1%20David%2C%20tenho%20interesse%20no%20Roteiro%20Norte%20(Ilha%20Malv%C3%A3o%2C%20Ilha%20Comprida%2C%20Salvador%20Moreira%20e%20Ventura)%20na%20Lancha%20Mikhael!" target="_blank" rel="noopener noreferrer" class="btn-roteiro-select">
+            <a href="https://wa.me/5524999790893?text=Ol%C3%A1%20David%2C%20tenho%20interesse%20no%20Roteiro%20Norte%20(Ilha%20Malv%C3%A3o%2C%20Ilha%20Comprida%2C%20Salvador%20Moreira%20e%20Ventura)%20na%20Lancha%20Mikhael!" target="_blank" rel="noopener noreferrer" class="btn-roteiro-select" data-mag>
               Escolher Roteiro Norte →
             </a>
           </div>
         </div>
 
         <!-- Roteiro 2: Sul I -->
-        <div class="roteiro-card">
+        <div class="roteiro-card reveal">
           <div class="roteiro-header">
             <span class="roteiro-badge">Roteiro 02</span>
-            <span class="roteiro-duration">5h de Passeio</span>
+            <span class="roteiro-duration"><span data-count="5">5</span>h de Passeio</span>
           </div>
           <h3 class="roteiro-title">Roteiro Sul I</h3>
           <p class="roteiro-tagline">O clássico apaixonante com a famosa Praia da Lula e águas calmas.</p>
 
-          <div class="paradas-timeline">
-            <div class="parada-item">
+          <ul class="stops">
+            <li>
               <span>1. Praia da Lula</span>
               <span class="parada-badge">~40 min</span>
-            </div>
-            <div class="parada-item">
+            </li>
+            <li>
               <span>2. Ilha da Pescaria</span>
               <span class="parada-badge">~40 min</span>
-            </div>
-            <div class="parada-item">
+            </li>
+            <li>
               <span>3. Praia Vermelha</span>
               <span class="parada-badge">~40 min</span>
-            </div>
-            <div class="parada-item">
+            </li>
+            <li>
               <span>4. Ilha do Mantimento</span>
               <span class="parada-badge">~40 min</span>
-            </div>
-          </div>
+            </li>
+          </ul>
 
           <div class="roteiro-footer">
             <div class="roteiro-features">
@@ -1681,39 +1972,39 @@
               <span class="roteiro-pill">Praia de Areia Branca</span>
               <span class="roteiro-pill">Cardumes Coloridos</span>
             </div>
-            <a href="https://wa.me/5524999790893?text=Ol%C3%A1%20David%2C%20gostaria%20de%20reservar%20o%20Roteiro%20Sul%20I%20(Praia%20da%20Lula%2C%20Ilha%20da%20Pescaria%2C%20Praia%20Vermelha%20e%20Ilha%20do%20Mantimento)!" target="_blank" rel="noopener noreferrer" class="btn-roteiro-select">
+            <a href="https://wa.me/5524999790893?text=Ol%C3%A1%20David%2C%20gostaria%20de%20reservar%20o%20Roteiro%20Sul%20I%20(Praia%20da%20Lula%2C%20Ilha%20da%20Pescaria%2C%20Praia%20Vermelha%20e%20Ilha%20do%20Mantimento)!" target="_blank" rel="noopener noreferrer" class="btn-roteiro-select" data-mag>
               Escolher Roteiro Sul I →
             </a>
           </div>
         </div>
 
         <!-- Roteiro 3: Sul II -->
-        <div class="roteiro-card">
+        <div class="roteiro-card reveal">
           <div class="roteiro-header">
             <span class="roteiro-badge">Roteiro 03</span>
-            <span class="roteiro-duration">5h de Passeio</span>
+            <span class="roteiro-duration"><span data-count="5">5</span>h de Passeio</span>
           </div>
           <h3 class="roteiro-title">Roteiro Sul II</h3>
           <p class="roteiro-tagline">Cenários de cartão-postal: Ilha dos Cocos e o encanto do Saco da Velha.</p>
 
-          <div class="paradas-timeline">
-            <div class="parada-item">
+          <ul class="stops">
+            <li>
               <span>1. Ilha dos Cocos</span>
               <span class="parada-badge">~40 min</span>
-            </div>
-            <div class="parada-item">
+            </li>
+            <li>
               <span>2. Enseada da Preguiça</span>
               <span class="parada-badge">~40 min</span>
-            </div>
-            <div class="parada-item">
+            </li>
+            <li>
               <span>3. Praia Saco da Velha</span>
               <span class="parada-badge">~40 min</span>
-            </div>
-            <div class="parada-item">
+            </li>
+            <li>
               <span>4. Ilha da Pescaria</span>
               <span class="parada-badge">~40 min</span>
-            </div>
-          </div>
+            </li>
+          </ul>
 
           <div class="roteiro-footer">
             <div class="roteiro-features">
@@ -1721,39 +2012,39 @@
               <span class="roteiro-pill">Visual Selvagem</span>
               <span class="roteiro-pill">Excelente para Fotos</span>
             </div>
-            <a href="https://wa.me/5524999790893?text=Ol%C3%A1%20David%2C%20quero%20fazer%20o%20Roteiro%20Sul%20II%20(Ilha%20dos%20Cocos%2C%20Enseada%20da%20Pregui%C3%A7a%2C%20Saco%20da%20Velha%20e%20Pescaria)!" target="_blank" rel="noopener noreferrer" class="btn-roteiro-select">
+            <a href="https://wa.me/5524999790893?text=Ol%C3%A1%20David%2C%20quero%20fazer%20o%20Roteiro%20Sul%20II%20(Ilha%20dos%20Cocos%2C%20Enseada%20da%20Pregui%C3%A7a%2C%20Saco%20da%20Velha%20e%20Pescaria)!" target="_blank" rel="noopener noreferrer" class="btn-roteiro-select" data-mag>
               Escolher Roteiro Sul II →
             </a>
           </div>
         </div>
 
         <!-- Roteiro 4: Sul III -->
-        <div class="roteiro-card">
+        <div class="roteiro-card reveal">
           <div class="roteiro-header">
             <span class="roteiro-badge">Roteiro 04</span>
-            <span class="roteiro-duration">5h de Passeio</span>
+            <span class="roteiro-duration"><span data-count="5">5</span>h de Passeio</span>
           </div>
           <h3 class="roteiro-title">Roteiro Sul III</h3>
           <p class="roteiro-tagline">A verdadeira piscina natural de Paraty: Lagoa Azul e Ilha dos Cocos.</p>
 
-          <div class="paradas-timeline">
-            <div class="parada-item">
+          <ul class="stops">
+            <li>
               <span>1. Ilha dos Cocos</span>
               <span class="parada-badge">~40 min</span>
-            </div>
-            <div class="parada-item">
+            </li>
+            <li>
               <span>2. Saco da Velha</span>
               <span class="parada-badge">~40 min</span>
-            </div>
-            <div class="parada-item">
+            </li>
+            <li>
               <span>3. Lagoa Azul</span>
               <span class="parada-badge">~40 min</span>
-            </div>
-            <div class="parada-item">
+            </li>
+            <li>
               <span>4. Praia Vermelha</span>
               <span class="parada-badge">~40 min</span>
-            </div>
-          </div>
+            </li>
+          </ul>
 
           <div class="roteiro-footer">
             <div class="roteiro-features">
@@ -1761,7 +2052,7 @@
               <span class="roteiro-pill">Snorkel Cristalino</span>
               <span class="roteiro-pill">Restaurante Típico</span>
             </div>
-            <a href="https://wa.me/5524999790893?text=Ol%C3%A1%20David%2C%20quero%20agendar%20o%20Roteiro%20Sul%20III%20(Ilha%20dos%20Cocos%2C%20Saco%20da%20Velha%2C%20Lagoa%20Azul%20e%20Praia%20Vermelha)!" target="_blank" rel="noopener noreferrer" class="btn-roteiro-select">
+            <a href="https://wa.me/5524999790893?text=Ol%C3%A1%20David%2C%20quero%20agendar%20o%20Roteiro%20Sul%20III%20(Ilha%20dos%20Cocos%2C%20Saco%20da%20Velha%2C%20Lagoa%20Azul%20e%20Praia%20Vermelha)!" target="_blank" rel="noopener noreferrer" class="btn-roteiro-select" data-mag>
               Escolher Roteiro Sul III →
             </a>
           </div>
@@ -1770,12 +2061,17 @@
     </div>
   </section>
 
+  <!-- 4. Onda Divisória -->
+  <svg class="wave reveal-wave" viewBox="0 0 1200 36" preserveAspectRatio="none">
+    <path pathLength="1" d="M0,18 C150,34 300,2 450,18 C600,34 750,2 900,18 C1050,34 1150,6 1200,18" />
+  </svg>
+
   <!-- Seção A Embarcação 21 Pés & O que está Incluso -->
   <section class="boat-specs-section" id="embarcacao">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span class="section-eyebrow">A Embarcação & Estrutura</span>
-        <h2 class="section-title">
+        <h2 class="section-title split">
           Lancha 21 Pés pensada para seu conforto de <em>ponta a ponta</em>
         </h2>
         <p class="section-desc">
@@ -1783,13 +2079,13 @@
         </p>
       </div>
 
-      <!-- Bento Grid com Fotos Reais da Lancha Mikhael -->
+      <!-- Bento Grid com Fotos Reais e Revelação Clip (.clip) -->
       <div class="boat-bento">
-        <div class="bento-card bento-col-8">
-          <div class="bento-photo-wrap">
+        <div class="bento-card bento-col-8 reveal">
+          <div class="bento-photo-wrap clip photo">
             <picture>
               <source srcset="img/lancha-mikhael-conves-interno.webp" type="image/webp">
-              <img src="img/lancha-mikhael-conves-interno.jpg" alt="Interior da Lancha Mikhael: piso náutico amadeirado em EVA e comando" loading="lazy" width="768" height="1024">
+              <img data-par src="img/lancha-mikhael-conves-interno.jpg" alt="Interior da Lancha Mikhael: piso náutico amadeirado em EVA e comando" loading="lazy" width="768" height="1024">
             </picture>
             <span class="bento-photo-tag">Convés & Piso Náutico Amadeirado</span>
           </div>
@@ -1801,11 +2097,11 @@
           </div>
         </div>
 
-        <div class="bento-card bento-col-4">
-          <div class="bento-photo-wrap">
+        <div class="bento-card bento-col-4 reveal">
+          <div class="bento-photo-wrap clip photo">
             <picture>
               <source srcset="img/lancha-mikhael-proa-pier.webp" type="image/webp">
-              <img src="img/lancha-mikhael-proa-pier.jpg" alt="Vista da proa da Lancha Mikhael atracada no píer" loading="lazy" width="576" height="1024">
+              <img data-par src="img/lancha-mikhael-proa-pier.jpg" alt="Vista da proa da Lancha Mikhael atracada no píer" loading="lazy" width="576" height="1024">
             </picture>
             <span class="bento-photo-tag">Proa Aberta & Píer</span>
           </div>
@@ -1817,11 +2113,11 @@
           </div>
         </div>
 
-        <div class="bento-card bento-col-6">
-          <div class="bento-photo-wrap">
+        <div class="bento-card bento-col-6 reveal">
+          <div class="bento-photo-wrap clip photo">
             <picture>
               <source srcset="img/lancha-mikhael-ilha-parada.webp" type="image/webp">
-              <img src="img/lancha-mikhael-ilha-parada.jpg" alt="Lancha Mikhael fundeada em frente a praia de águas cristalinas" loading="lazy" width="768" height="1024">
+              <img data-par src="img/lancha-mikhael-ilha-parada.jpg" alt="Lancha Mikhael fundeada em frente a praia de águas cristalinas" loading="lazy" width="768" height="1024">
             </picture>
             <span class="bento-photo-tag">Parada nas Ilhas & Praias</span>
           </div>
@@ -1833,11 +2129,11 @@
           </div>
         </div>
 
-        <div class="bento-card bento-col-6">
-          <div class="bento-photo-wrap">
+        <div class="bento-card bento-col-6 reveal">
+          <div class="bento-photo-wrap clip photo">
             <picture>
               <source srcset="img/lancha-mikhael-aguas-verdes.webp" type="image/webp">
-              <img src="img/lancha-mikhael-aguas-verdes.jpg" alt="Lancha Mikhael ancorada com flutuantes e motor Yamaha 115" loading="lazy" width="1024" height="768">
+              <img data-par src="img/lancha-mikhael-aguas-verdes.jpg" alt="Lancha Mikhael ancorada com flutuantes e motor Yamaha 115" loading="lazy" width="1024" height="768">
             </picture>
             <span class="bento-photo-tag">Motor Yamaha 115 HP & Lazer</span>
           </div>
@@ -1851,7 +2147,7 @@
       </div>
 
       <!-- Caixa dos 7 Itens Inclusos a Bordo -->
-      <div class="inclusos-box">
+      <div class="inclusos-box reveal">
         <div class="inclusos-header">
           <h3>O que está <span>Incluso a Bordo</span> da Lancha Mikhael:</h3>
           <p>Tudo preparado com carinho para você só se preocupar em aproveitar o dia</p>
@@ -1918,12 +2214,17 @@
     </div>
   </section>
 
+  <!-- 4. Onda Divisória -->
+  <svg class="wave reveal-wave" viewBox="0 0 1200 36" preserveAspectRatio="none">
+    <path pathLength="1" d="M0,18 C150,2 300,34 450,18 C600,2 750,34 900,18 C1050,2 1150,30 1200,18" />
+  </svg>
+
   <!-- Simulador de Reserva no WhatsApp -->
   <section class="simulador-section" id="simulador">
     <div class="container">
-      <div class="section-header" style="text-align: center; max-width: 650px; margin-left: auto; margin-right: auto;">
+      <div class="section-header reveal" style="text-align: center; max-width: 650px; margin-left: auto; margin-right: auto;">
         <span class="section-eyebrow" style="justify-content: center;">Planejador Direto</span>
-        <h2 class="section-title">
+        <h2 class="section-title split">
           Simule seu passeio na <em>Lancha Mikhael</em>
         </h2>
         <p class="section-desc" style="margin-left: auto; margin-right: auto;">
@@ -1931,7 +2232,7 @@
         </p>
       </div>
 
-      <div class="simulador-card">
+      <div class="simulador-card reveal">
         <form id="reservaForm" onsubmit="event.preventDefault(); enviarWhatsApp();">
           <div class="form-group">
             <label class="form-label" for="simRoteiro">Roteiro Escolhido:</label>
@@ -1988,7 +2289,7 @@
             </p>
           </div>
 
-          <button type="submit" class="btn-simulador-wa">
+          <button type="submit" class="btn-simulador-wa" data-mag>
             <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
             </svg>
@@ -1999,12 +2300,17 @@
     </div>
   </section>
 
+  <!-- 4. Onda Divisória -->
+  <svg class="wave reveal-wave" viewBox="0 0 1200 36" preserveAspectRatio="none">
+    <path pathLength="1" d="M0,18 C150,34 300,2 450,18 C600,34 750,2 900,18 C1050,34 1150,6 1200,18" />
+  </svg>
+
   <!-- FAQ Perguntas Frequentes -->
   <section class="faq-section" id="faq">
     <div class="container">
-      <div class="section-header" style="text-align: center; max-width: 650px; margin-left: auto; margin-right: auto;">
+      <div class="section-header reveal" style="text-align: center; max-width: 650px; margin-left: auto; margin-right: auto;">
         <span class="section-eyebrow" style="justify-content: center;">Tire Suas Dúvidas</span>
-        <h2 class="section-title">
+        <h2 class="section-title split">
           Perguntas <em>Frequentes</em>
         </h2>
         <p class="section-desc" style="margin-left: auto; margin-right: auto;">
@@ -2013,7 +2319,7 @@
       </div>
 
       <div class="faq-list">
-        <div class="faq-item">
+        <div class="faq-item reveal">
           <button class="faq-question" type="button" onclick="toggleFaq(this)">
             <span>Quanto tempo dura o passeio de lancha?</span>
             <span class="faq-icon">+</span>
@@ -2023,7 +2329,7 @@
           </div>
         </div>
 
-        <div class="faq-item">
+        <div class="faq-item reveal">
           <button class="faq-question" type="button" onclick="toggleFaq(this)">
             <span>Onde acontece o embarque e desembarque?</span>
             <span class="faq-icon">+</span>
@@ -2033,7 +2339,7 @@
           </div>
         </div>
 
-        <div class="faq-item">
+        <div class="faq-item reveal">
           <button class="faq-question" type="button" onclick="toggleFaq(this)">
             <span>Como funciona a forma de pagamento e reserva?</span>
             <span class="faq-icon">+</span>
@@ -2043,7 +2349,7 @@
           </div>
         </div>
 
-        <div class="faq-item">
+        <div class="faq-item reveal">
           <button class="faq-question" type="button" onclick="toggleFaq(this)">
             <span>Podemos levar bebidas e comidas para o barco?</span>
             <span class="faq-icon">+</span>
@@ -2053,7 +2359,7 @@
           </div>
         </div>
 
-        <div class="faq-item">
+        <div class="faq-item reveal">
           <button class="faq-question" type="button" onclick="toggleFaq(this)">
             <span>É possível parar para almoçar durante o passeio?</span>
             <span class="faq-icon">+</span>
@@ -2063,7 +2369,7 @@
           </div>
         </div>
 
-        <div class="faq-item">
+        <div class="faq-item reveal">
           <button class="faq-question" type="button" onclick="toggleFaq(this)">
             <span>O passeio é seguro para crianças e idosos?</span>
             <span class="faq-icon">+</span>
@@ -2113,73 +2419,251 @@
     </div>
   </footer>
 
-  <!-- Botão Flutuante de WhatsApp -->
-  <a href="https://wa.me/5524999790893?text=Ol%C3%A1%20David%20Henrique%2C%20gostaria%20de%20consultar%20disponibilidade%20para%20passeio%20na%20Lancha%20Mikhael%20em%20Paraty!" target="_blank" rel="noopener noreferrer" class="floating-wa" aria-label="Falar com David Henrique no WhatsApp">
+  <!-- 7. Botão Flutuante de WhatsApp (.fab) com Ping e Auto-Hide (.fab.away) -->
+  <a href="https://wa.me/5524999790893?text=Ol%C3%A1%20David%20Henrique%2C%20gostaria%20de%20consultar%20disponibilidade%20para%20passeio%20na%20Lancha%20Mikhael%20em%20Paraty!" target="_blank" rel="noopener noreferrer" class="fab" id="fab" aria-label="Falar com David Henrique no WhatsApp">
     <svg viewBox="0 0 24 24">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
     </svg>
   </a>
 
-  <!-- Scripts Interativos -->
+  <!-- Bibliotecas de Movimento Suave -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+
+  <!-- Scripts Interativos & Arquitetura de Movimento -->
   <script>
-    // Atualiza barra de progresso no topo
-    window.addEventListener('scroll', () => {
-      const winScroll = document.documentElement.scrollTop;
-      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrolled = (winScroll / height) * 100;
-      document.getElementById('scrollProgress').style.width = scrolled + '%';
+    document.addEventListener('DOMContentLoaded', function () {
+      // 2. Split de Palavras (.split -> .w > .wi)
+      document.querySelectorAll('.split').forEach(function (el) {
+        var i = 0;
+        (function walk(node) {
+          Array.prototype.slice.call(node.childNodes).forEach(function (n) {
+            if (n.nodeType === 3) {
+              var frag = document.createDocumentFragment();
+              n.textContent.split(/(\s+)/).forEach(function (t) {
+                if (!t) return;
+                if (/^\s+$/.test(t)) { frag.appendChild(document.createTextNode(' ')); return; }
+                var w = document.createElement('span'); w.className = 'w';
+                var wi = document.createElement('span'); wi.className = 'wi';
+                wi.style.setProperty('--i', i++); wi.textContent = t;
+                w.appendChild(wi); frag.appendChild(w);
+              });
+              node.replaceChild(frag, n);
+            } else if (n.nodeType === 1) { walk(n); }
+          });
+        })(el);
+      });
+
+      // 5. Revelação com IntersectionObserver (Leve no Android, 60fps)
+      var els = document.querySelectorAll('.reveal, .clip, .reveal-wave, .stops');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) {
+            if (!en.isIntersecting) return;
+            var el = en.target;
+            if (el.matches('.reveal, .clip, .reveal-wave, .stops')) el.classList.add('in');
+            (el.__clips || []).forEach(function (c) { c.classList.add('in'); });
+            io.unobserve(el);
+          });
+        }, { rootMargin: '0px 0px -6% 0px', threshold: 0.08 });
+
+        els.forEach(function (el) {
+          if (el.classList.contains('clip')) {
+            var h = el.parentElement;
+            (h.__clips = h.__clips || []).push(el);
+            io.observe(h);
+          }
+          if (el.matches('.reveal, .reveal-wave, .stops')) io.observe(el);
+        });
+      } else {
+        els.forEach(function (el) { el.classList.add('in'); });
+      }
+
+      // Varredura de segurança para rolagens rápidas
+      var pending = Array.prototype.slice.call(els), sweeping = false;
+      function sweep() {
+        sweeping = false;
+        var lim = window.innerHeight * 0.95;
+        pending = pending.filter(function (el) {
+          if (el.getBoundingClientRect().top < lim) { el.classList.add('in'); return false; }
+          return true;
+        });
+        if (!pending.length) window.removeEventListener('scroll', onSweep);
+      }
+      function onSweep() { if (!sweeping) { sweeping = true; requestAnimationFrame(sweep); } }
+      window.addEventListener('scroll', onSweep, { passive: true });
+      sweep();
+
+      // 3. Topo Flutuante que se esconde ao descer e reaparece ao subir
+      var navWrap = document.getElementById('navWrap'), lastY = window.scrollY, tick = false;
+      window.addEventListener('scroll', function () {
+        if (tick) return; tick = true;
+        requestAnimationFrame(function () {
+          var y = window.scrollY;
+          if (y > lastY + 6 && y > 130) navWrap.classList.add('hide');
+          else if (y < lastY - 6 || y < 130) navWrap.classList.remove('hide');
+          lastY = y; tick = false;
+        });
+      }, { passive: true });
+
+      // Barra de progresso no scroll
+      var prog = document.getElementById('scrollProgress');
+      window.addEventListener('scroll', function () {
+        var h = document.documentElement.scrollHeight - window.innerHeight;
+        if (h > 0) prog.style.width = (window.scrollY / h * 100) + '%';
+      }, { passive: true });
+
+      // 7. Auto-hide do botão flutuante (.fab.away) onde já há botão visível
+      var fab = document.getElementById('fab'), vis = new Set();
+      if ('IntersectionObserver' in window && fab) {
+        var fio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            e.isIntersecting ? vis.add(e.target) : vis.delete(e.target);
+          });
+          fab.classList.toggle('away', vis.size > 0);
+        }, { threshold: 0.25 });
+        [document.querySelector('.hero'), document.getElementById('simulador')].forEach(function (t) {
+          if (t) fio.observe(t);
+        });
+      }
+
+      // Inicializa data do simulador para amanhã
+      var tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      var yyyy = tomorrow.getFullYear();
+      var mm = String(tomorrow.getMonth() + 1).padStart(2, '0');
+      var dd = String(tomorrow.getDate()).padStart(2, '0');
+      var dateField = document.getElementById('simData');
+      if (dateField) dateField.value = yyyy + '-' + mm + '-' + dd;
+    });
+
+    // Animações GSAP + ScrollTrigger + Lenis
+    window.addEventListener('load', function () {
+      var fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
+      if (!window.gsap || !window.ScrollTrigger || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        // Fallback animar contadores sem GSAP
+        document.querySelectorAll('[data-count]').forEach(function (el) {
+          el.textContent = el.dataset.count;
+        });
+        return;
+      }
+
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Lenis Smooth Scroll para Desktop
+      if (fine && window.Lenis) {
+        var lenis = new Lenis({ duration: 1.15 });
+        lenis.on('scroll', ScrollTrigger.update);
+        gsap.ticker.add(function (t) { lenis.raf(t * 1000); });
+        gsap.ticker.lagSmoothing(0);
+        document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+          a.addEventListener('click', function (e) {
+            var target = document.querySelector(a.getAttribute('href'));
+            if (!target) return;
+            e.preventDefault();
+            lenis.scrollTo(target, { offset: -70 });
+          });
+        });
+      }
+
+      // Parallax suave no Hero
+      gsap.to('#heroImg', {
+        yPercent: 6,
+        ease: 'none',
+        scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true }
+      });
+
+      // Parallax nas fotos com [data-par]
+      document.querySelectorAll('[data-par]').forEach(function (img) {
+        var container = img.closest('.photo') || img.parentElement;
+        gsap.fromTo(img, { yPercent: -5 }, {
+          yPercent: 5,
+          ease: 'none',
+          scrollTrigger: { trigger: container, start: 'top bottom', end: 'bottom top', scrub: true }
+        });
+      });
+
+      // 4. Contadores animados [data-count]
+      document.querySelectorAll('[data-count]').forEach(function (el) {
+        var end = parseFloat(el.dataset.count), dec = Number(el.dataset.dec || 0), o = { v: 0 };
+        ScrollTrigger.create({
+          trigger: el,
+          start: 'top 92%',
+          once: true,
+          onEnter: function () {
+            gsap.to(o, {
+              v: end,
+              duration: 1.4,
+              ease: 'power2.out',
+              onUpdate: function () {
+                el.textContent = o.v.toFixed(dec).replace('.', ',');
+              }
+            });
+          }
+        });
+      });
+
+      // 7. Efeito Magnético nos botões [data-mag]
+      if (fine) {
+        document.querySelectorAll('[data-mag]').forEach(function (b) {
+          var qx = gsap.quickTo(b, 'x', { duration: 0.45, ease: 'power3' });
+          var qy = gsap.quickTo(b, 'y', { duration: 0.45, ease: 'power3' });
+          b.addEventListener('mousemove', function (e) {
+            var r = b.getBoundingClientRect();
+            qx((e.clientX - r.left - r.width / 2) * 0.18);
+            qy((e.clientY - r.top - r.height / 2) * 0.28);
+          });
+          b.addEventListener('mouseleave', function () {
+            qx(0);
+            qy(0);
+          });
+        });
+      }
+
+      ScrollTrigger.refresh();
     });
 
     // FAQ Acordeon
     function toggleFaq(btn) {
-      const item = btn.parentElement;
-      const isActive = item.classList.contains('active');
-      document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
-      if (!isActive) {
-        item.classList.add('active');
-      }
+      var item = btn.parentElement;
+      var isActive = item.classList.contains('active');
+      document.querySelectorAll('.faq-item').forEach(function (el) { el.classList.remove('active'); });
+      if (!isActive) item.classList.add('active');
     }
 
-    // Gerador de mensagem WhatsApp do Simulador
+    // Simulador WhatsApp
     function enviarWhatsApp() {
-      const roteiro = document.getElementById('simRoteiro').value;
-      const almoco = document.querySelector('input[name="simAlmoco"]:checked').value;
-      const pessoas = document.getElementById('simPessoas').value;
-      const dataInput = document.getElementById('simData').value;
+      var roteiro = document.getElementById('simRoteiro').value;
+      var almocoEl = document.querySelector('input[name="simAlmoco"]:checked');
+      var almoco = almocoEl ? almocoEl.value : 'A combinar';
+      var pessoas = document.getElementById('simPessoas').value;
+      var dataInput = document.getElementById('simData').value;
 
-      let dataFormatada = 'A combinar';
+      var dataFormatada = 'A combinar';
       if (dataInput) {
-        const partes = dataInput.split('-');
-        if (partes.length === 3) {
-          dataFormatada = `${partes[2]}/${partes[1]}/${partes[0]}`;
-        }
+        var partes = dataInput.split('-');
+        if (partes.length === 3) dataFormatada = partes[2] + '/' + partes[1] + '/' + partes[0];
       }
 
-      const mensagem = `Olá David Henrique! Simulei meu passeio a bordo da Lancha Mikhael no site:
-• Roteiro: ${roteiro}
-• Pessoas: ${pessoas}
-• Parada para Almoço: ${almoco}
-• Data Desejada: ${dataFormatada}
+      var mensagem = 'Olá David Henrique! Simulei meu passeio a bordo da Lancha Mikhael no site:\n' +
+        '• Roteiro: ' + roteiro + '\n' +
+        '• Pessoas: ' + pessoas + '\n' +
+        '• Parada para Almoço: ' + almoco + '\n' +
+        '• Data Desejada: ' + dataFormatada + '\n\n' +
+        'Estou ciente da condição de reserva (50% via Pix e o restante no embarque no Cais de Turismo). Poderia me confirmar a disponibilidade para esta data?';
 
-Estou ciente da condição de reserva (50% via Pix e o restante no embarque no Cais de Turismo). Poderia me confirmar a disponibilidade para esta data?`;
-
-      const url = `https://wa.me/5524999790893?text=${encodeURIComponent(mensagem)}`;
-      window.open(url, '_blank');
+      window.open('https://wa.me/5524999790893?text=' + encodeURIComponent(mensagem), '_blank');
     }
 
     function atualizarMensagem() {
-      // Funcao chamada ao alterar campos, pronta para feedback dinamico se necessario
+      var card = document.querySelector('.simulador-card');
+      if (card) {
+        card.classList.remove('bump');
+        void card.offsetWidth;
+        card.classList.add('bump');
+      }
     }
-
-    // Iniciar campo de data com amanha por padrao
-    document.addEventListener('DOMContentLoaded', () => {
-      const tomorrow = new Date();
-      tomorrow.setDate(tomorrow.getDate() + 1);
-      const yyyy = tomorrow.getFullYear();
-      const mm = String(tomorrow.getMonth() + 1).padStart(2, '0');
-      const dd = String(tomorrow.getDate()).padStart(2, '0');
-      document.getElementById('simData').value = `${yyyy}-${mm}-${dd}`;
-    });
   </script>
 </body>
 </html>
