@@ -1,15 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <rect width="64" height="64" rx="16" fill="#0A2342"/>
-  <circle cx="32" cy="32" r="26" stroke="#C88A36" stroke-width="1.5" stroke-dasharray="2 2" opacity="0.6"/>
-  <path d="M32 10L46 38H18L32 10Z" fill="url(#gradGold)" opacity="0.2"/>
-  <path d="M32 14L43 36C38 33 26 33 21 36L32 14Z" fill="#FFFFFF"/>
-  <path d="M20 40C26 37 38 37 44 40C40 43 24 43 20 40Z" fill="#0E7C7B"/>
-  <path d="M16 46C24 43 40 43 48 46C42 49 22 49 16 46Z" fill="#C88A36"/>
-  <circle cx="32" cy="24" r="3" fill="#0A2342"/>
-  <defs>
-    <linearGradient id="gradGold" x1="32" y1="10" x2="32" y2="38" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#E5B25D"/>
-      <stop offset="1" stop-color="#C88A36"/>
-    </linearGradient>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <circle cx="32" cy="32" r="32" fill="#15233F"/>
+  <path d="M8 41.5C20 32 36 25.5 57 20.5C47 28.5 33.5 37 21.5 44.5C16.5 45.4 11.5 44.4 8 41.5Z" fill="#FFFFFF"/>
+  <path d="M14.5 46.6 19 45l.9 3.5-4.5 1.6Z M21 44.3l4.5-1.6.9 3.5-4.5 1.6Z M27.5 42l4.5-1.6.9 3.5-4.5 1.6Z M34 39.7l4.5-1.6.9 3.5-4.5 1.6Z M18.2 51.5l4.5-1.6.9 3.5-4.5 1.6Z M24.7 49.2l4.5-1.6.9 3.5-4.5 1.6Z M31.2 46.9l4.5-1.6.9 3.5-4.5 1.6Z" fill="#43C99C"/>
 </svg>

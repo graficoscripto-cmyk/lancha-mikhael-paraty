@@ -1,15 +1,13 @@
 {
-  "name": "Lancha Mikhael — Passeios de Lancha em Paraty",
-  "short_name": "Lancha Mikhael",
+  "name": "Lancha Mikhael — Passeio de Lancha em Paraty",
+  "short_name": "Mikhael",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#F7F5F0",
-  "theme_color": "#0A2342",
+  "background_color": "#F5F2EB",
+  "theme_color": "#15233F",
   "icons": [
-    {
-      "src": "img/favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml"
-    }
+    { "src": "img/favicon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "img/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "img/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
   ]
 }

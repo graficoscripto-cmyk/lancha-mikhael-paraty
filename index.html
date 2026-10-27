@@ -1,2440 +1,740 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="no-js">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="theme-color" content="#0A2342" />
-  <title>Lancha Mikhael — Passeios Exclusivos de Lancha em Paraty, RJ</title>
-  <meta name="description" content="Venha curtir Paraty a bordo da Lancha Mikhael (21 pés)! 5 horas de passeio, 4 roteiros exclusivos, cooler com gelo, água à vontade, máscara e snorkel. Embarque no Cais de Turismo com David Henrique. WhatsApp: (24) 99979-0893." />
-  <meta name="robots" content="index, follow, max-image-preview:large" />
-  <link rel="canonical" href="https://lancha-mikhael-paraty.vercel.app/" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Lancha Mikhael | Passeio de Lancha em Paraty — Cais de Turismo</title>
+  <meta name="description" content="Passeio de lancha em Paraty a bordo da Lancha Mikhael (21 pés). 5 horas pelas praias e ilhas, 4 roteiros, saída do Cais de Turismo. Reserve pelo WhatsApp (24) 99979-0893.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Lancha Mikhael — David Henrique">
+  <meta name="geo.region" content="BR-RJ">
+  <meta name="geo.placename" content="Cais de Turismo, Paraty - RJ">
+  <link rel="canonical" href="https://lancha-mikhael-paraty.vercel.app/">
 
-  <!-- Open Graph / WhatsApp / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="pt_BR" />
-  <meta property="og:site_name" content="Lancha Mikhael Paraty" />
-  <meta property="og:title" content="Lancha Mikhael — Passeios Exclusivos de Lancha em Paraty, RJ" />
-  <meta property="og:description" content="Passeios privativos de 5h pelas ilhas e praias mais paradisíacas de Paraty. Cooler 26L c/ gelo, som bluetooth, ducha e snorkel inclusos. Reserve com David Henrique!" />
-  <meta property="og:image" content="https://lancha-mikhael-paraty.vercel.app/img/og-lancha-mikhael.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#15233F">
 
-  <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
-  <link rel="manifest" href="site.webmanifest" />
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Lancha Mikhael — Paraty">
+  <meta property="og:title" content="Lancha Mikhael | Passeio de Lancha em Paraty">
+  <meta property="og:description" content="5 horas pelas praias e ilhas de Paraty, saindo do Cais de Turismo. Monte seu passeio e chame no WhatsApp.">
+  <meta property="og:url" content="https://lancha-mikhael-paraty.vercel.app/">
+  <meta property="og:image" content="https://lancha-mikhael-paraty.vercel.app/img/og-lancha-mikhael.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Lancha Mikhael ancorada em água verde em Paraty">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lancha Mikhael | Passeio de Lancha em Paraty">
+  <meta name="twitter:description" content="5 horas pelas praias e ilhas de Paraty, saindo do Cais de Turismo.">
+  <meta name="twitter:image" content="https://lancha-mikhael-paraty.vercel.app/img/og-lancha-mikhael.jpg">
 
-  <!-- Preload Hero Image 4K -->
-  <link rel="preload" as="image" href="img/lancha-mikhael-aguas-verdes.webp" type="image/webp" fetchpriority="high" />
+  <link rel="preload" as="image" type="image/webp" href="img/mikhael-hero-m.webp" media="(max-width: 899px)" fetchpriority="high">
+  <link rel="preload" as="image" type="image/webp" href="img/mikhael-hero.webp" media="(min-width: 900px)" fetchpriority="high">
 
-  <!-- Google Fonts: Fraunces + Plus Jakarta Sans + JetBrains Mono -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <script>document.documentElement.classList.replace('no-js','js');</script>
-
-  <!-- Schema.org JSON-LD Completo -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": ["LocalBusiness", "TouristInformationCenter", "BoatTerminal"],
-        "@id": "https://lancha-mikhael-paraty.vercel.app/#business",
-        "name": "Lancha Mikhael — Passeios de Lancha em Paraty",
-        "alternateName": "Lancha Mikhael Paraty",
-        "description": "Passeios privativos e aluguel de lancha 21 pés em Paraty com saída do Cais de Turismo (Centro Histórico). 5 horas de passeio, 4 roteiros exclusivos e total segurança com o marinheiro David Henrique.",
-        "telephone": "+55-24-99979-0893",
+        "@type": ["LocalBusiness", "TravelAgency"],
+        "@id": "https://lancha-mikhael-paraty.vercel.app/#negocio",
+        "name": "Lancha Mikhael — Passeio de Lancha em Paraty",
+        "alternateName": ["Lancha Mikhael", "Lancha Mikhael Paraty", "Barco Paraty"],
+        "description": "Passeio de lancha em Paraty a bordo da Lancha Mikhael, de 21 pés. 5 horas pelas praias e ilhas, 4 roteiros e saída do Cais de Turismo.",
         "url": "https://lancha-mikhael-paraty.vercel.app/",
-        "image": "https://lancha-mikhael-paraty.vercel.app/img/lancha-mikhael-aguas-verdes.jpg",
-        "priceRange": "$$",
+        "logo": "https://lancha-mikhael-paraty.vercel.app/img/logo-lancha-mikhael.svg",
+        "image": [
+          "https://lancha-mikhael-paraty.vercel.app/img/og-lancha-mikhael.jpg",
+          "https://lancha-mikhael-paraty.vercel.app/img/mikhael-hero.jpg",
+          "https://lancha-mikhael-paraty.vercel.app/img/mikhael-cais-paraty.jpg"
+        ],
+        "telephone": "+55-24-99979-0893",
+        "founder": { "@type": "Person", "name": "David Henrique" },
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Cais de Turismo - Centro Histórico",
+          "streetAddress": "Cais de Turismo de Paraty, Centro Histórico",
           "addressLocality": "Paraty",
           "addressRegion": "RJ",
           "postalCode": "23970-000",
           "addressCountry": "BR"
         },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": -23.2221,
-          "longitude": -44.7115
-        },
-        "sameAs": [
-          "https://www.instagram.com/lanchamikhael/"
-        ],
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "5.0",
-          "reviewCount": "18",
-          "bestRating": "5"
-        },
-        "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-            "opens": "07:30",
-            "closes": "19:00"
-          }
+        "areaServed": { "@type": "City", "name": "Paraty" },
+        "paymentAccepted": "Pix",
+        "sameAs": ["https://www.instagram.com/lanchamikhael/"]
+      },
+      {
+        "@type": "TouristTrip",
+        "@id": "https://lancha-mikhael-paraty.vercel.app/#roteiros",
+        "name": "Passeio de lancha em Paraty — 4 roteiros",
+        "description": "Passeio de 5 horas saindo do Cais de Turismo de Paraty, com cerca de 40 minutos em cada parada e opção de parada em restaurante para almoço ou porções.",
+        "touristType": ["Famílias", "Casais", "Grupos de amigos"],
+        "provider": { "@id": "https://lancha-mikhael-paraty.vercel.app/#negocio" },
+        "subTrip": [
+          { "@type": "TouristTrip", "name": "Roteiro Norte", "itinerary": { "@type": "ItemList", "itemListElement": [
+            { "@type": "ListItem", "position": 1, "item": { "@type": "Place", "name": "Ilha Malvão" } },
+            { "@type": "ListItem", "position": 2, "item": { "@type": "Place", "name": "Ilha Comprida do Norte" } },
+            { "@type": "ListItem", "position": 3, "item": { "@type": "Place", "name": "Praia Salvador Moreira" } },
+            { "@type": "ListItem", "position": 4, "item": { "@type": "Place", "name": "Ilha Ventura" } } ] } },
+          { "@type": "TouristTrip", "name": "Roteiro Sul I", "itinerary": { "@type": "ItemList", "itemListElement": [
+            { "@type": "ListItem", "position": 1, "item": { "@type": "Place", "name": "Praia da Lula" } },
+            { "@type": "ListItem", "position": 2, "item": { "@type": "Place", "name": "Ilha da Pescaria" } },
+            { "@type": "ListItem", "position": 3, "item": { "@type": "Place", "name": "Praia Vermelha" } },
+            { "@type": "ListItem", "position": 4, "item": { "@type": "Place", "name": "Ilha do Mantimento" } } ] } },
+          { "@type": "TouristTrip", "name": "Roteiro Sul II", "itinerary": { "@type": "ItemList", "itemListElement": [
+            { "@type": "ListItem", "position": 1, "item": { "@type": "Place", "name": "Ilha dos Cocos" } },
+            { "@type": "ListItem", "position": 2, "item": { "@type": "Place", "name": "Enseada da Preguiça" } },
+            { "@type": "ListItem", "position": 3, "item": { "@type": "Place", "name": "Praia Saco da Velha" } },
+            { "@type": "ListItem", "position": 4, "item": { "@type": "Place", "name": "Ilha da Pescaria" } } ] } },
+          { "@type": "TouristTrip", "name": "Roteiro Sul III", "itinerary": { "@type": "ItemList", "itemListElement": [
+            { "@type": "ListItem", "position": 1, "item": { "@type": "Place", "name": "Ilha dos Cocos" } },
+            { "@type": "ListItem", "position": 2, "item": { "@type": "Place", "name": "Saco da Velha" } },
+            { "@type": "ListItem", "position": 3, "item": { "@type": "Place", "name": "Lagoa Azul" } },
+            { "@type": "ListItem", "position": 4, "item": { "@type": "Place", "name": "Praia Vermelha" } } ] } }
         ]
       },
       {
-        "@type": "TouristTrip",
-        "@id": "https://lancha-mikhael-paraty.vercel.app/#roteiro-norte",
-        "name": "Roteiro Norte — Lancha Mikhael",
-        "description": "Passeio privativo de 5h: Ilha Malvão, Ilha Comprida do Norte, Praia Salvador Moreira e Ilha Ventura.",
-        "touristType": "Famílias, casais e grupos de amigos",
-        "itinerary": {
-          "@type": "ItemList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Ilha Malvão" },
-            { "@type": "ListItem", "position": 2, "name": "Ilha Comprida do Norte" },
-            { "@type": "ListItem", "position": 3, "name": "Praia Salvador Moreira" },
-            { "@type": "ListItem", "position": 4, "name": "Ilha Ventura" }
-          ]
-        }
-      },
-      {
-        "@type": "TouristTrip",
-        "@id": "https://lancha-mikhael-paraty.vercel.app/#roteiro-sul-1",
-        "name": "Roteiro Sul I — Lancha Mikhael",
-        "description": "Passeio privativo de 5h: Praia da Lula, Ilha da Pescaria, Praia Vermelha e Ilha do Mantimento.",
-        "touristType": "Famílias, casais e grupos de amigos",
-        "itinerary": {
-          "@type": "ItemList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Praia da Lula" },
-            { "@type": "ListItem", "position": 2, "name": "Ilha da Pescaria" },
-            { "@type": "ListItem", "position": 3, "name": "Praia Vermelha" },
-            { "@type": "ListItem", "position": 4, "name": "Ilha do Mantimento" }
-          ]
-        }
-      },
-      {
-        "@type": "TouristTrip",
-        "@id": "https://lancha-mikhael-paraty.vercel.app/#roteiro-sul-2",
-        "name": "Roteiro Sul II — Lancha Mikhael",
-        "description": "Passeio privativo de 5h: Ilha dos Cocos, Enseada da Preguiça, Praia Saco da Velha e Ilha da Pescaria.",
-        "touristType": "Famílias, casais e grupos de amigos",
-        "itinerary": {
-          "@type": "ItemList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Ilha dos Cocos" },
-            { "@type": "ListItem", "position": 2, "name": "Enseada da Preguiça" },
-            { "@type": "ListItem", "position": 3, "name": "Praia Saco da Velha" },
-            { "@type": "ListItem", "position": 4, "name": "Ilha da Pescaria" }
-          ]
-        }
-      },
-      {
-        "@type": "TouristTrip",
-        "@id": "https://lancha-mikhael-paraty.vercel.app/#roteiro-sul-3",
-        "name": "Roteiro Sul III — Lancha Mikhael",
-        "description": "Passeio privativo de 5h: Ilha dos Cocos, Saco da Velha, Lagoa Azul e Praia Vermelha.",
-        "touristType": "Famílias, casais e grupos de amigos",
-        "itinerary": {
-          "@type": "ItemList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Ilha dos Cocos" },
-            { "@type": "ListItem", "position": 2, "name": "Saco da Velha" },
-            { "@type": "ListItem", "position": 3, "name": "Lagoa Azul" },
-            { "@type": "ListItem", "position": 4, "name": "Praia Vermelha" }
-          ]
-        }
-      },
-      {
         "@type": "FAQPage",
+        "@id": "https://lancha-mikhael-paraty.vercel.app/#duvidas",
         "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Quanto tempo dura o passeio na Lancha Mikhael?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "O passeio privativo tem duração de 5 horas completas, com tempo médio de 40 minutos em cada parada, e opção de parada em restaurante nas ilhas para almoço ou porções."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "De onde sai a embarcação em Paraty?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "O embarque e desembarque acontecem no Cais de Turismo de Paraty, localizado no Centro Histórico de Paraty - RJ."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "O que está incluso a bordo da Lancha Mikhael?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Incluso: cooler 26L abastecido com gelo, água mineral à vontade, ducha de água doce, som Bluetooth, flutuantes (macarrões), máscara e snorkel para mergulho livre e coletes salva-vidas homologados."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Como funciona a reserva e pagamento?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "A reserva da data é feita mediante pagamento de 50% de sinal via Pix, e o restante é quitado no momento do embarque no Cais de Turismo de Paraty."
-            }
-          }
+          { "@type": "Question", "name": "Quanto tempo dura o passeio de lancha em Paraty?", "acceptedAnswer": { "@type": "Answer", "text": "5 horas de passeio, com cerca de 40 minutos em cada parada." } },
+          { "@type": "Question", "name": "De onde sai a Lancha Mikhael?", "acceptedAnswer": { "@type": "Answer", "text": "Do Cais de Turismo de Paraty, no Centro Histórico." } },
+          { "@type": "Question", "name": "O que tem a bordo?", "acceptedAnswer": { "@type": "Answer", "text": "Cooler de 26 litros com gelo, água à vontade, ducha de água doce, som bluetooth, flutuantes (macarrão), máscara e snorkel e coletes salva-vidas." } },
+          { "@type": "Question", "name": "Dá para parar para almoçar?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. O passeio tem opção de parada em restaurante para almoço ou porções." } },
+          { "@type": "Question", "name": "Como funciona a reserva?", "acceptedAnswer": { "@type": "Answer", "text": "50% no Pix para garantir a data e o restante no embarque." } }
         ]
       }
     ]
   }
   </script>
 
+  <script>document.documentElement.classList.add('js');</script>
+
   <style>
-    /* CSS Náutico Cinematográfico — Padrão Levanta Caixa / Pro Max */
+    /* Paleta própria "Cal de Paraty & Faixa do Casco":
+       cal das casas coloniais (fundo) + marinho do toldo da lancha + verde da faixa xadrez do casco
+       + um toque de ocre das portas do Centro Histórico (só em detalhes). */
     :root {
-      --navy: #0A2342;
-      --navy-deep: #051324;
-      --navy-light: #183C66;
-      --emerald: #0E7C7B;
-      --emerald-light: #16A09E;
-      --gold: #C88A36;
-      --gold-light: #E5B25D;
-      --gold-soft: rgba(200, 138, 54, 0.16);
-      --sand: #F7F5F0;
-      --sand-soft: #EDE8DE;
-      --surface: #FFFFFF;
-      --ink: #0A2342;
-      --ink-mid: #2C4869;
-      --ink-muted: #5A7799;
-      --line: rgba(10, 35, 66, 0.10);
-      --line-light: rgba(247, 245, 240, 0.15);
-      --whatsapp: #25D366;
-      --whatsapp-dark: #1EBE5D;
-
-      --ease: cubic-bezier(0.16, 1, 0.3, 1);
-
-      --font-display: 'Fraunces', Georgia, serif;
-      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      --font-mono: 'JetBrains Mono', monospace;
-
-      --radius-sm: 8px;
-      --radius-md: 14px;
-      --radius-lg: 22px;
-      --radius-pill: 9999px;
-
-      --shadow-sm: 0 4px 12px rgba(10, 35, 66, 0.06);
-      --shadow-md: 0 10px 28px rgba(10, 35, 66, 0.10);
-      --shadow-lg: 0 20px 45px rgba(10, 35, 66, 0.15);
-    }
-
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      background-color: var(--sand);
-      color: var(--ink);
-      font-family: var(--font-sans);
-      font-size: 16px;
-      line-height: 1.5;
-    }
-
-    body {
-      background-color: var(--sand);
-      color: var(--ink);
-      overflow-x: hidden;
-      width: 100%;
-      min-height: 100vh;
-    }
-
-    img, picture, svg {
-      display: block;
-      max-width: 100%;
-      height: auto;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    button {
-      font-family: inherit;
-      cursor: pointer;
-      border: none;
-      background: none;
-    }
-
-    /* 1. Abertura Cinematográfica (.intro) */
-    .intro {
-      position: fixed;
-      inset: 0;
-      z-index: 1000;
-      background: var(--navy-deep);
-      display: grid;
-      place-items: center;
-      pointer-events: none;
-      animation: introOut 0.65s var(--ease) 1s forwards;
-    }
-
-    .intro-in {
-      display: grid;
-      justify-items: center;
-      gap: 12px;
-      color: #FFFFFF;
-      animation: introIn 0.75s var(--ease) both;
-    }
-
-    .intro-logo {
-      width: 88px;
-      height: 88px;
-      border-radius: 50%;
-      background: #0A2342;
-      border: 2px solid var(--gold);
-      display: grid;
-      place-items: center;
-      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.55);
-    }
-
-    .intro b {
-      font-family: var(--font-display);
-      font-size: 1.65rem;
-      letter-spacing: 0.04em;
-    }
-
-    .intro b em {
-      font-style: italic;
-      color: var(--gold-light);
-    }
-
-    .intro-tag {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      color: var(--emerald-light);
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      margin-top: -6px;
-    }
-
-    .intro-wave {
-      width: 140px;
-      height: 18px;
-      margin-top: 4px;
-    }
-
-    .intro-wave path {
-      fill: none;
-      stroke: var(--gold);
-      stroke-width: 2.4;
-      stroke-linecap: round;
-      stroke-dasharray: 1;
-      stroke-dashoffset: 1;
-      animation: draw 1s var(--ease) 0.2s forwards;
-    }
-
-    @keyframes draw {
-      to { stroke-dashoffset: 0; }
-    }
-
-    @keyframes introIn {
-      from { opacity: 0; transform: scale(0.85) translateY(12px); }
-      to { opacity: 1; transform: none; }
-    }
-
-    @keyframes introOut {
-      to { opacity: 0; transform: translateY(-100%); visibility: hidden; }
-    }
-
-    /* Barra de Progresso no Topo */
-    .scroll-progress {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 3px;
-      width: 0%;
-      background: linear-gradient(90deg, var(--gold), var(--emerald-light));
-      z-index: 999;
-      transform-origin: left;
-    }
-
-    /* 3. Topo Flutuante Inteligente (.nav-wrap auto-hide) */
-    .nav-wrap {
-      position: fixed;
-      top: 10px;
-      left: 0;
-      right: 0;
-      z-index: 900;
-      padding: 0 12px;
-      transition: transform 0.45s var(--ease);
-      pointer-events: none;
-    }
-
-    .nav-wrap.hide {
-      transform: translateY(-130%);
-    }
-
-    @media (min-width: 768px) {
-      .nav-wrap {
-        top: 16px;
-        padding: 0 24px;
-      }
-    }
-
-    .nav-bar {
-      max-width: 1140px;
-      margin: 0 auto;
-      background: rgba(10, 35, 66, 0.92);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: var(--radius-pill);
-      padding: 0.55rem 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 0.75rem;
-      box-shadow: 0 10px 30px rgba(5, 19, 36, 0.35);
-      pointer-events: auto;
-    }
-
-    .nav-brand {
-      display: flex;
-      align-items: center;
-      gap: 0.65rem;
-      text-decoration: none;
-    }
-
-    .brand-icon {
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      background: #0A2342;
-      border: 1.5px solid var(--gold);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-    }
-
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .brand-title {
-      font-family: var(--font-display);
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: #FFFFFF;
-      letter-spacing: 0.02em;
-      line-height: 1.15;
-    }
-
-    .brand-tag {
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--gold-light);
-    }
-
-    .nav-links {
-      display: none;
-      align-items: center;
-      gap: 1.5rem;
-      list-style: none;
-    }
-
-    @media (min-width: 820px) {
-      .nav-links {
-        display: flex;
-      }
-    }
-
-    .nav-links a {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: #CBD5E1;
-      transition: color 0.2s;
-    }
-
-    .nav-links a:hover {
-      color: #FFFFFF;
-    }
-
-    .btn-nav-wa {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-      background: var(--whatsapp);
-      color: #FFFFFF;
-      font-weight: 700;
-      font-size: 0.82rem;
-      padding: 0.5rem 0.95rem;
-      border-radius: var(--radius-pill);
-      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
-      transition: transform 0.2s, background 0.2s;
-      white-space: nowrap;
-    }
-
-    .btn-nav-wa:hover {
-      background: var(--whatsapp-dark);
-      transform: translateY(-1px);
-    }
-
-    /* 2. Hero Section & Split Headline */
-    .hero {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      align-items: flex-end;
-      padding: 7rem 1.25rem 4rem;
-      background-color: var(--navy-deep);
-      color: #FFFFFF;
-      overflow: hidden;
-    }
-
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-    }
-
-    .hero-bg img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 35%;
-      filter: brightness(0.92) contrast(1.05);
-      transform: scale(1.14);
-      animation: heroIn 1.8s var(--ease) 0.6s forwards;
-    }
-
-    @keyframes heroIn {
-      from { transform: scale(1.14); opacity: 0.001; }
-      to { transform: scale(1.03); opacity: 1; }
-    }
-
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      z-index: 2;
-      background: linear-gradient(
-        180deg,
-        rgba(5, 19, 36, 0.45) 0%,
-        rgba(5, 19, 36, 0.30) 40%,
-        rgba(5, 19, 36, 0.88) 80%,
-        rgba(5, 19, 36, 0.98) 100%
-      );
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 3;
-      max-width: 960px;
-      margin: 0 auto;
-      width: 100%;
-    }
-
-    .hero-badge-wrap {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: rgba(10, 35, 66, 0.8);
-      backdrop-filter: blur(10px);
-      border: 1px solid var(--gold);
-      padding: 0.38rem 0.95rem;
-      border-radius: var(--radius-pill);
-      margin-bottom: 1.25rem;
-      opacity: 0;
-      animation: fadeUp 0.8s var(--ease) 0.8s forwards;
-    }
-
-    .pulse-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--emerald-light);
-      box-shadow: 0 0 10px var(--emerald-light);
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.4; transform: scale(0.85); }
-    }
-
-    .hero-badge-text {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #FFFFFF;
-    }
-
-    /* Split de Palavras (.split -> .w > .wi) */
-    .hero-title {
-      font-family: var(--font-display);
-      font-size: clamp(2.15rem, 6.8vw, 4rem);
-      line-height: 1.08;
-      font-weight: 700;
-      color: #FFFFFF;
-      margin-bottom: 1.15rem;
-      letter-spacing: -0.015em;
-    }
-
-    .hero-title em {
-      font-style: italic;
-      color: var(--gold-light);
-      font-weight: 600;
-    }
-
-    .w {
-      display: inline-block;
-      overflow: hidden;
-      vertical-align: top;
-      padding-bottom: 0.08em;
-    }
-
-    .wi {
-      display: inline-block;
-    }
-
-    .js .hero .wi {
-      animation: wordUp 0.9s var(--ease) both;
-      animation-delay: calc(0.9s + var(--i, 0) * 65ms);
-    }
-
-    @keyframes wordUp {
-      from { transform: translateY(105%); }
-      to { transform: none; }
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(18px); }
-      to { opacity: 1; transform: none; }
-    }
-
-    .hero-quote {
-      font-size: clamp(1rem, 2.6vw, 1.22rem);
-      line-height: 1.5;
-      color: #E2E8F0;
-      max-width: 740px;
-      margin-bottom: 1.85rem;
-      border-left: 3px solid var(--emerald-light);
-      padding: 0.5rem 1rem;
-      background: rgba(10, 35, 66, 0.45);
-      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-      opacity: 0;
-      animation: fadeUp 0.8s var(--ease) 1.2s forwards;
-    }
-
-    .hero-highlights {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0.75rem;
-      margin-bottom: 2.25rem;
-      opacity: 0;
-      animation: fadeUp 0.8s var(--ease) 1.35s forwards;
-    }
-
-    @media (min-width: 640px) {
-      .hero-highlights {
-        grid-template-columns: repeat(4, 1fr);
-      }
-    }
-
-    .highlight-card {
-      background: rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: var(--radius-md);
-      padding: 0.85rem 0.95rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.2rem;
-      transition: transform 0.3s ease, border-color 0.3s ease;
-    }
-
-    .highlight-card:hover {
-      transform: translateY(-2px);
-      border-color: var(--gold);
-    }
-
-    .highlight-card .val {
-      font-family: var(--font-display);
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--gold-light);
-      display: flex;
-      align-items: baseline;
-      gap: 0.15rem;
-    }
-
-    .highlight-card .lbl {
-      font-size: 0.75rem;
-      color: #CBD5E1;
-      line-height: 1.25;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-direction: column;
-      gap: 0.85rem;
-      opacity: 0;
-      animation: fadeUp 0.8s var(--ease) 1.5s forwards;
-    }
-
-    @media (min-width: 480px) {
-      .hero-actions {
-        flex-direction: row;
-        align-items: center;
-      }
-    }
-
-    .btn-primary-wa {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.65rem;
-      background: var(--whatsapp);
-      color: #FFFFFF;
-      font-weight: 700;
-      font-size: 1rem;
-      padding: 0.95rem 1.85rem;
-      border-radius: var(--radius-pill);
-      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.35);
-      transition: all 0.25s ease;
-      text-align: center;
-    }
-
-    .btn-primary-wa:hover {
-      background: var(--whatsapp-dark);
-      transform: translateY(-2px);
-      box-shadow: 0 14px 30px rgba(37, 211, 102, 0.45);
-    }
-
-    .btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      background: rgba(255, 255, 255, 0.12);
-      color: #FFFFFF;
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      font-weight: 600;
-      font-size: 0.95rem;
-      padding: 0.95rem 1.5rem;
-      border-radius: var(--radius-pill);
-      backdrop-filter: blur(8px);
-      transition: all 0.25s ease;
-      text-align: center;
-    }
-
-    .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.2);
-      border-color: rgba(255, 255, 255, 0.4);
-    }
-
-    /* 4. Onda Divisória SVG que se desenha no scroll (.wave.reveal-wave) */
-    .wave {
-      display: block;
-      width: 100%;
-      height: 38px;
-      margin-top: -1px;
-      overflow: visible;
-    }
-
-    .wave path {
-      fill: none;
-      stroke: var(--gold);
-      stroke-width: 2.2;
-      stroke-linecap: round;
-      stroke-dasharray: 1;
-      stroke-dashoffset: 1;
-      transition: stroke-dashoffset 1.8s var(--ease);
-    }
-
-    .wave.in path {
-      stroke-dashoffset: 0;
-    }
-
-    /* 5. Revelação no Scroll (.reveal & .clip) */
-    .js .reveal {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity 0.85s var(--ease), transform 0.85s var(--ease);
-    }
-
-    .js .reveal.in {
-      opacity: 1;
-      transform: none;
-    }
-
-    .js .clip {
-      clip-path: inset(8% 6% 8% 6% round 22px);
-      transition: clip-path 1.25s var(--ease);
-    }
-
-    .js .clip.in {
-      clip-path: inset(0 round 22px);
-    }
-
-    /* Seções Globais */
-    section {
-      padding: 5rem 1.25rem;
-    }
-
-    .container {
-      max-width: 1140px;
-      margin: 0 auto;
-    }
-
-    .section-header {
-      margin-bottom: 2.75rem;
-    }
-
-    .section-eyebrow {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: var(--emerald);
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      margin-bottom: 0.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .section-eyebrow::before {
-      content: '';
-      display: inline-block;
-      width: 16px;
-      height: 2px;
-      background: var(--gold);
-    }
-
-    .section-title {
-      font-family: var(--font-display);
-      font-size: clamp(1.85rem, 4.5vw, 2.75rem);
-      line-height: 1.15;
-      font-weight: 700;
-      color: var(--navy);
-    }
-
-    .section-title em {
-      font-style: italic;
-      color: var(--emerald);
-      font-weight: 600;
-    }
-
-    .section-desc {
-      font-size: 1rem;
-      color: var(--ink-mid);
-      margin-top: 0.75rem;
-      max-width: 680px;
-      line-height: 1.6;
-    }
-
-    /* Seção Sobre / David Henrique */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2.5rem;
-      align-items: center;
-    }
-
-    @media (min-width: 860px) {
-      .about-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 3.5rem;
-      }
-    }
-
-    .about-photos-stack {
-      position: relative;
-    }
-
-    .about-main-photo {
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      box-shadow: var(--shadow-lg);
-      border: 3px solid #FFFFFF;
-    }
-
-    .about-main-photo img {
-      width: 100%;
-      aspect-ratio: 4/3;
-      object-fit: cover;
-      transform: scale(1.04);
-      transition: transform 0.6s ease;
-    }
-
-    .about-badge-card {
-      position: absolute;
-      bottom: -15px;
-      right: 15px;
-      background: var(--navy);
-      color: #FFFFFF;
-      padding: 0.85rem 1.25rem;
-      border-radius: var(--radius-md);
-      box-shadow: var(--shadow-md);
-      border: 1px solid var(--gold);
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .about-badge-card .num {
-      font-family: var(--font-display);
-      font-size: 1.7rem;
-      font-weight: 700;
-      color: var(--gold-light);
-      line-height: 1;
-    }
-
-    .about-badge-card .txt {
-      font-size: 0.75rem;
-      line-height: 1.25;
-      color: #CBD5E1;
-    }
-
-    .about-info-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-      margin: 1.75rem 0;
-    }
-
-    .about-info-item {
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
-    }
-
-    .info-icon {
-      width: 42px;
-      height: 42px;
-      border-radius: var(--radius-sm);
-      background: var(--gold-soft);
-      color: var(--gold);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .info-title {
-      font-weight: 700;
-      font-size: 0.95rem;
-      color: var(--navy);
-      margin-bottom: 0.15rem;
-    }
-
-    .info-desc {
-      font-size: 0.88rem;
-      color: var(--ink-muted);
-      line-height: 1.45;
-    }
-
-    .instagram-card {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      background: #FFFFFF;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-md);
-      padding: 0.85rem 1.25rem;
-      margin-top: 1.5rem;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .ig-brand {
-      display: flex;
-      align-items: center;
-      gap: 0.65rem;
-    }
-
-    .ig-btn {
-      font-size: 0.8rem;
-      font-weight: 700;
-      color: #E1306C;
-      border: 1px solid rgba(225, 48, 108, 0.3);
-      padding: 0.4rem 0.85rem;
-      border-radius: var(--radius-pill);
-      transition: all 0.2s;
-    }
-
-    .ig-btn:hover {
-      background: #E1306C;
-      color: #FFFFFF;
-    }
-
-    /* 6. Os 4 Roteiros Exclusivos com Linha e Paradas que se Desenham no Scroll (.stops) */
-    .roteiros-section {
-      background: #FFFFFF;
-      position: relative;
-    }
-
-    .roteiros-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.75rem;
-    }
-
-    @media (min-width: 768px) {
-      .roteiros-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    .roteiro-card {
-      background: var(--sand);
-      border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
-      padding: 1.85rem 1.6rem;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .roteiro-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-md);
-      border-color: var(--emerald);
-    }
-
-    .roteiro-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 1rem;
-    }
-
-    .roteiro-badge {
-      font-family: var(--font-mono);
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      background: var(--navy);
-      color: var(--gold-light);
-      padding: 0.3rem 0.65rem;
-      border-radius: var(--radius-pill);
-    }
-
-    .roteiro-duration {
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: var(--emerald);
-      background: rgba(14, 124, 123, 0.1);
-      padding: 0.3rem 0.65rem;
-      border-radius: var(--radius-pill);
-    }
-
-    .roteiro-title {
-      font-family: var(--font-display);
-      font-size: 1.45rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 0.4rem;
-    }
-
-    .roteiro-tagline {
-      font-size: 0.85rem;
-      color: var(--ink-muted);
-      margin-bottom: 1.35rem;
-    }
-
-    /* Linha de Rota que se Desenha no Scroll (.stops) */
-    .stops {
-      position: relative;
-      display: grid;
-      padding-left: 28px;
-      list-style: none;
-      margin-bottom: 1.6rem;
-      flex-grow: 1;
-    }
-
-    .stops::before {
-      content: '';
-      position: absolute;
-      left: 7px;
-      top: 10px;
-      bottom: 10px;
-      width: 2px;
-      border-radius: 2px;
-      background: linear-gradient(180deg, var(--gold), var(--emerald));
-      transform: scaleY(0);
-      transform-origin: top;
-      transition: transform 1.2s var(--ease);
-    }
-
-    .stops.in::before {
-      transform: none;
-    }
-
-    .stops li {
-      position: relative;
-      padding-bottom: 0.85rem;
-      font-size: 0.92rem;
-      font-weight: 600;
-      color: var(--ink);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .stops li:last-child {
-      padding-bottom: 0;
-    }
-
-    .stops li::before {
-      content: '';
-      position: absolute;
-      left: -28px;
-      top: 5px;
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      background: #FFFFFF;
-      border: 3px solid var(--emerald);
-      box-shadow: 0 0 0 2px rgba(14, 124, 123, 0.2);
-      transform: scale(0.6);
-      opacity: 0.4;
-      transition: transform 0.4s var(--ease), border-color 0.4s, opacity 0.4s;
-    }
-
-    .stops.in li::before {
-      transform: scale(1);
-      opacity: 1;
-      border-color: var(--gold);
-    }
-
-    .stops li:nth-child(1)::before { transition-delay: 0.1s; }
-    .stops li:nth-child(2)::before { transition-delay: 0.3s; }
-    .stops li:nth-child(3)::before { transition-delay: 0.5s; }
-    .stops li:nth-child(4)::before { transition-delay: 0.7s; }
-
-    .parada-badge {
-      font-family: var(--font-mono);
-      font-size: 0.68rem;
-      font-weight: 500;
-      color: var(--ink-muted);
-    }
-
-    .roteiro-footer {
-      border-top: 1px dashed var(--line);
-      padding-top: 1.15rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
-    .roteiro-features {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      font-size: 0.75rem;
-      color: var(--ink-mid);
-    }
-
-    .roteiro-pill {
-      background: #FFFFFF;
-      border: 1px solid var(--line);
-      padding: 0.25rem 0.55rem;
-      border-radius: var(--radius-sm);
-    }
-
-    .btn-roteiro-select {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.4rem;
-      background: var(--navy);
-      color: #FFFFFF;
-      font-size: 0.88rem;
-      font-weight: 700;
-      padding: 0.75rem 1rem;
-      border-radius: var(--radius-md);
-      transition: background 0.2s, transform 0.2s;
-    }
-
-    .btn-roteiro-select:hover {
-      background: var(--emerald);
-      transform: translateY(-1px);
-    }
-
-    /* Seção Embarcação & Bento Grid */
-    .boat-specs-section {
-      background: var(--sand);
-    }
-
-    .boat-bento {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.35rem;
-      margin-bottom: 3.5rem;
-    }
-
-    @media (min-width: 768px) {
-      .boat-bento {
-        grid-template-columns: repeat(12, 1fr);
-      }
-
-      .bento-col-8 {
-        grid-column: span 8;
-      }
-
-      .bento-col-4 {
-        grid-column: span 4;
-      }
-
-      .bento-col-6 {
-        grid-column: span 6;
-      }
-    }
-
-    .bento-card {
-      background: #FFFFFF;
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--line);
-      overflow: hidden;
-      box-shadow: var(--shadow-sm);
-      display: flex;
-      flex-direction: column;
-    }
-
-    .bento-photo-wrap {
-      position: relative;
-      height: 290px;
-      overflow: hidden;
-    }
-
-    .bento-photo-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transform: scale(1.06);
-      transition: transform 0.6s var(--ease);
-    }
-
-    .bento-photo-wrap:hover img {
-      transform: scale(1.1);
-    }
-
-    .bento-photo-tag {
-      position: absolute;
-      top: 15px;
-      left: 15px;
-      background: rgba(10, 35, 66, 0.85);
-      color: #FFFFFF;
-      font-size: 0.75rem;
-      font-weight: 700;
-      padding: 0.35rem 0.75rem;
-      border-radius: var(--radius-pill);
-      backdrop-filter: blur(6px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .bento-body {
-      padding: 1.5rem;
-    }
-
-    .bento-title {
-      font-family: var(--font-display);
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 0.5rem;
-    }
-
-    .bento-desc {
-      font-size: 0.92rem;
-      color: var(--ink-mid);
-      line-height: 1.5;
-    }
-
-    /* Caixa dos 7 Itens Inclusos */
-    .inclusos-box {
-      background: var(--navy);
-      color: #FFFFFF;
-      border-radius: var(--radius-lg);
-      padding: 2.75rem 1.75rem;
-      box-shadow: var(--shadow-lg);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .inclusos-box::after {
-      content: '';
-      position: absolute;
-      top: -100px;
-      right: -100px;
-      width: 320px;
-      height: 320px;
-      background: radial-gradient(circle, rgba(14, 124, 123, 0.32) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .inclusos-header {
-      margin-bottom: 2rem;
-      position: relative;
-      z-index: 2;
-    }
-
-    .inclusos-header h3 {
-      font-family: var(--font-display);
-      font-size: clamp(1.5rem, 3.5vw, 2.1rem);
-      color: #FFFFFF;
-      margin-bottom: 0.35rem;
-    }
-
-    .inclusos-header h3 span {
-      color: var(--gold-light);
-    }
-
-    .inclusos-header p {
-      color: #CBD5E1;
-      font-size: 0.95rem;
-    }
-
-    .inclusos-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.25rem;
-      position: relative;
-      z-index: 2;
-    }
-
+      --bg: #F5F2EB;
+      --bg-2: #EAE4D7;
+      --card: #FFFFFF;
+      --ink: #15233F;
+      --ink-2: #22355C;
+      --soft: #59617A;
+      --line: rgba(21, 35, 63, 0.12);
+      --verde: #12765C;
+      --verde-l: #43C99C;
+      --ocre: #E0A526;
+      --wa: #1FA855;
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+      --serif: 'DM Serif Display', Georgia, 'Times New Roman', serif;
+      --sans: 'Onest', -apple-system, 'Segoe UI', Roboto, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { background: var(--bg); color: var(--ink); font-family: var(--sans); -webkit-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: transparent; overflow-x: hidden; scroll-behavior: smooth; }
+    body { background: var(--bg); font-size: 16px; line-height: 1.55; overflow-x: hidden; }
+    img { display: block; max-width: 100%; }
+    picture { display: block; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; touch-action: manipulation; }
+    ul, ol { list-style: none; }
+    h1, h2, h3 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.01em; line-height: 1.02; }
+    em.it { font-style: italic; color: var(--verde); }
+    .wrap { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 16px; }
+    section[id] { scroll-margin-top: 76px; }
+    :focus-visible { outline: 2px solid var(--verde); outline-offset: 3px; }
+
+    /* ---------- abertura (CSS puro, sem CDN) ---------- */
+    .intro { position: fixed; inset: 0; z-index: 100; background: var(--ink); display: grid; place-items: center; pointer-events: none; animation: introOut 0.6s var(--ease) 1s forwards; }
+    .intro-in { display: grid; justify-items: center; gap: 14px; animation: introIn 0.6s var(--ease) both; }
+    .intro svg { width: 92px; height: 92px; }
+    .intro .sw { stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 0.9s var(--ease) 0.15s forwards; }
+    .intro b { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 2.1rem; color: #fff; letter-spacing: 0.01em; line-height: 1; }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+    @keyframes introIn { from { opacity: 0; transform: translateY(10px) scale(0.94); } to { opacity: 1; transform: none; } }
+    @keyframes introOut { to { opacity: 0; transform: translateY(-3%); visibility: hidden; } }
+
+    .progress { position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 90; background: linear-gradient(90deg, var(--verde), var(--verde-l)); transform-origin: left; transform: scaleX(0); pointer-events: none; }
+
+    /* ---------- topo enxuto com auto-hide ---------- */
+    .nav-wrap { position: fixed; top: 10px; left: 0; right: 0; z-index: 80; padding: 0 12px; transition: transform 0.45s var(--ease); pointer-events: none; }
+    .nav-wrap.hide { transform: translateY(-150%); }
+    .nav { pointer-events: auto; max-width: 1180px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 5px 5px 5px 8px; border-radius: 999px; background: rgba(255, 255, 255, 0.96); border: 1px solid var(--line); box-shadow: 0 12px 30px -20px rgba(21, 35, 63, 0.55); }
+    .brand { display: flex; align-items: center; gap: 9px; min-height: 44px; min-width: 0; }
+    .brand svg { width: 38px; height: 38px; flex: none; }
+    .brand span { display: grid; line-height: 1; }
+    .brand b { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 1.32rem; }
+    .brand small { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--verde); margin-top: 3px; }
+    .nav-links { display: none; gap: 30px; font-size: 0.93rem; font-weight: 600; color: var(--soft); }
+    .nav-links a { display: inline-flex; align-items: center; min-height: 44px; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-cta { flex: none; display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 999px; background: var(--ink); color: #fff; font-weight: 700; font-size: 0.9rem; }
+
+    /* ---------- botões ---------- */
+    .btn { display: inline-flex; align-items: center; justify-content: space-between; gap: 14px; min-height: 54px; padding: 6px 6px 6px 24px; border-radius: 999px; background: var(--ink); color: #fff; font-weight: 700; font-size: 1rem; transition: transform 0.35s var(--ease), background 0.2s; }
+    .btn i { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; background: var(--verde-l); color: var(--ink); transition: transform 0.35s var(--ease); }
+    .btn i svg { width: 18px; height: 18px; }
+    .btn:active { transform: scale(0.97); }
+    @media (hover: hover) { .btn:hover { background: var(--ink-2); } .btn:hover i { transform: translateX(3px); } }
+    .btn.light { background: var(--verde-l); color: var(--ink); }
+    .btn.light i { background: var(--ink); color: var(--verde-l); }
+    .link { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 4px; font-weight: 700; color: var(--ink); border-bottom: 2px solid var(--verde); }
+
+    /* ---------- hero: foto real protagonista, texto embaixo no celular ---------- */
+    .hero { padding-top: 70px; }
+    .hero-grid { display: grid; gap: 24px; }
+    .hero-photo { position: relative; overflow: hidden; border-radius: 28px; aspect-ratio: 4 / 3.6; background: var(--bg-2); }
+    .hero-photo picture { height: 100%; }
+    .hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 58% 60%; transform-origin: 60% 60%; animation: heroIn 1.7s var(--ease) 0.7s both; }
+    @keyframes heroIn { from { transform: scale(1.12); opacity: 0.001; } to { transform: scale(1); opacity: 1; } }
+    .hero-photo .badge { position: absolute; left: 12px; bottom: 12px; display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 14px; border-radius: 999px; background: rgba(255, 255, 255, 0.95); font-size: 0.82rem; font-weight: 700; color: var(--ink); }
+    .hero-photo .badge::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--verde); box-shadow: 0 0 0 0 rgba(18, 118, 92, 0.5); animation: pulse 2.4s ease-out infinite 2s; }
+    @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(18, 118, 92, 0.55); } 80%, 100% { box-shadow: 0 0 0 9px rgba(18, 118, 92, 0); } }
+    .hero-copy { display: grid; gap: 16px; align-content: center; padding-bottom: 8px; }
+    .kicker { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--verde); }
+    .hero h1 { font-size: clamp(2.9rem, 13vw, 5.6rem); line-height: 0.98; }
+    .hero-lead { font-size: 1.06rem; color: var(--soft); max-width: 34ch; }
+    .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 22px; margin-top: 4px; }
+    .w { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.1em; margin-bottom: -0.1em; }
+    .wi { display: inline-block; }
+    .js .hero .wi { animation: wordUp 0.9s var(--ease) both; animation-delay: calc(1s + var(--i, 0) * 75ms); }
+    @keyframes wordUp { from { transform: translateY(108%); } to { transform: none; } }
+    .js .h-in { animation: fadeUp 0.8s var(--ease) both; animation-delay: calc(1.2s + var(--i, 0) * 90ms); }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+
+    /* ---------- faixa de números com onda em movimento ---------- */
+    .numbers { position: relative; margin-top: 56px; background: var(--ink); color: #fff; overflow: hidden; }
+    .wave { position: absolute; left: 0; top: -1px; width: 200%; height: 22px; color: var(--bg); animation: drift 14s linear infinite; }
+    @keyframes drift { to { transform: translateX(-50%); } }
+    .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 30px 16px; padding-top: 64px; padding-bottom: 56px; }
+    .stat b { display: block; font-family: var(--serif); font-weight: 400; font-size: clamp(3rem, 14vw, 4.6rem); line-height: 1; }
+    .stat b small { font-family: var(--sans); font-size: 0.32em; font-weight: 700; color: var(--verde-l); margin-left: 4px; letter-spacing: 0.04em; }
+    .stat > span { display: block; margin-top: 6px; font-size: 0.9rem; color: rgba(255, 255, 255, 0.7); }
+
+    /* ---------- seções ---------- */
+    .section { padding: 84px 0; }
+    .section.alt { background: var(--bg-2); }
+    .section.deep { background: var(--ink); color: #fff; }
+    .sec-head { display: grid; gap: 12px; margin-bottom: 32px; max-width: 640px; }
+    .sec-title { font-size: clamp(2.3rem, 10vw, 3.8rem); }
+    .sec-sub { color: var(--soft); max-width: 40ch; }
+    .deep .kicker { color: var(--verde-l); }
+    .deep .sec-sub { color: rgba(255, 255, 255, 0.74); }
+    .deep em.it { color: var(--verde-l); }
+
+    .js .rv { opacity: 0; transform: translateY(24px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); transition-delay: var(--d, 0ms); }
+    .js .rv.in { opacity: 1; transform: none; }
+    .ph { position: relative; overflow: hidden; border-radius: 24px; background: var(--bg-2); }
+    .ph picture, .ph img { width: 100%; height: 100%; object-fit: cover; }
+    .ph [data-par] { height: 114%; margin-top: -7%; will-change: transform; }
+    .js .ph.cl { clip-path: inset(10% 8% 10% 8% round 24px); transition: clip-path 1.2s var(--ease); }
+    .js .ph.cl.in { clip-path: inset(0 round 24px); }
+
+    /* ---------- a lancha + o que tem a bordo ---------- */
+    .boat { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
+    .boat .ph { aspect-ratio: 3 / 4; }
+    .boat .ph.big { grid-column: 1 / -1; aspect-ratio: 16 / 10; }
+    .boat .ph .tag { position: absolute; left: 10px; bottom: 10px; padding: 7px 12px; border-radius: 999px; background: rgba(255, 255, 255, 0.95); font-size: 0.78rem; font-weight: 700; }
+    .onboard { margin-top: 44px; }
+    .onboard h3 { font-size: 1.9rem; margin-bottom: 18px; }
+    .feats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .feat { display: grid; gap: 10px; align-content: start; padding: 18px 16px; border-radius: 20px; background: var(--card); border: 1px solid var(--line); transition: transform 0.35s var(--ease), border-color 0.25s; }
+    .feat svg { width: 26px; height: 26px; color: var(--verde); }
+    .feat b { font-weight: 600; font-size: 0.98rem; line-height: 1.25; }
+    @media (hover: hover) { .feat:hover { transform: translateY(-3px); border-color: var(--verde); } }
+    .feat.all { background: var(--ink); color: #fff; border-color: var(--ink); align-content: center; }
+    .feat.all b { font-family: var(--serif); font-weight: 400; font-size: 1.35rem; }
+    .feat.all span { font-size: 0.85rem; color: rgba(255, 255, 255, 0.7); }
+
+    /* ---------- roteiros em abas, rota que se desenha + barquinho ---------- */
+    .tabs { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; margin: 0 -16px 22px; padding: 2px 16px; scroll-snap-type: x proximity; }
+    .tabs::-webkit-scrollbar { display: none; }
+    .tab { flex: none; scroll-snap-align: start; min-height: 48px; padding: 0 18px; border-radius: 999px; border: 1.5px solid var(--line); background: var(--card); font-weight: 700; font-size: 0.93rem; transition: background 0.25s, color 0.25s, border-color 0.25s; }
+    .tab[aria-selected="true"] { background: var(--ink); border-color: var(--ink); color: #fff; }
+    .panel { display: grid; gap: 22px; }
+    .panel[hidden] { display: none; }
+    .panel .ph { aspect-ratio: 4 / 3; border-radius: 26px; }
+    .panel .ph img { animation: panelIn 0.9s var(--ease) both; }
+    @keyframes panelIn { from { transform: scale(1.08); opacity: 0.3; } to { transform: none; opacity: 1; } }
+    .rt-head { display: grid; gap: 6px; margin-bottom: 18px; }
+    .rt-head h3 { font-size: 2.3rem; }
+    .rt-head p { color: var(--soft); }
+    .route { position: relative; padding-left: 46px; }
+    .route ol { display: grid; gap: 14px; }
+    .route .line { position: absolute; left: 13px; top: var(--y0, 29px); height: var(--travel, 210px); width: 2px; background: var(--line); border-radius: 2px; }
+    .route .line::after { content: ''; position: absolute; inset: 0; background: var(--verde); transform-origin: top; transform: scaleY(0); }
+    .route .boatie { position: absolute; left: 2px; top: calc(var(--y0, 29px) - 12px); width: 24px; height: 24px; border-radius: 50%; background: var(--verde); color: #fff; display: grid; place-items: center; box-shadow: 0 0 0 4px var(--bg-2); z-index: 2; }
+    .route .boatie svg { width: 14px; height: 14px; }
+    .route li { position: relative; display: flex; align-items: center; gap: 14px; min-height: 58px; padding: 10px 16px; border-radius: 18px; background: var(--card); border: 1px solid var(--line); opacity: 0.45; transform: translateX(8px); transition: opacity 0.5s var(--ease), transform 0.5s var(--ease), border-color 0.3s; }
+    .route li::before { content: ''; position: absolute; left: -38px; top: 50%; width: 12px; height: 12px; margin-top: -6px; border-radius: 50%; background: var(--bg-2); border: 2.5px solid var(--verde); }
+    .route li small { font-family: var(--serif); font-size: 1.15rem; color: var(--verde); min-width: 24px; }
+    .route li b { font-weight: 600; }
+    .route.play .line::after { animation: grow 1.6s var(--ease) forwards; }
+    .route.play .boatie { animation: sail 1.6s var(--ease) forwards; }
+    .route.play li { opacity: 1; transform: none; transition-delay: calc(var(--k) * 330ms + 150ms); }
+    .route.play li::before { background: var(--ocre); border-color: var(--ocre); transition: background 0.3s calc(var(--k) * 330ms + 250ms); }
+    @keyframes grow { to { transform: scaleY(1); } }
+    @keyframes sail { to { transform: translateY(var(--travel, 210px)); } }
+    .rt-notes { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+    .rt-notes span { display: inline-flex; align-items: center; gap: 7px; padding: 9px 14px; border-radius: 999px; background: rgba(255, 255, 255, 0.6); border: 1px solid var(--line); font-size: 0.86rem; font-weight: 600; }
+    .rt-notes span::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--ocre); }
+    .rt-cta { margin-top: 22px; }
+
+    /* ---------- simulador ---------- */
+    .planner { display: grid; gap: 26px; }
+    .group { display: grid; gap: 10px; }
+    .label { font-size: 0.76rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255, 255, 255, 0.66); }
+    .chips { display: flex; flex-wrap: wrap; align-items: flex-start; align-content: flex-start; gap: 8px; }
+    .chip { min-height: 48px; padding: 0 16px; border-radius: 999px; border: 1.5px solid rgba(255, 255, 255, 0.22); color: #fff; font-weight: 600; font-size: 0.93rem; transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.2s var(--ease); }
+    .chip:active { transform: scale(0.96); }
+    .chip.active { background: var(--verde-l); border-color: var(--verde-l); color: var(--ink); font-weight: 700; }
+    .stops-live { font-size: 0.88rem; color: rgba(255, 255, 255, 0.7); min-height: 1.4em; }
+    .counters { display: grid; gap: 10px; }
+    .counter { display: flex; align-items: center; justify-content: space-between; min-height: 64px; padding: 8px 10px 8px 18px; border-radius: 18px; border: 1.5px solid rgba(255, 255, 255, 0.16); }
+    .counter span { font-weight: 700; }
+    .c-ctl { display: flex; align-items: center; gap: 6px; }
+    .c-btn { width: 48px; height: 48px; border-radius: 50%; background: rgba(255, 255, 255, 0.1); color: #fff; font-size: 1.4rem; line-height: 1; display: grid; place-items: center; transition: background 0.2s; }
+    .c-btn:active { background: var(--verde-l); color: var(--ink); }
+    .c-btn:disabled { opacity: 0.3; }
+    .c-val { min-width: 30px; text-align: center; font-family: var(--serif); font-weight: 400; font-size: 1.6rem; }
+    .c-val.bump { animation: bump 0.3s var(--ease); }
+    @keyframes bump { 50% { transform: scale(1.3); } }
+    .date { width: 100%; min-height: 54px; padding: 0 16px; border-radius: 18px; border: 1.5px solid rgba(255, 255, 255, 0.16); background: transparent; color: #fff; font: inherit; font-weight: 600; color-scheme: dark; }
+    .note { padding: 14px 16px; border-radius: 16px; background: rgba(224, 165, 38, 0.12); border-left: 3px solid var(--ocre); font-size: 0.9rem; color: rgba(255, 255, 255, 0.86); }
+    .preview { padding: 16px 18px; border-radius: 18px; background: rgba(255, 255, 255, 0.06); border: 1px dashed rgba(255, 255, 255, 0.24); font-size: 0.93rem; color: rgba(255, 255, 255, 0.88); white-space: pre-line; overflow-wrap: anywhere; }
+    .planner .btn { width: 100%; }
+
+    /* ---------- embarque + dúvidas ---------- */
+    .where { display: grid; gap: 14px; }
+    .where-card { display: grid; gap: 16px; align-content: start; padding: 26px 20px; border-radius: 26px; background: var(--card); border: 1px solid var(--line); }
+    .where-card h2 { font-size: 2.2rem; }
+    .where-card .ph { aspect-ratio: 16 / 10; border-radius: 18px; }
+    .facts { display: grid; gap: 12px; }
+    .facts li { display: grid; gap: 2px; padding-left: 14px; border-left: 2px solid var(--verde); }
+    .facts small { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: var(--soft); }
+    .facts b { font-weight: 600; }
+    .where-card .btn { justify-self: start; }
+    .map { min-height: 320px; border-radius: 26px; overflow: hidden; border: 1px solid var(--line); background: var(--bg-2); }
+    .map iframe { width: 100%; height: 100%; min-height: 320px; border: 0; display: block; }
+    .faq { margin-top: 44px; display: grid; gap: 10px; }
+    .faq details { border-radius: 20px; background: var(--card); border: 1px solid var(--line); }
+    .faq summary { list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 60px; padding: 14px 18px; font-weight: 700; cursor: pointer; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: '+'; flex: none; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; background: var(--bg-2); font-size: 1.2rem; transition: transform 0.3s var(--ease), background 0.3s; }
+    .faq details[open] summary::after { transform: rotate(45deg); background: var(--verde-l); }
+    .faq details p { padding: 0 18px 18px; color: var(--soft); }
+
+    /* ---------- final: foto limpa + texto abaixo ---------- */
+    .final { padding: 84px 0 0; background: var(--bg-2); }
+    .final .ph { aspect-ratio: 4 / 3.2; border-radius: 28px; }
+    .final-copy { display: grid; justify-items: start; gap: 18px; padding: 30px 0 84px; }
+    .final h2 { font-size: clamp(2.5rem, 11vw, 4.8rem); max-width: 13ch; }
+
+    .footer { background: var(--ink); color: rgba(255, 255, 255, 0.72); padding: 52px 0 104px; font-size: 0.9rem; }
+    .foot { display: grid; gap: 26px; }
+    .foot-brand { display: flex; align-items: center; gap: 14px; color: #fff; }
+    .foot-brand svg { width: 64px; height: 64px; }
+    .foot-brand b { display: block; font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 2rem; line-height: 1; }
+    .foot-brand small { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--verde-l); }
+    .foot h4 { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--verde-l); margin-bottom: 8px; }
+    .foot a { display: inline-flex; align-items: center; min-height: 44px; }
+    .credit { margin-top: 30px; font-size: 0.78rem; color: rgba(255, 255, 255, 0.48); }
+
+    /* ---------- bolinha redonda do WhatsApp ---------- */
+    .fab { position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 70; width: 58px; height: 58px; border-radius: 50%; background: var(--wa); display: grid; place-items: center; box-shadow: 0 10px 24px -6px rgba(21, 35, 63, 0.55); transition: transform 0.35s var(--ease), opacity 0.3s; }
+    .fab svg { width: 30px; height: 30px; fill: #fff; }
+    .fab.away { opacity: 0; transform: scale(0.8); pointer-events: none; }
+
+    /* ---------- tablet ---------- */
     @media (min-width: 600px) {
-      .inclusos-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+      .wrap { padding: 0 28px; }
+      .tabs { margin: 0 0 26px; padding: 2px 0; }
+      .hero-photo { aspect-ratio: 16 / 11; }
+      .stats { grid-template-columns: repeat(4, 1fr); }
+      .feats { grid-template-columns: repeat(4, 1fr); }
+      .boat { grid-template-columns: 1.6fr 1fr 1fr; }
+      .boat .ph, .boat .ph.big { grid-column: auto; aspect-ratio: auto; height: min(56vw, 540px); }
+      .counters { grid-template-columns: 1fr 1fr; }
+      .final .ph { aspect-ratio: 16 / 8; }
     }
-
-    @media (min-width: 990px) {
-      .inclusos-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
+    /* ---------- desktop ---------- */
+    @media (min-width: 900px) {
+      .nav-wrap { top: 16px; }
+      .nav-links { display: flex; }
+      .hero { padding-top: 0; }
+      .hero-grid { grid-template-columns: 0.8fr 1.2fr; gap: 56px; min-height: 100svh; align-items: center; padding-top: 70px; }
+      .hero-copy { order: -1; padding: 40px 0; }
+      .hero-photo { aspect-ratio: 4 / 3.3; max-height: calc(100svh - 120px); width: 100%; border-radius: 32px; }
+      .hero-photo img { object-position: 52% 62%; }
+      .numbers { margin-top: 0; }
+      .section { padding: 120px 0; }
+      .sec-head { margin-bottom: 48px; }
+      .panel { grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: center; }
+      .panel .ph { aspect-ratio: 4 / 4; }
+      .planner { grid-template-columns: 1fr 1fr; gap: 30px 48px; }
+      .planner .full { grid-column: 1 / -1; }
+      .where { grid-template-columns: 1fr 1.25fr; }
+      .where-card { padding: 36px; }
+      .faq { grid-template-columns: 1fr 1fr; align-items: start; }
+      .final-copy { grid-template-columns: 1fr auto; align-items: end; justify-items: stretch; }
+      .foot { grid-template-columns: auto 1fr 1fr; gap: 64px; align-items: start; }
+      .footer { padding-bottom: 52px; }
     }
-
-    .incluso-item {
-      display: flex;
-      gap: 0.85rem;
-      align-items: flex-start;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 1.05rem;
-      border-radius: var(--radius-md);
-      transition: background 0.25s, transform 0.25s;
-    }
-
-    .incluso-item:hover {
-      background: rgba(255, 255, 255, 0.09);
-      transform: translateY(-2px);
-    }
-
-    .incluso-num {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: var(--gold);
-      color: var(--navy);
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .incluso-text h4 {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: #FFFFFF;
-      margin-bottom: 0.2rem;
-    }
-
-    .incluso-text p {
-      font-size: 0.8rem;
-      color: #CBD5E1;
-      line-height: 1.35;
-    }
-
-    /* Simulador de Reserva no WhatsApp */
-    .simulador-section {
-      background: #FFFFFF;
-    }
-
-    .simulador-card {
-      background: var(--sand);
-      border: 2px solid var(--gold);
-      border-radius: var(--radius-lg);
-      padding: 2.25rem 1.75rem;
-      box-shadow: var(--shadow-lg);
-      max-width: 760px;
-      margin: 0 auto;
-    }
-
-    .form-group {
-      margin-bottom: 1.5rem;
-    }
-
-    .form-label {
-      display: block;
-      font-weight: 700;
-      font-size: 0.9rem;
-      color: var(--navy);
-      margin-bottom: 0.5rem;
-    }
-
-    .form-select, .form-input {
-      width: 100%;
-      padding: 0.85rem 1rem;
-      font-family: inherit;
-      font-size: 0.95rem;
-      color: var(--navy);
-      background: #FFFFFF;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-md);
-      outline: none;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-
-    .form-select:focus, .form-input:focus {
-      border-color: var(--emerald);
-      box-shadow: 0 0 0 3px rgba(14, 124, 123, 0.15);
-    }
-
-    .radio-pill-group {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.65rem;
-    }
-
-    .radio-label {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: #FFFFFF;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-md);
-      padding: 0.75rem 1rem;
-      cursor: pointer;
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: var(--ink);
-      transition: all 0.2s;
-    }
-
-    .radio-label input {
-      accent-color: var(--emerald);
-    }
-
-    .radio-label:has(input:checked) {
-      border-color: var(--emerald);
-      background: rgba(14, 124, 123, 0.08);
-      color: var(--navy);
-    }
-
-    .reserva-regra-box {
-      background: rgba(200, 138, 54, 0.12);
-      border-left: 4px solid var(--gold);
-      padding: 1rem 1.25rem;
-      border-radius: 0 var(--radius-md) var(--radius-md) 0;
-      margin-bottom: 1.75rem;
-    }
-
-    .reserva-regra-box h4 {
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 0.25rem;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .reserva-regra-box p {
-      font-size: 0.84rem;
-      color: var(--ink-mid);
-      line-height: 1.4;
-    }
-
-    .btn-simulador-wa {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.65rem;
-      background: var(--whatsapp);
-      color: #FFFFFF;
-      font-size: 1.05rem;
-      font-weight: 700;
-      padding: 1rem 1.5rem;
-      border-radius: var(--radius-pill);
-      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.35);
-      transition: all 0.2s ease;
-    }
-
-    .btn-simulador-wa:hover {
-      background: var(--whatsapp-dark);
-      transform: translateY(-2px);
-      box-shadow: 0 14px 30px rgba(37, 211, 102, 0.45);
-    }
-
-    /* FAQ */
-    .faq-section {
-      background: var(--sand);
-    }
-
-    .faq-list {
-      max-width: 780px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 0.85rem;
-    }
-
-    .faq-item {
-      background: #FFFFFF;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .faq-question {
-      width: 100%;
-      text-align: left;
-      padding: 1.15rem 1.25rem;
-      font-weight: 700;
-      font-size: 1rem;
-      color: var(--navy);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .faq-icon {
-      font-size: 1.25rem;
-      color: var(--emerald);
-      transition: transform 0.3s ease;
-    }
-
-    .faq-answer {
-      display: none;
-      padding: 0 1.25rem 1.25rem;
-      font-size: 0.92rem;
-      color: var(--ink-mid);
-      line-height: 1.55;
-    }
-
-    .faq-item.active .faq-answer {
-      display: block;
-    }
-
-    .faq-item.active .faq-icon {
-      transform: rotate(45deg);
-    }
-
-    /* Footer & Floating CTA */
-    footer {
-      background: var(--navy-deep);
-      color: #FFFFFF;
-      padding: 4.5rem 1.25rem 5.5rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2.5rem;
-      max-width: 1140px;
-      margin: 0 auto 3rem;
-    }
-
-    @media (min-width: 768px) {
-      .footer-grid {
-        grid-template-columns: 2fr 1fr 1fr;
-      }
-    }
-
-    .footer-brand h4 {
-      font-family: var(--font-display);
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: #FFFFFF;
-      margin-bottom: 0.5rem;
-    }
-
-    .footer-brand p {
-      color: #94A3B8;
-      font-size: 0.88rem;
-      line-height: 1.5;
-      max-width: 380px;
-    }
-
-    .footer-col h5 {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--gold-light);
-      margin-bottom: 1rem;
-    }
-
-    .footer-links {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.65rem;
-      font-size: 0.88rem;
-      color: #CBD5E1;
-    }
-
-    .footer-links a:hover {
-      color: #FFFFFF;
-    }
-
-    .footer-bottom {
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      padding-top: 2rem;
-      text-align: center;
-      font-size: 0.8rem;
-      color: #64748B;
-    }
-
-    /* 7. Floating WhatsApp Button (.fab) com Ping e Auto-Hide (.fab.away) */
-    .fab {
-      position: fixed;
-      right: 18px;
-      bottom: calc(18px + env(safe-area-inset-bottom));
-      z-index: 800;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      background: var(--whatsapp);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 10px 28px rgba(37, 211, 102, 0.45);
-      transition: transform 0.35s var(--ease), opacity 0.35s var(--ease);
-    }
-
-    .fab svg {
-      width: 30px;
-      height: 30px;
-      fill: #FFFFFF;
-      position: relative;
-      z-index: 2;
-    }
-
-    .fab::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      border-radius: 50%;
-      background: var(--whatsapp);
-      animation: ping 2.6s ease-out infinite;
-      z-index: 1;
-    }
-
-    @keyframes ping {
-      0% { transform: scale(1); opacity: 0.7; }
-      70% { transform: scale(1.45); opacity: 0; }
-      100% { transform: scale(1.45); opacity: 0; }
-    }
-
-    .fab:hover {
-      transform: scale(1.08);
-    }
-
-    .fab.away {
-      opacity: 0;
-      transform: scale(0.6) translateY(20px);
-      pointer-events: none;
-    }
-
-    /* Micro-animação bump nos seletores */
-    .bump {
-      animation: bumpAnim 0.35s var(--ease);
-    }
-
-    @keyframes bumpAnim {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.06); }
-      100% { transform: scale(1); }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: 0.01ms !important; animation-delay: 0ms !important; transition-duration: 0.01ms !important; transition-delay: 0ms !important; }
+      .intro { display: none; }
+      .js .rv { opacity: 1; transform: none; }
+      .js .ph.cl { clip-path: none; }
+      .ph [data-par] { transform: none !important; }
     }
   </style>
 </head>
 <body>
 
-  <!-- 1. Abertura Cinematográfica (.intro) -->
-  <div class="intro" id="intro" aria-hidden="true">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <!-- Emblema: a faixa do casco da Lancha Mikhael (onda + xadrez verde) num círculo marinho -->
+      <symbol id="mk" viewBox="0 0 64 64">
+        <circle cx="32" cy="32" r="32" fill="#15233F"/>
+        <path d="M8 41.5C20 32 36 25.5 57 20.5C47 28.5 33.5 37 21.5 44.5C16.5 45.4 11.5 44.4 8 41.5Z" fill="#FFFFFF"/>
+        <path d="M14.5 46.6 19 45l.9 3.5-4.5 1.6Z M21 44.3l4.5-1.6.9 3.5-4.5 1.6Z M27.5 42l4.5-1.6.9 3.5-4.5 1.6Z M34 39.7l4.5-1.6.9 3.5-4.5 1.6Z M18.2 51.5l4.5-1.6.9 3.5-4.5 1.6Z M24.7 49.2l4.5-1.6.9 3.5-4.5 1.6Z M31.2 46.9l4.5-1.6.9 3.5-4.5 1.6Z" fill="#43C99C"/>
+      </symbol>
+      <symbol id="i-boat" viewBox="0 0 24 24"><path d="M3 15h18l-2.5 4.5a2 2 0 0 1-1.7 1H7.2a2 2 0 0 1-1.7-1L3 15Zm4-1 1.5-5h6L17 14M11.5 9V4l4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    </defs>
+  </svg>
+
+  <div class="intro" aria-hidden="true">
     <div class="intro-in">
-      <div class="intro-logo">
-        <svg width="58" height="58" viewBox="0 0 64 64" fill="none">
-          <circle cx="32" cy="32" r="26" stroke="#C88A36" stroke-width="1.5" stroke-dasharray="2 2" opacity="0.6"/>
-          <path d="M32 14L43 36C38 33 26 33 21 36L32 14Z" fill="#FFFFFF"/>
-          <path d="M20 40C26 37 38 37 44 40C40 43 24 43 20 40Z" fill="#0E7C7B"/>
-          <path d="M16 46C24 43 40 43 48 46C42 49 22 49 16 46Z" fill="#C88A36"/>
-        </svg>
-      </div>
-      <b>Lancha <em>Mikhael</em></b>
-      <span class="intro-tag">Paraty · RJ</span>
-      <svg class="intro-wave" viewBox="0 0 140 18"><path pathLength="1" d="M2 9c11 0 11-6 22-6s11 12 22 12 11-12 22-12 11 12 22 12 11-12 22-12 11 6 22 6"/></svg>
+      <svg viewBox="0 0 64 64"><use href="#mk"/><path class="sw" pathLength="1" d="M8 41.5C20 32 36 25.5 57 20.5" fill="none" stroke="#43C99C" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <b>Mikhael</b>
     </div>
   </div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
 
-  <!-- Barra de Progresso no Scroll -->
-  <div class="scroll-progress" id="scrollProgress"></div>
-
-  <!-- 3. Topo Flutuante Inteligente (.nav-wrap auto-hide) -->
   <div class="nav-wrap" id="navWrap">
-    <header class="nav-bar">
-      <a href="#" class="nav-brand" aria-label="Lancha Mikhael Paraty">
-        <div class="brand-icon">
-          <svg width="22" height="22" viewBox="0 0 64 64" fill="none">
-            <path d="M32 14L43 36C38 33 26 33 21 36L32 14Z" fill="#FFFFFF"/>
-            <path d="M20 40C26 37 38 37 44 40C40 43 24 43 20 40Z" fill="#0E7C7B"/>
-            <path d="M16 46C24 43 40 43 48 46C42 49 22 49 16 46Z" fill="#C88A36"/>
-          </svg>
-        </div>
-        <div class="brand-text">
-          <span class="brand-title">Lancha Mikhael</span>
-          <span class="brand-tag">Paraty · 21 Pés</span>
-        </div>
+    <header class="nav">
+      <a href="#topo" class="brand" aria-label="Lancha Mikhael Paraty — início">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><use href="#mk"/></svg>
+        <span><b>Mikhael</b><small>Lancha · Paraty</small></span>
       </a>
       <nav class="nav-links" aria-label="Navegação principal">
-        <a href="#sobre">A Lancha & David</a>
-        <a href="#roteiros">4 Roteiros</a>
-        <a href="#embarcacao">7 Inclusos</a>
-        <a href="#simulador">Simular Passeio</a>
-        <a href="#faq">Dúvidas</a>
+        <a href="#lancha">A lancha</a>
+        <a href="#roteiros">Roteiros</a>
+        <a href="#reservar">Monte seu passeio</a>
       </nav>
-      <div class="nav-actions">
-        <a href="https://wa.me/5524999790893?text=Ol%C3%A1%20David%20Henrique%2C%20vim%20pelo%20site%20da%20Lancha%20Mikhael%20e%20gostaria%20de%20consultar%20disponibilidade%20para%20passeio%20em%20Paraty!" target="_blank" rel="noopener noreferrer" class="btn-nav-wa" data-mag aria-label="Chamar no WhatsApp">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-          </svg>
-          WhatsApp
-        </a>
-      </div>
+      <a href="#reservar" class="nav-cta">Reservar</a>
     </header>
   </div>
 
-  <!-- 2. Hero Section com Headline Split de Palavras (.split -> .w > .wi) -->
-  <section class="hero" id="topo">
-    <div class="hero-bg photo">
-      <picture>
-        <source srcset="img/lancha-mikhael-aguas-verdes.webp" type="image/webp">
-        <img id="heroImg" data-par src="img/lancha-mikhael-aguas-verdes.jpg" alt="Lancha Mikhael ancorada nas águas cristalinas de Paraty com David Henrique" width="2000" height="1500" fetchpriority="high">
-      </picture>
-    </div>
-    <div class="hero-overlay"></div>
-
-    <div class="hero-content">
-      <div class="hero-badge-wrap">
-        <span class="pulse-dot"></span>
-        <span class="hero-badge-text">Lancha 21 Pés · Paraty - RJ</span>
-      </div>
-
-      <h1 class="hero-title split">
-        A Baía de Paraty a bordo da <em>Lancha Mikhael</em>
-      </h1>
-
-      <p class="hero-quote">
-        "Venha curtir Paraty a bordo da Lancha Mikhael, praias e ilhas maravilhosas!! Temos roteiros exclusivos, com total segurança e inesquecível!!"
-      </p>
-
-      <div class="hero-highlights">
-        <div class="highlight-card">
-          <span class="val"><span data-count="5">5</span>h</span>
-          <span class="lbl">Duração de passeio com paradas de ~<span data-count="40">40</span>min</span>
+  <main id="topo">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-photo">
+          <picture>
+            <source media="(max-width: 899px)" srcset="img/mikhael-hero-m.webp" type="image/webp">
+            <source media="(min-width: 900px)" srcset="img/mikhael-hero.webp" type="image/webp">
+            <img id="heroImg" src="img/mikhael-hero-m.jpg" alt="Lancha Mikhael ancorada em água verde em Paraty, com toldo azul e flutuantes coloridos" width="1080" height="810" fetchpriority="high" decoding="async">
+          </picture>
+          <span class="badge">Lancha 21 pés · Paraty</span>
         </div>
-        <div class="highlight-card">
-          <span class="val"><span data-count="21">21</span>'</span>
-          <span class="lbl">Pés de estabilidade com motor Yamaha 115</span>
-        </div>
-        <div class="highlight-card">
-          <span class="val"><span data-count="4">4</span></span>
-          <span class="lbl">Roteiros exclusivos e paradas a combinar</span>
-        </div>
-        <div class="highlight-card">
-          <span class="val"><span data-count="7">7</span></span>
-          <span class="lbl">Itens inclusos (cooler c/ gelo, som, água...)</span>
+        <div class="hero-copy">
+          <span class="kicker h-in" style="--i:0">Cais de Turismo · Paraty, RJ</span>
+          <h1 class="split">Paraty a bordo da <em class="it">Mikhael.</em></h1>
+          <p class="hero-lead h-in" style="--i:1">Praias e ilhas maravilhosas em 5 horas de passeio, com roteiros exclusivos.</p>
+          <div class="hero-actions h-in" style="--i:2">
+            <a href="#reservar" class="btn mag"><span>Montar meu passeio</span><i><svg aria-hidden="true"><use href="#i-arrow"/></svg></i></a>
+            <a href="#roteiros" class="link">Ver os 4 roteiros</a>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="hero-actions">
-        <a href="https://wa.me/5524999790893?text=Ol%C3%A1%20David%20Henrique%2C%20quero%20agendar%20um%20passeio%20na%20Lancha%20Mikhael%20em%20Paraty!" target="_blank" rel="noopener noreferrer" class="btn-primary-wa" data-mag>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-          </svg>
-          Agendar no WhatsApp
-        </a>
-        <a href="#roteiros" class="btn-secondary" data-mag>
-          Conhecer os 4 Roteiros ↓
-        </a>
+    <section class="numbers" aria-label="O passeio em números">
+      <svg class="wave" viewBox="0 0 1200 22" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 0h1200v8c-50 0-50 10-100 10S1050 8 1000 8s-50 10-100 10S850 8 800 8s-50 10-100 10S650 8 600 8s-50 10-100 10S450 8 400 8s-50 10-100 10S250 8 200 8s-50 10-100 10S50 8 0 8Z"/></svg>
+      <div class="wrap stats">
+        <div class="stat rv"><b><span data-count="21">21</span><small>pés</small></b><span>Lancha só para o seu grupo</span></div>
+        <div class="stat rv" style="--d:80ms"><b><span data-count="5">5</span><small>horas</small></b><span>De passeio pelas ilhas</span></div>
+        <div class="stat rv" style="--d:160ms"><b><span data-count="4">4</span><small>roteiros</small></b><span>Norte e Sul da baía</span></div>
+        <div class="stat rv" style="--d:240ms"><b><span data-count="40">40</span><small>min</small></b><span>Em média em cada parada</span></div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 4. Onda Divisória que se desenha no scroll -->
-  <svg class="wave reveal-wave" viewBox="0 0 1200 36" preserveAspectRatio="none">
-    <path pathLength="1" d="M0,18 C150,34 300,2 450,18 C600,34 750,2 900,18 C1050,34 1150,6 1200,18" />
-  </svg>
-
-  <!-- Seção Sobre / David Henrique -->
-  <section class="about-section" id="sobre">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-photos-stack reveal">
-          <div class="about-main-photo clip photo">
+    <section class="section" id="lancha">
+      <div class="wrap">
+        <div class="sec-head rv">
+          <span class="kicker">A lancha</span>
+          <h2 class="sec-title">Conforto do cais <em class="it">até a ilha.</em></h2>
+        </div>
+        <div class="boat">
+          <div class="ph big cl rv">
             <picture>
-              <source srcset="img/lancha-mikhael-cais-paraty.webp" type="image/webp">
-              <img data-par src="img/lancha-mikhael-cais-paraty.jpg" alt="David Henrique a bordo da Lancha Mikhael no Cais de Turismo de Paraty" loading="lazy" width="1024" height="576">
+              <source media="(max-width: 599px)" srcset="img/mikhael-cais-paraty-m.webp" type="image/webp">
+              <source srcset="img/mikhael-cais-paraty.webp" type="image/webp">
+              <img src="img/mikhael-cais-paraty-m.jpg" alt="Lancha Mikhael atracada no Cais de Turismo de Paraty, com as montanhas ao fundo" width="1080" height="608" loading="lazy" decoding="async" data-par>
+            </picture>
+            <span class="tag">No Cais de Turismo</span>
+          </div>
+          <div class="ph cl rv" style="--d:80ms">
+            <picture>
+              <source media="(max-width: 599px)" srcset="img/mikhael-conves-m.webp" type="image/webp">
+              <source srcset="img/mikhael-conves.webp" type="image/webp">
+              <img src="img/mikhael-conves-m.jpg" alt="Convés da Lancha Mikhael com piso antiderrapante e vista para a baía de Paraty" width="810" height="1080" loading="lazy" decoding="async" data-par>
             </picture>
           </div>
-          <div class="about-badge-card reveal">
-            <span class="num"><span data-count="21">21</span>'</span>
-            <span class="txt">Pés de Pura<br>Estabilidade & Conforto</span>
+          <div class="ph cl rv" style="--d:160ms">
+            <picture>
+              <source media="(max-width: 599px)" srcset="img/mikhael-pier-m.webp" type="image/webp">
+              <source srcset="img/mikhael-pier.webp" type="image/webp">
+              <img src="img/mikhael-pier-m.jpg" alt="Lancha Mikhael encostada no píer de madeira em Paraty" width="608" height="1080" loading="lazy" decoding="async" data-par>
+            </picture>
           </div>
         </div>
 
-        <div class="about-content reveal">
-          <span class="section-eyebrow">Experiência Privativa & Confiável</span>
-          <h2 class="section-title split">
-            Navegue no seu ritmo com quem conhece cada recanto de <em>Paraty</em>
-          </h2>
-          <p class="section-desc">
-            Comandada pelo marinheiro e proprietário <strong>David Henrique</strong>, a Lancha Mikhael oferece uma experiência exclusiva longe de aglomerações. Você decide o tempo do mergulho, a playlist no som Bluetooth e o momento exato de relaxar ou almoçar numa ilha paradisíaca.
-          </p>
-
-          <div class="about-info-list">
-            <div class="about-info-item reveal">
-              <div class="info-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/>
-                  <circle cx="12" cy="10" r="3"/>
-                </svg>
-              </div>
-              <div>
-                <div class="info-title">Saída do Cais de Turismo de Paraty</div>
-                <div class="info-desc">Localização central no Centro Histórico, fácil acesso com embarque e desembarque seguro e pontual.</div>
-              </div>
-            </div>
-
-            <div class="about-info-item reveal">
-              <div class="info-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"/>
-                  <polyline points="12 6 12 12 16 14"/>
-                </svg>
-              </div>
-              <div>
-                <div class="info-title"><span data-count="5">5</span> Horas de Passeio Completo</div>
-                <div class="info-desc">Tempo médio de ~<span data-count="40">40</span> minutos em cada parada para mergulhar, curtir as praias ou saborear frutos do mar frescos.</div>
-              </div>
-            </div>
-
-            <div class="about-info-item reveal">
-              <div class="info-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-              </div>
-              <div>
-                <div class="info-title"><span data-count="4">4</span> Roteiros e Paradas Personalizáveis</div>
-                <div class="info-desc">Você pode escolher um dos 4 Roteiros consagrados ou combinar paradas customizadas com o David Henrique.</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="instagram-card reveal">
-            <div class="ig-brand">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E1306C" stroke-width="2">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-              </svg>
-              <div>
-                <strong style="font-size: 0.9rem; color: var(--navy); display:block;">@lanchamikhael</strong>
-                <span style="font-size: 0.75rem; color: var(--ink-muted);">Fotos reais e bastidores em Paraty</span>
-              </div>
-            </div>
-            <a href="https://www.instagram.com/lanchamikhael/" target="_blank" rel="noopener noreferrer" class="ig-btn" data-mag>
-              Seguir no Insta
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4. Onda Divisória -->
-  <svg class="wave reveal-wave" viewBox="0 0 1200 36" preserveAspectRatio="none">
-    <path pathLength="1" d="M0,18 C150,2 300,34 450,18 C600,2 750,34 900,18 C1050,2 1150,30 1200,18" />
-  </svg>
-
-  <!-- 6. Seção dos 4 Roteiros Exclusivos com Linhas de Paradas Desenham no Scroll (.stops) -->
-  <section class="roteiros-section" id="roteiros">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-eyebrow">Roteiros Consagrados</span>
-        <h2 class="section-title split">
-          Os 4 Roteiros Exclusivos na <em>Lancha Mikhael</em>
-        </h2>
-        <p class="section-desc">
-          Todos os roteiros contam com 5 horas de navegação pelas águas esmeralda de Paraty, com paradas de aproximadamente 40 minutos e opção de parada para almoço ou porções em restaurantes caiçaras.
-        </p>
-      </div>
-
-      <div class="roteiros-grid">
-        <!-- Roteiro 1: Norte -->
-        <div class="roteiro-card reveal">
-          <div class="roteiro-header">
-            <span class="roteiro-badge">Roteiro 01</span>
-            <span class="roteiro-duration"><span data-count="5">5</span>h de Passeio</span>
-          </div>
-          <h3 class="roteiro-title">Roteiro Norte</h3>
-          <p class="roteiro-tagline">Águas abrigadas, natureza exuberante e mergulho relaxante.</p>
-
-          <ul class="stops">
-            <li>
-              <span>1. Ilha Malvão</span>
-              <span class="parada-badge">~40 min</span>
-            </li>
-            <li>
-              <span>2. Ilha Comprida do Norte</span>
-              <span class="parada-badge">~40 min</span>
-            </li>
-            <li>
-              <span>3. Praia Salvador Moreira</span>
-              <span class="parada-badge">~40 min</span>
-            </li>
-            <li>
-              <span>4. Ilha Ventura</span>
-              <span class="parada-badge">~40 min</span>
-            </li>
+        <div class="onboard">
+          <h3 class="rv">Tudo isso <em class="it">a bordo.</em></h3>
+          <ul class="feats">
+            <li class="feat rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M3 12h18M8 8V5h8v3"/></svg><b>Cooler 26 litros com gelo</b></li>
+            <li class="feat rv" style="--d:60ms"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11Z"/></svg><b>Água à vontade</b></li>
+            <li class="feat rv" style="--d:120ms"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h6a4 4 0 0 1 4 4v1M10 9h8l-1 2h-6Z"/><path d="M12 14v1M15 14v2M18 14v1M12 18v1M15 19v1M18 18v1"/></svg><b>Ducha de água doce</b></li>
+            <li class="feat rv" style="--d:180ms"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg><b>Som bluetooth</b></li>
+            <li class="feat rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9c4-3 14-3 18 0M3 14c4-3 14-3 18 0"/><path d="M2 20c1.7 0 1.7-1 3.3-1s1.7 1 3.4 1 1.6-1 3.3-1 1.7 1 3.3 1 1.7-1 3.4-1 1.6 1 3.3 1"/></svg><b>Flutuantes (macarrão)</b></li>
+            <li class="feat rv" style="--d:60ms"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9h18v4a3 3 0 0 1-3 3h-2.5l-2-2h-3l-2 2H6a3 3 0 0 1-3-3Z"/><path d="M19 9V4"/></svg><b>Máscara e snorkel</b></li>
+            <li class="feat rv" style="--d:120ms"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="m5.6 5.6 3.6 3.6M14.8 14.8l3.6 3.6M18.4 5.6l-3.6 3.6M9.2 14.8l-3.6 3.6"/></svg><b>Coletes salva-vidas</b></li>
+            <li class="feat all rv" style="--d:180ms"><b>Incluso no passeio</b><span>É só trazer a turma.</span></li>
           </ul>
-
-          <div class="roteiro-footer">
-            <div class="roteiro-features">
-              <span class="roteiro-pill">Opção de Restaurante</span>
-              <span class="roteiro-pill">Mergulho com Snorkel</span>
-              <span class="roteiro-pill">Flutuantes Inclusos</span>
-            </div>
-            <a href="https://wa.me/5524999790893?text=Ol%C3%A1%20David%2C%20tenho%20interesse%20no%20Roteiro%20Norte%20(Ilha%20Malv%C3%A3o%2C%20Ilha%20Comprida%2C%20Salvador%20Moreira%20e%20Ventura)%20na%20Lancha%20Mikhael!" target="_blank" rel="noopener noreferrer" class="btn-roteiro-select" data-mag>
-              Escolher Roteiro Norte →
-            </a>
-          </div>
-        </div>
-
-        <!-- Roteiro 2: Sul I -->
-        <div class="roteiro-card reveal">
-          <div class="roteiro-header">
-            <span class="roteiro-badge">Roteiro 02</span>
-            <span class="roteiro-duration"><span data-count="5">5</span>h de Passeio</span>
-          </div>
-          <h3 class="roteiro-title">Roteiro Sul I</h3>
-          <p class="roteiro-tagline">O clássico apaixonante com a famosa Praia da Lula e águas calmas.</p>
-
-          <ul class="stops">
-            <li>
-              <span>1. Praia da Lula</span>
-              <span class="parada-badge">~40 min</span>
-            </li>
-            <li>
-              <span>2. Ilha da Pescaria</span>
-              <span class="parada-badge">~40 min</span>
-            </li>
-            <li>
-              <span>3. Praia Vermelha</span>
-              <span class="parada-badge">~40 min</span>
-            </li>
-            <li>
-              <span>4. Ilha do Mantimento</span>
-              <span class="parada-badge">~40 min</span>
-            </li>
-          </ul>
-
-          <div class="roteiro-footer">
-            <div class="roteiro-features">
-              <span class="roteiro-pill">Parada para Almoço</span>
-              <span class="roteiro-pill">Praia de Areia Branca</span>
-              <span class="roteiro-pill">Cardumes Coloridos</span>
-            </div>
-            <a href="https://wa.me/5524999790893?text=Ol%C3%A1%20David%2C%20gostaria%20de%20reservar%20o%20Roteiro%20Sul%20I%20(Praia%20da%20Lula%2C%20Ilha%20da%20Pescaria%2C%20Praia%20Vermelha%20e%20Ilha%20do%20Mantimento)!" target="_blank" rel="noopener noreferrer" class="btn-roteiro-select" data-mag>
-              Escolher Roteiro Sul I →
-            </a>
-          </div>
-        </div>
-
-        <!-- Roteiro 3: Sul II -->
-        <div class="roteiro-card reveal">
-          <div class="roteiro-header">
-            <span class="roteiro-badge">Roteiro 03</span>
-            <span class="roteiro-duration"><span data-count="5">5</span>h de Passeio</span>
-          </div>
-          <h3 class="roteiro-title">Roteiro Sul II</h3>
-          <p class="roteiro-tagline">Cenários de cartão-postal: Ilha dos Cocos e o encanto do Saco da Velha.</p>
-
-          <ul class="stops">
-            <li>
-              <span>1. Ilha dos Cocos</span>
-              <span class="parada-badge">~40 min</span>
-            </li>
-            <li>
-              <span>2. Enseada da Preguiça</span>
-              <span class="parada-badge">~40 min</span>
-            </li>
-            <li>
-              <span>3. Praia Saco da Velha</span>
-              <span class="parada-badge">~40 min</span>
-            </li>
-            <li>
-              <span>4. Ilha da Pescaria</span>
-              <span class="parada-badge">~40 min</span>
-            </li>
-          </ul>
-
-          <div class="roteiro-footer">
-            <div class="roteiro-features">
-              <span class="roteiro-pill">Águas Esmeralda</span>
-              <span class="roteiro-pill">Visual Selvagem</span>
-              <span class="roteiro-pill">Excelente para Fotos</span>
-            </div>
-            <a href="https://wa.me/5524999790893?text=Ol%C3%A1%20David%2C%20quero%20fazer%20o%20Roteiro%20Sul%20II%20(Ilha%20dos%20Cocos%2C%20Enseada%20da%20Pregui%C3%A7a%2C%20Saco%20da%20Velha%20e%20Pescaria)!" target="_blank" rel="noopener noreferrer" class="btn-roteiro-select" data-mag>
-              Escolher Roteiro Sul II →
-            </a>
-          </div>
-        </div>
-
-        <!-- Roteiro 4: Sul III -->
-        <div class="roteiro-card reveal">
-          <div class="roteiro-header">
-            <span class="roteiro-badge">Roteiro 04</span>
-            <span class="roteiro-duration"><span data-count="5">5</span>h de Passeio</span>
-          </div>
-          <h3 class="roteiro-title">Roteiro Sul III</h3>
-          <p class="roteiro-tagline">A verdadeira piscina natural de Paraty: Lagoa Azul e Ilha dos Cocos.</p>
-
-          <ul class="stops">
-            <li>
-              <span>1. Ilha dos Cocos</span>
-              <span class="parada-badge">~40 min</span>
-            </li>
-            <li>
-              <span>2. Saco da Velha</span>
-              <span class="parada-badge">~40 min</span>
-            </li>
-            <li>
-              <span>3. Lagoa Azul</span>
-              <span class="parada-badge">~40 min</span>
-            </li>
-            <li>
-              <span>4. Praia Vermelha</span>
-              <span class="parada-badge">~40 min</span>
-            </li>
-          </ul>
-
-          <div class="roteiro-footer">
-            <div class="roteiro-features">
-              <span class="roteiro-pill">Piscina Natural</span>
-              <span class="roteiro-pill">Snorkel Cristalino</span>
-              <span class="roteiro-pill">Restaurante Típico</span>
-            </div>
-            <a href="https://wa.me/5524999790893?text=Ol%C3%A1%20David%2C%20quero%20agendar%20o%20Roteiro%20Sul%20III%20(Ilha%20dos%20Cocos%2C%20Saco%20da%20Velha%2C%20Lagoa%20Azul%20e%20Praia%20Vermelha)!" target="_blank" rel="noopener noreferrer" class="btn-roteiro-select" data-mag>
-              Escolher Roteiro Sul III →
-            </a>
-          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 4. Onda Divisória -->
-  <svg class="wave reveal-wave" viewBox="0 0 1200 36" preserveAspectRatio="none">
-    <path pathLength="1" d="M0,18 C150,34 300,2 450,18 C600,34 750,2 900,18 C1050,34 1150,6 1200,18" />
-  </svg>
+    <section class="section alt" id="roteiros">
+      <div class="wrap">
+        <div class="sec-head rv">
+          <span class="kicker">Os roteiros</span>
+          <h2 class="sec-title">Escolha <em class="it">sua ilha.</em></h2>
+          <p class="sec-sub">4 roteiros saindo do Cais de Turismo. As paradas também podem ser combinadas.</p>
+        </div>
 
-  <!-- Seção A Embarcação 21 Pés & O que está Incluso -->
-  <section class="boat-specs-section" id="embarcacao">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-eyebrow">A Embarcação & Estrutura</span>
-        <h2 class="section-title split">
-          Lancha 21 Pés pensada para seu conforto de <em>ponta a ponta</em>
-        </h2>
-        <p class="section-desc">
-          Casco branco com elegantes faixas azul-marinho, capota protetora, piso náutico amadeirado em EVA com isolamento térmico, estofamento náutico impecável e motor Yamaha 115 HP de alta confiabilidade.
-        </p>
-      </div>
+        <div class="tabs rv" role="tablist" aria-label="Roteiros">
+          <button type="button" class="tab" role="tab" id="t-norte" aria-controls="p-norte" aria-selected="true">Norte</button>
+          <button type="button" class="tab" role="tab" id="t-sul1" aria-controls="p-sul1" aria-selected="false" tabindex="-1">Sul I</button>
+          <button type="button" class="tab" role="tab" id="t-sul2" aria-controls="p-sul2" aria-selected="false" tabindex="-1">Sul II</button>
+          <button type="button" class="tab" role="tab" id="t-sul3" aria-controls="p-sul3" aria-selected="false" tabindex="-1">Sul III</button>
+        </div>
 
-      <!-- Bento Grid com Fotos Reais e Revelação Clip (.clip) -->
-      <div class="boat-bento">
-        <div class="bento-card bento-col-8 reveal">
-          <div class="bento-photo-wrap clip photo">
+        <div class="panel" id="p-norte" role="tabpanel" aria-labelledby="t-norte" data-rot="Roteiro Norte">
+          <div class="ph">
             <picture>
-              <source srcset="img/lancha-mikhael-conves-interno.webp" type="image/webp">
-              <img data-par src="img/lancha-mikhael-conves-interno.jpg" alt="Interior da Lancha Mikhael: piso náutico amadeirado em EVA e comando" loading="lazy" width="768" height="1024">
+              <source media="(max-width: 599px)" srcset="img/paraty-ilha-m.webp" type="image/webp">
+              <source srcset="img/paraty-ilha.webp" type="image/webp">
+              <img src="img/paraty-ilha-m.jpg" alt="Ilha com pedras e mata na baía de Paraty" width="1080" height="720" loading="lazy" decoding="async">
             </picture>
-            <span class="bento-photo-tag">Convés & Piso Náutico Amadeirado</span>
           </div>
-          <div class="bento-body">
-            <h3 class="bento-title">Piso Náutico em EVA & Estofamento Premium</h3>
-            <p class="bento-desc">
-              Piso térmico amadeirado que não esquenta ao sol, proa aberta confortável para contemplação e bancos macios para todo o grupo navegar com total estabilidade e comodidade.
-            </p>
+          <div>
+            <div class="rt-head"><span class="kicker">Roteiro 01</span><h3>Roteiro Norte</h3><p>Ilhas e praias do lado norte da baía.</p></div>
+            <div class="route"><span class="line" aria-hidden="true"></span><span class="boatie" aria-hidden="true"><svg><use href="#i-boat"/></svg></span><ol>
+              <li style="--k:0"><small>1</small><b>Ilha Malvão</b></li>
+              <li style="--k:1"><small>2</small><b>Ilha Comprida do Norte</b></li>
+              <li style="--k:2"><small>3</small><b>Praia Salvador Moreira</b></li>
+              <li style="--k:3"><small>4</small><b>Ilha Ventura</b></li>
+            </ol></div>
           </div>
         </div>
 
-        <div class="bento-card bento-col-4 reveal">
-          <div class="bento-photo-wrap clip photo">
+        <div class="panel" id="p-sul1" role="tabpanel" aria-labelledby="t-sul1" data-rot="Roteiro Sul I" hidden>
+          <div class="ph">
             <picture>
-              <source srcset="img/lancha-mikhael-proa-pier.webp" type="image/webp">
-              <img data-par src="img/lancha-mikhael-proa-pier.jpg" alt="Vista da proa da Lancha Mikhael atracada no píer" loading="lazy" width="576" height="1024">
+              <source media="(max-width: 599px)" srcset="img/mikhael-ilha-m.webp" type="image/webp">
+              <source srcset="img/mikhael-ilha.webp" type="image/webp">
+              <img src="img/mikhael-ilha-m.jpg" alt="Vista da Lancha Mikhael parada em frente a uma praia de ilha em Paraty" width="810" height="1080" loading="lazy" decoding="async">
             </picture>
-            <span class="bento-photo-tag">Proa Aberta & Píer</span>
           </div>
-          <div class="bento-body">
-            <h3 class="bento-title">Embarque Suave no Píer</h3>
-            <p class="bento-desc">
-              Acesso facilitado no Cais de Turismo de Paraty, proporcionando segurança para adultos, crianças e melhor idade.
-            </p>
+          <div>
+            <div class="rt-head"><span class="kicker">Roteiro 02</span><h3>Roteiro Sul I</h3><p>Começa pela Praia da Lula.</p></div>
+            <div class="route"><span class="line" aria-hidden="true"></span><span class="boatie" aria-hidden="true"><svg><use href="#i-boat"/></svg></span><ol>
+              <li style="--k:0"><small>1</small><b>Praia da Lula</b></li>
+              <li style="--k:1"><small>2</small><b>Ilha da Pescaria</b></li>
+              <li style="--k:2"><small>3</small><b>Praia Vermelha</b></li>
+              <li style="--k:3"><small>4</small><b>Ilha do Mantimento</b></li>
+            </ol></div>
           </div>
         </div>
 
-        <div class="bento-card bento-col-6 reveal">
-          <div class="bento-photo-wrap clip photo">
+        <div class="panel" id="p-sul2" role="tabpanel" aria-labelledby="t-sul2" data-rot="Roteiro Sul II" hidden>
+          <div class="ph">
             <picture>
-              <source srcset="img/lancha-mikhael-ilha-parada.webp" type="image/webp">
-              <img data-par src="img/lancha-mikhael-ilha-parada.jpg" alt="Lancha Mikhael fundeada em frente a praia de águas cristalinas" loading="lazy" width="768" height="1024">
+              <source media="(max-width: 599px)" srcset="img/paraty-mirante-m.webp" type="image/webp">
+              <source srcset="img/paraty-mirante.webp" type="image/webp">
+              <img src="img/paraty-mirante-m.jpg" alt="Baía de Paraty vista do alto, com ilhas e montanhas" width="1080" height="676" loading="lazy" decoding="async">
             </picture>
-            <span class="bento-photo-tag">Parada nas Ilhas & Praias</span>
           </div>
-          <div class="bento-body">
-            <h3 class="bento-title">Fundear nas Praias Mais Belas</h3>
-            <p class="bento-desc">
-              Aproxime-se das praias cristalinas e desfrute de paradas calmas com água translúcida para relaxar ou nadar.
-            </p>
+          <div>
+            <div class="rt-head"><span class="kicker">Roteiro 03</span><h3>Roteiro Sul II</h3><p>Ilha dos Cocos e Saco da Velha.</p></div>
+            <div class="route"><span class="line" aria-hidden="true"></span><span class="boatie" aria-hidden="true"><svg><use href="#i-boat"/></svg></span><ol>
+              <li style="--k:0"><small>1</small><b>Ilha dos Cocos</b></li>
+              <li style="--k:1"><small>2</small><b>Enseada da Preguiça</b></li>
+              <li style="--k:2"><small>3</small><b>Praia Saco da Velha</b></li>
+              <li style="--k:3"><small>4</small><b>Ilha da Pescaria</b></li>
+            </ol></div>
           </div>
         </div>
 
-        <div class="bento-card bento-col-6 reveal">
-          <div class="bento-photo-wrap clip photo">
+        <div class="panel" id="p-sul3" role="tabpanel" aria-labelledby="t-sul3" data-rot="Roteiro Sul III" hidden>
+          <div class="ph">
             <picture>
-              <source srcset="img/lancha-mikhael-aguas-verdes.webp" type="image/webp">
-              <img data-par src="img/lancha-mikhael-aguas-verdes.jpg" alt="Lancha Mikhael ancorada com flutuantes e motor Yamaha 115" loading="lazy" width="1024" height="768">
+              <source media="(max-width: 599px)" srcset="img/paraty-agua-cristalina-m.webp" type="image/webp">
+              <source srcset="img/paraty-agua-cristalina.webp" type="image/webp">
+              <img src="img/paraty-agua-cristalina-m.jpg" alt="Água cristalina azul-turquesa entre pedras na região de Paraty" width="1080" height="810" loading="lazy" decoding="async">
             </picture>
-            <span class="bento-photo-tag">Motor Yamaha 115 HP & Lazer</span>
           </div>
-          <div class="bento-body">
-            <h3 class="bento-title">Segurança & Potência Yamaha</h3>
-            <p class="bento-desc">
-              Motor 4 tempos moderno, silencioso e econômico, com manutenções preventivas rigorosas e todos os itens homologados pela Marinha.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Caixa dos 7 Itens Inclusos a Bordo -->
-      <div class="inclusos-box reveal">
-        <div class="inclusos-header">
-          <h3>O que está <span>Incluso a Bordo</span> da Lancha Mikhael:</h3>
-          <p>Tudo preparado com carinho para você só se preocupar em aproveitar o dia</p>
-        </div>
-
-        <div class="inclusos-grid">
-          <div class="incluso-item">
-            <span class="incluso-num">1</span>
-            <div class="incluso-text">
-              <h4>Cooler 26L com Gelo</h4>
-              <p>Espaço térmico com gelo para manter suas bebidas e petiscos trincando.</p>
-            </div>
-          </div>
-
-          <div class="incluso-item">
-            <span class="incluso-num">2</span>
-            <div class="incluso-text">
-              <h4>Água Mineral à Vontade</h4>
-              <p>Hidratação fresca garantida durante todas as 5 horas de passeio.</p>
-            </div>
-          </div>
-
-          <div class="incluso-item">
-            <span class="incluso-num">3</span>
-            <div class="incluso-text">
-              <h4>Ducha de Água Doce</h4>
-              <p>Para tirar o sal do corpo após o mergulho nas ilhas de Paraty.</p>
-            </div>
-          </div>
-
-          <div class="incluso-item">
-            <span class="incluso-num">4</span>
-            <div class="incluso-text">
-              <h4>Som Bluetooth</h4>
-              <p>Conecte o seu celular e curta a playlist favorita do seu grupo no mar.</p>
-            </div>
-          </div>
-
-          <div class="incluso-item">
-            <span class="incluso-num">5</span>
-            <div class="incluso-text">
-              <h4>Flutuantes (Macarrão)</h4>
-              <p>Ideal para boiar sem esforço nas águas calmas e quentes da baía.</p>
-            </div>
-          </div>
-
-          <div class="incluso-item">
-            <span class="incluso-num">6</span>
-            <div class="incluso-text">
-              <h4>Máscara e Snorkel</h4>
-              <p>Equipamentos para observar cardumes de peixes e a vida marinha local.</p>
-            </div>
-          </div>
-
-          <div class="incluso-item">
-            <span class="incluso-num">7</span>
-            <div class="incluso-text">
-              <h4>Coletes Salva-Vidas</h4>
-              <p>Equipamentos de salvatagem certificados pela Capitania dos Portos.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4. Onda Divisória -->
-  <svg class="wave reveal-wave" viewBox="0 0 1200 36" preserveAspectRatio="none">
-    <path pathLength="1" d="M0,18 C150,2 300,34 450,18 C600,2 750,34 900,18 C1050,2 1150,30 1200,18" />
-  </svg>
-
-  <!-- Simulador de Reserva no WhatsApp -->
-  <section class="simulador-section" id="simulador">
-    <div class="container">
-      <div class="section-header reveal" style="text-align: center; max-width: 650px; margin-left: auto; margin-right: auto;">
-        <span class="section-eyebrow" style="justify-content: center;">Planejador Direto</span>
-        <h2 class="section-title split">
-          Simule seu passeio na <em>Lancha Mikhael</em>
-        </h2>
-        <p class="section-desc" style="margin-left: auto; margin-right: auto;">
-          Escolha o roteiro, a data e monte a sua mensagem personalizada para falar diretamente com o David Henrique no WhatsApp.
-        </p>
-      </div>
-
-      <div class="simulador-card reveal">
-        <form id="reservaForm" onsubmit="event.preventDefault(); enviarWhatsApp();">
-          <div class="form-group">
-            <label class="form-label" for="simRoteiro">Roteiro Escolhido:</label>
-            <select id="simRoteiro" class="form-select" onchange="atualizarMensagem()">
-              <option value="Roteiro Norte (Ilha Malvão, Ilha Comprida do Norte, Salvador Moreira, Ilha Ventura)">Roteiro Norte (Malvão, Ilha Comprida, Salvador Moreira, Ventura)</option>
-              <option value="Roteiro Sul I (Praia da Lula, Ilha da Pescaria, Praia Vermelha, Mantimento)">Roteiro Sul I (Praia da Lula, Pescaria, Praia Vermelha, Mantimento)</option>
-              <option value="Roteiro Sul II (Ilha dos Cocos, Enseada da Preguiça, Saco da Velha, Pescaria)">Roteiro Sul II (Ilha dos Cocos, Enseada Preguiça, Saco da Velha, Pescaria)</option>
-              <option value="Roteiro Sul III (Ilha dos Cocos, Saco da Velha, Lagoa Azul, Praia Vermelha)" selected>Roteiro Sul III (Ilha dos Cocos, Saco da Velha, Lagoa Azul, Praia Vermelha)</option>
-              <option value="Roteiro Personalizado a Combinar">Roteiro Personalizado (a combinar com David Henrique)</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Parada para almoço em restaurante na ilha?</label>
-            <div class="radio-pill-group">
-              <label class="radio-label">
-                <input type="radio" name="simAlmoco" value="Sim, queremos parada para almoço" checked onchange="atualizarMensagem()">
-                <span>Sim, queremos parar</span>
-              </label>
-              <label class="radio-label">
-                <input type="radio" name="simAlmoco" value="Não, direto nas praias (apenas petiscos a bordo)" onchange="atualizarMensagem()">
-                <span>Não, direto nas praias</span>
-              </label>
-            </div>
-          </div>
-
-          <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-            <div>
-              <label class="form-label" for="simPessoas">Nº de Passageiros:</label>
-              <select id="simPessoas" class="form-select" onchange="atualizarMensagem()">
-                <option value="2 pessoas (Casal)">2 pessoas (Casal)</option>
-                <option value="3 a 4 pessoas">3 a 4 pessoas</option>
-                <option value="5 a 6 pessoas">5 a 6 pessoas</option>
-                <option value="7 pessoas">7 pessoas</option>
-                <option value="Grupo maior (consultar)">Grupo maior (consultar)</option>
-              </select>
-            </div>
-            <div>
-              <label class="form-label" for="simData">Data Desejada:</label>
-              <input type="date" id="simData" class="form-input" onchange="atualizarMensagem()">
-            </div>
-          </div>
-
-          <div class="reserva-regra-box">
-            <h4>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-              </svg>
-              Condição Oficial de Reserva
-            </h4>
-            <p>
-              A reserva da data é confirmada mediante <strong>50% de sinal via Pix</strong>. O saldo restante é pago diretamente no momento do embarque no Cais de Turismo de Paraty.
-            </p>
-          </div>
-
-          <button type="submit" class="btn-simulador-wa" data-mag>
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-            </svg>
-            Consultar Disponibilidade no WhatsApp
-          </button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4. Onda Divisória -->
-  <svg class="wave reveal-wave" viewBox="0 0 1200 36" preserveAspectRatio="none">
-    <path pathLength="1" d="M0,18 C150,34 300,2 450,18 C600,34 750,2 900,18 C1050,34 1150,6 1200,18" />
-  </svg>
-
-  <!-- FAQ Perguntas Frequentes -->
-  <section class="faq-section" id="faq">
-    <div class="container">
-      <div class="section-header reveal" style="text-align: center; max-width: 650px; margin-left: auto; margin-right: auto;">
-        <span class="section-eyebrow" style="justify-content: center;">Tire Suas Dúvidas</span>
-        <h2 class="section-title split">
-          Perguntas <em>Frequentes</em>
-        </h2>
-        <p class="section-desc" style="margin-left: auto; margin-right: auto;">
-          Tudo o que você precisa saber antes de embarcar com a Lancha Mikhael em Paraty.
-        </p>
-      </div>
-
-      <div class="faq-list">
-        <div class="faq-item reveal">
-          <button class="faq-question" type="button" onclick="toggleFaq(this)">
-            <span>Quanto tempo dura o passeio de lancha?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            O passeio privativo na Lancha Mikhael dura 5 horas completas. O tempo médio em cada parada é de aproximadamente 40 minutos, permitindo que você aproveite com calma para nadar, tirar fotos e contemplar a natureza.
+          <div>
+            <div class="rt-head"><span class="kicker">Roteiro 04</span><h3>Roteiro Sul III</h3><p>Com parada na Lagoa Azul.</p></div>
+            <div class="route"><span class="line" aria-hidden="true"></span><span class="boatie" aria-hidden="true"><svg><use href="#i-boat"/></svg></span><ol>
+              <li style="--k:0"><small>1</small><b>Ilha dos Cocos</b></li>
+              <li style="--k:1"><small>2</small><b>Saco da Velha</b></li>
+              <li style="--k:2"><small>3</small><b>Lagoa Azul</b></li>
+              <li style="--k:3"><small>4</small><b>Praia Vermelha</b></li>
+            </ol></div>
           </div>
         </div>
 
-        <div class="faq-item reveal">
-          <button class="faq-question" type="button" onclick="toggleFaq(this)">
-            <span>Onde acontece o embarque e desembarque?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            O ponto de encontro é no Cais de Turismo de Paraty, localizado ao lado do Centro Histórico (CEP 23970-000). O local possui fácil acesso para pedestres e veículos.
-          </div>
+        <div class="rt-notes rv">
+          <span>5 horas de passeio</span>
+          <span>~40 min por parada</span>
+          <span>Opção de almoço em restaurante</span>
         </div>
+        <div class="rt-cta rv"><button type="button" class="btn" id="pickRoute"><span>Quero este roteiro</span><i><svg aria-hidden="true"><use href="#i-arrow"/></svg></i></button></div>
+      </div>
+    </section>
 
-        <div class="faq-item reveal">
-          <button class="faq-question" type="button" onclick="toggleFaq(this)">
-            <span>Como funciona a forma de pagamento e reserva?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            Para garantir a data e o horário exclusivo na agenda da lancha, solicitamos 50% de sinal via transferência Pix. O saldo restante é quitado no momento do embarque com David Henrique.
-          </div>
+    <section class="section deep" id="reservar">
+      <div class="wrap">
+        <div class="sec-head rv">
+          <span class="kicker">Reserva direta</span>
+          <h2 class="sec-title">Monte seu <em class="it">passeio.</em></h2>
+          <p class="sec-sub">Escolha, confira a mensagem e envie no WhatsApp.</p>
         </div>
-
-        <div class="faq-item reveal">
-          <button class="faq-question" type="button" onclick="toggleFaq(this)">
-            <span>Podemos levar bebidas e comidas para o barco?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            Com certeza! A Lancha Mikhael já disponibiliza a bordo um cooler de 26 litros com gelo e água mineral à vontade. Você pode trazer suas cervejas, refrigerantes, vinhos e petiscos preferidos.
+        <div class="planner rv">
+          <div class="group">
+            <span class="label">1. Roteiro</span>
+            <div class="chips" data-g="roteiro">
+              <button type="button" class="chip active" data-v="Roteiro Norte">Norte</button>
+              <button type="button" class="chip" data-v="Roteiro Sul I">Sul I</button>
+              <button type="button" class="chip" data-v="Roteiro Sul II">Sul II</button>
+              <button type="button" class="chip" data-v="Roteiro Sul III">Sul III</button>
+              <button type="button" class="chip" data-v="Roteiro a combinar">A combinar</button>
+            </div>
+            <span class="stops-live" id="stopsLive" aria-live="polite"></span>
           </div>
-        </div>
-
-        <div class="faq-item reveal">
-          <button class="faq-question" type="button" onclick="toggleFaq(this)">
-            <span>É possível parar para almoçar durante o passeio?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            Sim! Temos opções de restaurantes caiçaras parceiros nas ilhas e praias (como na Praia Vermelha, Saco da Velha ou arredores), com pratos típicos de frutos do mar frescos e porções saborosas. A parada para almoço é combinada previamente de acordo com a sua preferência.
+          <div class="group">
+            <span class="label">2. Quem vai</span>
+            <div class="counters">
+              <div class="counter"><span>Adultos</span><div class="c-ctl"><button type="button" class="c-btn" data-c="adultos" data-d="-1" aria-label="Menos um adulto">−</button><b class="c-val" id="val-adultos">4</b><button type="button" class="c-btn" data-c="adultos" data-d="1" aria-label="Mais um adulto">+</button></div></div>
+              <div class="counter"><span>Crianças</span><div class="c-ctl"><button type="button" class="c-btn" data-c="criancas" data-d="-1" aria-label="Menos uma criança">−</button><b class="c-val" id="val-criancas">0</b><button type="button" class="c-btn" data-c="criancas" data-d="1" aria-label="Mais uma criança">+</button></div></div>
+            </div>
           </div>
-        </div>
-
-        <div class="faq-item reveal">
-          <button class="faq-question" type="button" onclick="toggleFaq(this)">
-            <span>O passeio é seguro para crianças e idosos?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            Sim, 100% seguro. A Lancha Mikhael possui 21 pés, excelente estabilidade de navegação e está equipada com todos os coletes salva-vidas homologados pela Marinha do Brasil, além de ser comandada por marinheiro devidamente habilitado.
+          <div class="group">
+            <span class="label">3. Parada para almoço</span>
+            <div class="chips" data-g="almoco">
+              <button type="button" class="chip active" data-v="Sim, com parada em restaurante">Sim, em restaurante</button>
+              <button type="button" class="chip" data-v="Não, só praias e ilhas">Só praias e ilhas</button>
+            </div>
+          </div>
+          <div class="group">
+            <label class="label" for="data">4. Data</label>
+            <input type="date" id="data" class="date">
+          </div>
+          <div class="group full">
+            <p class="note"><b>Reserva:</b> 50% no Pix para garantir a data e o restante no embarque.</p>
+            <span class="label">Sua mensagem</span>
+            <div class="preview" id="preview" aria-live="polite"></div>
+            <a href="https://wa.me/5524999790893" target="_blank" rel="noopener" id="sendWa" class="btn light mag"><span>Enviar no WhatsApp</span><i><svg aria-hidden="true"><use href="#i-arrow"/></svg></i></a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Rodapé -->
-  <footer>
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <h4>Lancha Mikhael · Paraty</h4>
-        <p>
-          Passeios de lancha privativos e inesquecíveis em Paraty - RJ. Roteiros exclusivos para famílias, casais e grupos com segurança, conforto e exclusividade.
-        </p>
+    <section class="section" id="embarque">
+      <div class="wrap">
+        <div class="where">
+          <div class="where-card rv">
+            <span class="kicker">Embarque</span>
+            <h2>Cais de Turismo de <em class="it">Paraty</em></h2>
+            <div class="ph">
+              <picture>
+                <source media="(max-width: 599px)" srcset="img/paraty-centro-historico-m.webp" type="image/webp">
+                <source srcset="img/paraty-centro-historico.webp" type="image/webp">
+                <img src="img/paraty-centro-historico-m.jpg" alt="Rua de pedra e casarões coloniais do Centro Histórico de Paraty" width="1080" height="720" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <ul class="facts">
+              <li><small>Onde</small><b>Cais de Turismo · Centro Histórico, Paraty - RJ</b></li>
+              <li><small>Reservas</small><b>WhatsApp (24) 99979-0893 · David Henrique</b></li>
+            </ul>
+            <a href="https://www.google.com/maps/search/?api=1&query=Cais+de+Turismo+de+Paraty" target="_blank" rel="noopener" class="btn"><span>Abrir no Maps</span><i><svg aria-hidden="true"><use href="#i-arrow"/></svg></i></a>
+          </div>
+          <div class="map rv" style="--d:100ms">
+            <iframe title="Mapa do Cais de Turismo de Paraty, embarque da Lancha Mikhael" src="https://www.google.com/maps?q=Cais+de+Turismo+de+Paraty&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <div class="faq" id="duvidas">
+          <details class="rv" open><summary>Quanto tempo dura?</summary><p>5 horas de passeio, com cerca de 40 minutos em cada parada.</p></details>
+          <details class="rv" style="--d:60ms"><summary>De onde sai?</summary><p>Do Cais de Turismo de Paraty, no Centro Histórico.</p></details>
+          <details class="rv" style="--d:120ms"><summary>Dá para almoçar no caminho?</summary><p>Sim. Tem opção de parada em restaurante para almoço ou porções.</p></details>
+          <details class="rv" style="--d:180ms"><summary>Posso escolher as paradas?</summary><p>Pode. Além dos 4 roteiros, o roteiro e as paradas podem ser combinados.</p></details>
+          <details class="rv" style="--d:240ms"><summary>Como funciona a reserva?</summary><p>50% no Pix para garantir a data e o restante no embarque.</p></details>
+          <details class="rv" style="--d:300ms"><summary>O que tem a bordo?</summary><p>Cooler 26 L com gelo, água, ducha de água doce, som bluetooth, flutuantes, máscara e snorkel e coletes salva-vidas.</p></details>
+        </div>
       </div>
+    </section>
 
-      <div class="footer-col">
-        <h5>Navegação</h5>
-        <ul class="footer-links">
-          <li><a href="#sobre">A Lancha & Marinheiro</a></li>
-          <li><a href="#roteiros">Os 4 Roteiros</a></li>
-          <li><a href="#embarcacao">Itens Inclusos</a></li>
-          <li><a href="#simulador">Simular Reserva</a></li>
-          <li><a href="#faq">Dúvidas Frequentes</a></li>
-        </ul>
+    <section class="final">
+      <div class="wrap">
+        <div class="ph cl rv">
+          <picture>
+            <source media="(max-width: 599px)" srcset="img/paraty-rua-colonial-m.webp" type="image/webp">
+            <source srcset="img/paraty-rua-colonial.webp" type="image/webp">
+            <img src="img/paraty-rua-colonial-m.jpg" alt="Casarões brancos de portas coloridas no Centro Histórico de Paraty, com a serra ao fundo" width="1080" height="720" loading="lazy" decoding="async" data-par>
+          </picture>
+        </div>
+        <div class="final-copy">
+          <h2 class="rv">Seu dia em Paraty <em class="it">começa no mar.</em></h2>
+          <a href="#reservar" class="btn mag rv" style="--d:100ms"><span>Montar meu passeio</span><i><svg aria-hidden="true"><use href="#i-arrow"/></svg></i></a>
+        </div>
       </div>
+    </section>
+  </main>
 
-      <div class="footer-col">
-        <h5>Contato Direto</h5>
-        <ul class="footer-links">
-          <li><strong>David Henrique:</strong> (24) 99979-0893</li>
-          <li><strong>Instagram:</strong> @lanchamikhael</li>
-          <li><strong>Embarque:</strong> Cais de Turismo de Paraty</li>
-          <li><strong>Horário:</strong> 07:30 às 19:00</li>
-        </ul>
+  <footer class="footer">
+    <div class="wrap">
+      <div class="foot">
+        <div class="foot-brand">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><use href="#mk"/></svg>
+          <div><b>Mikhael</b><small>Lancha · Paraty - RJ</small></div>
+        </div>
+        <div><h4>Reservas</h4><ul><li><a href="https://wa.me/5524999790893" target="_blank" rel="noopener">WhatsApp (24) 99979-0893</a></li><li><a href="https://www.instagram.com/lanchamikhael/" target="_blank" rel="noopener">Instagram @lanchamikhael</a></li></ul></div>
+        <div><h4>Embarque</h4><ul><li><a href="https://www.google.com/maps/search/?api=1&query=Cais+de+Turismo+de+Paraty" target="_blank" rel="noopener">Cais de Turismo · Paraty - RJ</a></li></ul></div>
       </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>© 2026 Lancha Mikhael — Todos os direitos reservados. Paraty - RJ.</p>
+      <p class="credit">© 2026 Lancha Mikhael · Fotos da lancha: Lancha Mikhael.</p>
     </div>
   </footer>
 
-  <!-- 7. Botão Flutuante de WhatsApp (.fab) com Ping e Auto-Hide (.fab.away) -->
-  <a href="https://wa.me/5524999790893?text=Ol%C3%A1%20David%20Henrique%2C%20gostaria%20de%20consultar%20disponibilidade%20para%20passeio%20na%20Lancha%20Mikhael%20em%20Paraty!" target="_blank" rel="noopener noreferrer" class="fab" id="fab" aria-label="Falar com David Henrique no WhatsApp">
-    <svg viewBox="0 0 24 24">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-    </svg>
+  <a href="https://wa.me/5524999790893?text=Ol%C3%A1%2C%20David!%20Vi%20o%20site%20da%20Lancha%20Mikhael%20e%20quero%20consultar%20um%20passeio%20em%20Paraty." target="_blank" rel="noopener" class="fab" id="fab" aria-label="Chamar no WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></svg>
   </a>
 
-  <!-- Bibliotecas de Movimento Suave -->
-  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
-
-  <!-- Scripts Interativos & Arquitetura de Movimento -->
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // 2. Split de Palavras (.split -> .w > .wi)
+    (function () {
+      var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // título palavra por palavra (CSS faz a animação)
       document.querySelectorAll('.split').forEach(function (el) {
         var i = 0;
         (function walk(node) {
@@ -2455,215 +755,149 @@
         })(el);
       });
 
-      // 5. Revelação com IntersectionObserver (Leve no Android, 60fps)
-      var els = document.querySelectorAll('.reveal, .clip, .reveal-wave, .stops');
-      if ('IntersectionObserver' in window) {
-        var io = new IntersectionObserver(function (entries) {
-          entries.forEach(function (en) {
-            if (!en.isIntersecting) return;
-            var el = en.target;
-            if (el.matches('.reveal, .clip, .reveal-wave, .stops')) el.classList.add('in');
-            (el.__clips || []).forEach(function (c) { c.classList.add('in'); });
-            io.unobserve(el);
-          });
-        }, { rootMargin: '0px 0px -6% 0px', threshold: 0.08 });
-
-        els.forEach(function (el) {
-          if (el.classList.contains('clip')) {
-            var h = el.parentElement;
-            (h.__clips = h.__clips || []).push(el);
-            io.observe(h);
-          }
-          if (el.matches('.reveal, .reveal-wave, .stops')) io.observe(el);
-        });
-      } else {
-        els.forEach(function (el) { el.classList.add('in'); });
+      // roteiros em abas: a rota se desenha e o barquinho navega pelas 4 paradas
+      var tabs = [].slice.call(document.querySelectorAll('.tab')), current = 'Roteiro Norte';
+      function play(panel) {
+        var route = panel.querySelector('.route'), items = route.querySelectorAll('li');
+        var r0 = route.getBoundingClientRect().top, a = items[0].getBoundingClientRect(), b = items[items.length - 1].getBoundingClientRect();
+        route.classList.remove('play');
+        route.style.setProperty('--y0', (a.top - r0 + a.height / 2) + 'px');
+        route.style.setProperty('--travel', (b.top + b.height / 2 - a.top - a.height / 2) + 'px');
+        void route.offsetWidth;
+        route.classList.add('play');
       }
-
-      // Varredura de segurança para rolagens rápidas
-      var pending = Array.prototype.slice.call(els), sweeping = false;
-      function sweep() {
-        sweeping = false;
-        var lim = window.innerHeight * 0.95;
-        pending = pending.filter(function (el) {
-          if (el.getBoundingClientRect().top < lim) { el.classList.add('in'); return false; }
-          return true;
+      function openTab(tab, focus) {
+        tabs.forEach(function (t) {
+          var on = t === tab, p = document.getElementById(t.getAttribute('aria-controls'));
+          t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1; p.hidden = !on;
+          if (on) { current = p.dataset.rot; play(p); }
         });
-        if (!pending.length) window.removeEventListener('scroll', onSweep);
+        if (focus) tab.focus();
+        tab.scrollIntoView({ block: 'nearest', inline: 'nearest' });
       }
-      function onSweep() { if (!sweeping) { sweeping = true; requestAnimationFrame(sweep); } }
-      window.addEventListener('scroll', onSweep, { passive: true });
-      sweep();
-
-      // 3. Topo Flutuante que se esconde ao descer e reaparece ao subir
-      var navWrap = document.getElementById('navWrap'), lastY = window.scrollY, tick = false;
-      window.addEventListener('scroll', function () {
-        if (tick) return; tick = true;
-        requestAnimationFrame(function () {
-          var y = window.scrollY;
-          if (y > lastY + 6 && y > 130) navWrap.classList.add('hide');
-          else if (y < lastY - 6 || y < 130) navWrap.classList.remove('hide');
-          lastY = y; tick = false;
-        });
-      }, { passive: true });
-
-      // Barra de progresso no scroll
-      var prog = document.getElementById('scrollProgress');
-      window.addEventListener('scroll', function () {
-        var h = document.documentElement.scrollHeight - window.innerHeight;
-        if (h > 0) prog.style.width = (window.scrollY / h * 100) + '%';
-      }, { passive: true });
-
-      // 7. Auto-hide do botão flutuante (.fab.away) onde já há botão visível
-      var fab = document.getElementById('fab'), vis = new Set();
-      if ('IntersectionObserver' in window && fab) {
-        var fio = new IntersectionObserver(function (entries) {
-          entries.forEach(function (e) {
-            e.isIntersecting ? vis.add(e.target) : vis.delete(e.target);
-          });
-          fab.classList.toggle('away', vis.size > 0);
-        }, { threshold: 0.25 });
-        [document.querySelector('.hero'), document.getElementById('simulador')].forEach(function (t) {
-          if (t) fio.observe(t);
-        });
-      }
-
-      // Inicializa data do simulador para amanhã
-      var tomorrow = new Date();
-      tomorrow.setDate(tomorrow.getDate() + 1);
-      var yyyy = tomorrow.getFullYear();
-      var mm = String(tomorrow.getMonth() + 1).padStart(2, '0');
-      var dd = String(tomorrow.getDate()).padStart(2, '0');
-      var dateField = document.getElementById('simData');
-      if (dateField) dateField.value = yyyy + '-' + mm + '-' + dd;
-    });
-
-    // Animações GSAP + ScrollTrigger + Lenis
-    window.addEventListener('load', function () {
-      var fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
-      if (!window.gsap || !window.ScrollTrigger || matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        // Fallback animar contadores sem GSAP
-        document.querySelectorAll('[data-count]').forEach(function (el) {
-          el.textContent = el.dataset.count;
-        });
-        return;
-      }
-
-      gsap.registerPlugin(ScrollTrigger);
-
-      // Lenis Smooth Scroll para Desktop
-      if (fine && window.Lenis) {
-        var lenis = new Lenis({ duration: 1.15 });
-        lenis.on('scroll', ScrollTrigger.update);
-        gsap.ticker.add(function (t) { lenis.raf(t * 1000); });
-        gsap.ticker.lagSmoothing(0);
-        document.querySelectorAll('a[href^="#"]').forEach(function (a) {
-          a.addEventListener('click', function (e) {
-            var target = document.querySelector(a.getAttribute('href'));
-            if (!target) return;
-            e.preventDefault();
-            lenis.scrollTo(target, { offset: -70 });
-          });
-        });
-      }
-
-      // Parallax suave no Hero
-      gsap.to('#heroImg', {
-        yPercent: 6,
-        ease: 'none',
-        scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true }
-      });
-
-      // Parallax nas fotos com [data-par]
-      document.querySelectorAll('[data-par]').forEach(function (img) {
-        var container = img.closest('.photo') || img.parentElement;
-        gsap.fromTo(img, { yPercent: -5 }, {
-          yPercent: 5,
-          ease: 'none',
-          scrollTrigger: { trigger: container, start: 'top bottom', end: 'bottom top', scrub: true }
+      tabs.forEach(function (t, i) {
+        t.addEventListener('click', function () { openTab(t); });
+        t.addEventListener('keydown', function (e) {
+          var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+          if (d) { e.preventDefault(); openTab(tabs[(i + d + tabs.length) % tabs.length], true); }
         });
       });
 
-      // 4. Contadores animados [data-count]
-      document.querySelectorAll('[data-count]').forEach(function (el) {
-        var end = parseFloat(el.dataset.count), dec = Number(el.dataset.dec || 0), o = { v: 0 };
-        ScrollTrigger.create({
-          trigger: el,
-          start: 'top 92%',
-          once: true,
-          onEnter: function () {
-            gsap.to(o, {
-              v: end,
-              duration: 1.4,
-              ease: 'power2.out',
-              onUpdate: function () {
-                el.textContent = o.v.toFixed(dec).replace('.', ',');
-              }
-            });
-          }
+      // simulador -> WhatsApp
+      var paradas = {
+        'Roteiro Norte': 'Ilha Malvão · Ilha Comprida do Norte · Praia Salvador Moreira · Ilha Ventura',
+        'Roteiro Sul I': 'Praia da Lula · Ilha da Pescaria · Praia Vermelha · Ilha do Mantimento',
+        'Roteiro Sul II': 'Ilha dos Cocos · Enseada da Preguiça · Praia Saco da Velha · Ilha da Pescaria',
+        'Roteiro Sul III': 'Ilha dos Cocos · Saco da Velha · Lagoa Azul · Praia Vermelha',
+        'Roteiro a combinar': 'Paradas combinadas com o David'
+      };
+      var counts = { adultos: 4, criancas: 0 }, dataEl = document.getElementById('data');
+      var amanha = new Date(Date.now() + 864e5), pad = function (n) { return String(n).padStart(2, '0'); };
+      dataEl.min = new Date().toISOString().slice(0, 10);
+      dataEl.value = amanha.getFullYear() + '-' + pad(amanha.getMonth() + 1) + '-' + pad(amanha.getDate());
+      function active(g) { return document.querySelector('[data-g="' + g + '"] .chip.active').dataset.v; }
+      function mensagem() {
+        var pessoas = [counts.adultos + ' adulto' + (counts.adultos > 1 ? 's' : '')];
+        if (counts.criancas > 0) pessoas.push(counts.criancas + ' criança' + (counts.criancas > 1 ? 's' : ''));
+        var d = dataEl.value ? dataEl.value.split('-').reverse().join('/') : 'a combinar';
+        return 'Olá, David! Tudo bem? Vim pelo site da *Lancha Mikhael* e gostaria de consultar disponibilidade:\n\n*Roteiro:* ' + active('roteiro') + '\n*Grupo:* ' + pessoas.join(' e ') + '\n*Almoço:* ' + active('almoco') + '\n*Data:* ' + d + '\n\nSei que a reserva é 50% no Pix e o restante no embarque.';
+      }
+      function atualizar() {
+        var msg = mensagem();
+        document.getElementById('stopsLive').textContent = paradas[active('roteiro')];
+        document.getElementById('preview').textContent = msg.replace(/\*/g, '');
+        document.getElementById('sendWa').href = 'https://wa.me/5524999790893?text=' + encodeURIComponent(msg);
+        document.querySelectorAll('.c-btn').forEach(function (b) {
+          var k = b.dataset.c, min = k === 'adultos' ? 1 : 0;
+          b.disabled = Number(b.dataset.d) < 0 ? counts[k] <= min : counts[k] >= 10;
+        });
+      }
+      function pick(group, v) {
+        group.querySelectorAll('.chip').forEach(function (c) { c.classList.toggle('active', c.dataset.v === v); });
+      }
+      document.querySelectorAll('.chips').forEach(function (group) {
+        group.addEventListener('click', function (e) {
+          var btn = e.target.closest('.chip'); if (!btn) return;
+          pick(group, btn.dataset.v); atualizar();
         });
       });
+      document.querySelectorAll('.c-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var k = btn.dataset.c, min = k === 'adultos' ? 1 : 0, v = document.getElementById('val-' + k);
+          counts[k] = Math.max(min, Math.min(10, counts[k] + Number(btn.dataset.d)));
+          v.textContent = counts[k]; v.classList.remove('bump'); void v.offsetWidth; v.classList.add('bump');
+          atualizar();
+        });
+      });
+      dataEl.addEventListener('change', atualizar);
+      document.getElementById('pickRoute').addEventListener('click', function () {
+        pick(document.querySelector('[data-g="roteiro"]'), current); atualizar();
+        document.getElementById('reservar').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
+      });
+      atualizar();
 
-      // 7. Efeito Magnético nos botões [data-mag]
-      if (fine) {
-        document.querySelectorAll('[data-mag]').forEach(function (b) {
-          var qx = gsap.quickTo(b, 'x', { duration: 0.45, ease: 'power3' });
-          var qy = gsap.quickTo(b, 'y', { duration: 0.45, ease: 'power3' });
+      // topo some ao descer, barra de progresso e parallax leve (só transform)
+      var nav = document.getElementById('navWrap'), prog = document.getElementById('progress'), lastY = window.scrollY, tick = false;
+      var pars = [].slice.call(document.querySelectorAll('[data-par]'));
+      function frame() {
+        var y = window.scrollY, vh = window.innerHeight, h = document.documentElement.scrollHeight - vh;
+        if (y > lastY + 6 && y > 160) nav.classList.add('hide');
+        else if (y < lastY - 6 || y < 160) nav.classList.remove('hide');
+        lastY = y;
+        prog.style.transform = 'scaleX(' + (h > 0 ? y / h : 0).toFixed(4) + ')';
+        if (!reduce) {
+          pars.forEach(function (img) {
+            var r = img.parentNode.parentNode.getBoundingClientRect();
+            if (r.bottom < 0 || r.top > vh) return;
+            var p = (r.top + r.height / 2 - vh / 2) / (vh + r.height);
+            img.style.transform = 'translate3d(0,' + (p * -12).toFixed(2) + '%,0)';
+          });
+        }
+        tick = false;
+      }
+      window.addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(frame); } }, { passive: true });
+      frame();
+
+      // botões magnéticos só com mouse
+      if (!reduce && matchMedia('(hover: hover) and (pointer: fine)').matches) {
+        document.querySelectorAll('.mag').forEach(function (b) {
           b.addEventListener('mousemove', function (e) {
             var r = b.getBoundingClientRect();
-            qx((e.clientX - r.left - r.width / 2) * 0.18);
-            qy((e.clientY - r.top - r.height / 2) * 0.28);
+            b.style.transform = 'translate(' + ((e.clientX - r.left - r.width / 2) * 0.15).toFixed(1) + 'px,' + ((e.clientY - r.top - r.height / 2) * 0.25).toFixed(1) + 'px)';
           });
-          b.addEventListener('mouseleave', function () {
-            qx(0);
-            qy(0);
-          });
+          b.addEventListener('mouseleave', function () { b.style.transform = ''; });
         });
       }
 
-      ScrollTrigger.refresh();
-    });
+      // revelação no scroll + contadores + 1ª rota
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (es) {
+          es.forEach(function (e) {
+            if (!e.isIntersecting) return;
+            e.target.classList.add('in'); io.unobserve(e.target);
+            var c = e.target.querySelector('[data-count]');
+            if (c && !reduce) { var n = +c.dataset.count, t0 = performance.now(); (function step(t) { var p = Math.min(1, (t - t0) / 1100); c.textContent = Math.round(n * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(step); })(t0); }
+          });
+        }, { threshold: 0.15, rootMargin: '0px 0px -6% 0px' });
+        document.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
 
-    // FAQ Acordeon
-    function toggleFaq(btn) {
-      var item = btn.parentElement;
-      var isActive = item.classList.contains('active');
-      document.querySelectorAll('.faq-item').forEach(function (el) { el.classList.remove('active'); });
-      if (!isActive) item.classList.add('active');
-    }
+        var rio = new IntersectionObserver(function (es) {
+          if (es[0].isIntersecting) { play(document.querySelector('.panel:not([hidden])')); rio.disconnect(); }
+        }, { threshold: 0.35 });
+        rio.observe(document.getElementById('p-norte'));
 
-    // Simulador WhatsApp
-    function enviarWhatsApp() {
-      var roteiro = document.getElementById('simRoteiro').value;
-      var almocoEl = document.querySelector('input[name="simAlmoco"]:checked');
-      var almoco = almocoEl ? almocoEl.value : 'A combinar';
-      var pessoas = document.getElementById('simPessoas').value;
-      var dataInput = document.getElementById('simData').value;
-
-      var dataFormatada = 'A combinar';
-      if (dataInput) {
-        var partes = dataInput.split('-');
-        if (partes.length === 3) dataFormatada = partes[2] + '/' + partes[1] + '/' + partes[0];
+        // bolinha do WhatsApp some no topo e no simulador
+        var fab = document.getElementById('fab'), vis = new Set();
+        var fio = new IntersectionObserver(function (es) {
+          es.forEach(function (e) { e.isIntersecting ? vis.add(e.target) : vis.delete(e.target); });
+          fab.classList.toggle('away', vis.size > 0);
+        }, { threshold: 0.25 });
+        [document.querySelector('.hero-copy'), document.getElementById('reservar')].forEach(function (t) { fio.observe(t); });
+      } else {
+        document.querySelectorAll('.rv').forEach(function (el) { el.classList.add('in'); });
+        play(document.getElementById('p-norte'));
       }
-
-      var mensagem = 'Olá David Henrique! Simulei meu passeio a bordo da Lancha Mikhael no site:\n' +
-        '• Roteiro: ' + roteiro + '\n' +
-        '• Pessoas: ' + pessoas + '\n' +
-        '• Parada para Almoço: ' + almoco + '\n' +
-        '• Data Desejada: ' + dataFormatada + '\n\n' +
-        'Estou ciente da condição de reserva (50% via Pix e o restante no embarque no Cais de Turismo). Poderia me confirmar a disponibilidade para esta data?';
-
-      window.open('https://wa.me/5524999790893?text=' + encodeURIComponent(mensagem), '_blank');
-    }
-
-    function atualizarMensagem() {
-      var card = document.querySelector('.simulador-card');
-      if (card) {
-        card.classList.remove('bump');
-        void card.offsetWidth;
-        card.classList.add('bump');
-      }
-    }
+    })();
   </script>
 </body>
 </html>
