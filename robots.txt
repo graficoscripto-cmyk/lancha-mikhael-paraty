@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lancha-mikhael-paraty.vercel.app/sitemap.xml

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 64" fill="none">
+  <g transform="translate(4, 4)">
+    <circle cx="28" cy="28" r="26" fill="#0A2342" stroke="#C88A36" stroke-width="1.5"/>
+    <circle cx="28" cy="28" r="22" stroke="#0E7C7B" stroke-width="1" stroke-opacity="0.5" stroke-dasharray="2 2"/>
+    <path d="M28 12L39 34C34 31 22 31 17 34L28 12Z" fill="#FFFFFF"/>
+    <path d="M16 38C22 35 34 35 40 38C36 41 20 41 16 38Z" fill="#0E7C7B"/>
+    <path d="M13 43C21 40 35 40 43 43C38 46 18 46 13 43Z" fill="#C88A36"/>
+    <circle cx="28" cy="7" r="1.5" fill="#C88A36"/>
+    <circle cx="49" cy="28" r="1.5" fill="#C88A36"/>
+    <circle cx="28" cy="49" r="1.5" fill="#C88A36"/>
+    <circle cx="7" cy="28" r="1.5" fill="#C88A36"/>
+  </g>
+  <text x="72" y="32" font-family="'Fraunces', serif" font-size="21" font-weight="700" letter-spacing="0.05em" fill="#0A2342">LANCHA MIKHAEL</text>
+  <text x="73" y="48" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="600" letter-spacing="0.24em" fill="#0E7C7B">PASSEIOS EM PARATY · RJ</text>
+</svg>
