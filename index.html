@@ -169,7 +169,7 @@
     .brand { display: flex; align-items: center; gap: 9px; min-height: 44px; min-width: 0; }
     .brand svg { width: 38px; height: 38px; flex: none; }
     .brand span { display: grid; line-height: 1; }
-    .brand b { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 1.32rem; }
+    .brand b { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: clamp(1.08rem, 4.6vw, 1.32rem); white-space: nowrap; }
     .brand small { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--verde); margin-top: 3px; }
     .nav-links { display: none; gap: 30px; font-size: 0.93rem; font-weight: 600; color: var(--soft); }
     .nav-links a { display: inline-flex; align-items: center; min-height: 44px; transition: color 0.2s; }
@@ -414,7 +414,7 @@
   <div class="intro" aria-hidden="true">
     <div class="intro-in">
       <svg viewBox="0 0 64 64"><use href="#mk"/><path class="sw" pathLength="1" d="M8 41.5C20 32 36 25.5 57 20.5" fill="none" stroke="#43C99C" stroke-width="1.6" stroke-linecap="round"/></svg>
-      <b>Mikhael</b>
+      <b>Lancha Mikhael</b>
     </div>
   </div>
   <div class="progress" id="progress" aria-hidden="true"></div>
@@ -423,7 +423,7 @@
     <header class="nav">
       <a href="#topo" class="brand" aria-label="Lancha Mikhael Paraty — início">
         <svg viewBox="0 0 64 64" aria-hidden="true"><use href="#mk"/></svg>
-        <span><b>Mikhael</b><small>Lancha · Paraty</small></span>
+        <span><b>Lancha Mikhael</b><small>Paraty · RJ</small></span>
       </a>
       <nav class="nav-links" aria-label="Navegação principal">
         <a href="#lancha">A lancha</a>
@@ -717,7 +717,7 @@
       <div class="foot">
         <div class="foot-brand">
           <svg viewBox="0 0 64 64" aria-hidden="true"><use href="#mk"/></svg>
-          <div><b>Mikhael</b><small>Lancha · Paraty - RJ</small></div>
+          <div><b>Lancha Mikhael</b><small>Paraty - RJ</small></div>
         </div>
         <div><h4>Reservas</h4><ul><li><a href="https://wa.me/5511957602301" target="_blank" rel="noopener">WhatsApp (11) 95760-2301</a></li><li><a href="https://www.instagram.com/lanchamikhael/" target="_blank" rel="noopener">Instagram @lanchamikhael</a></li></ul></div>
         <div><h4>Embarque</h4><ul><li><a href="https://www.google.com/maps/search/?api=1&query=Cais+de+Turismo+de+Paraty" target="_blank" rel="noopener">Cais de Turismo · Paraty - RJ</a></li></ul></div>
