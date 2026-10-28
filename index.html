@@ -240,6 +240,9 @@
     .boat { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
     .boat .ph { aspect-ratio: 3 / 4; }
     .boat .ph.big { grid-column: 1 / -1; aspect-ratio: 16 / 10; }
+    .vista { margin-top: 28px; }
+    .vista-ph { aspect-ratio: 3 / 4; max-height: 88vh; max-width: 560px; margin: 0 auto; box-shadow: 0 24px 60px rgba(21, 35, 63, 0.22); }
+    .vista-ph .tag { position: absolute; left: 14px; bottom: 14px; padding: 8px 14px; border-radius: 999px; background: rgba(255, 255, 255, 0.95); font-size: 0.82rem; font-weight: 700; }
     .boat .ph .tag { position: absolute; left: 10px; bottom: 10px; padding: 7px 12px; border-radius: 999px; background: rgba(255, 255, 255, 0.95); font-size: 0.78rem; font-weight: 700; }
     .onboard { margin-top: 44px; }
     .onboard h3 { font-size: 1.9rem; margin-bottom: 18px; }
@@ -453,6 +456,18 @@
             <a href="#reservar" class="btn mag"><span>Montar meu passeio</span><i><svg aria-hidden="true"><use href="#i-arrow"/></svg></i></a>
             <a href="#roteiros" class="link">Ver os 4 roteiros</a>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="vista" aria-label="Águas de Paraty">
+      <div class="wrap">
+        <div class="ph vista-ph rv">
+          <picture>
+            <source srcset="img/mikhael-agua-paraty.webp" type="image/webp">
+            <img src="img/mikhael-agua-paraty.jpg" alt="Água transparente sobre as pedras, com mata e palmeiras na ilha, em Paraty" width="960" height="1280" decoding="async">
+          </picture>
+          <span class="tag">Águas de Paraty</span>
         </div>
       </div>
     </section>
