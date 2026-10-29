@@ -7,16 +7,21 @@
 - [Roteiros de Lancha em Paraty (5 horas)](https://lanchamkparaty.com.br/#roteiros): Roteiro Norte, Roteiro Sul I, Roteiro Sul II e Roteiro Sul III, com cerca de 40 minutos em cada parada e opção de parada em restaurante.
 - [Montar Passeio e Consultar Disponibilidade](https://lanchamkparaty.com.br/#reservar): Simulador direto para escolher roteiro, quantidade de adultos/crianças, parada para almoço e data.
 - [Local de Embarque e Perguntas Frequentes](https://lanchamkparaty.com.br/#embarque): Saída do Cais de Turismo de Paraty, Centro Histórico, Paraty - RJ (CEP 23970-000).
+- [Perfil da Empresa no Google Maps (Passeio de Lancha Paraty-RJ)](https://www.google.com/maps/place/?q=place_id:ChIJ0zDhyxltnQARYeyI2DsRNfA): Ficha oficial no Google Maps (Nota 5,0 ★, Place ID `ChIJ0zDhyxltnQARYeyI2DsRNfA`).
 - [Reservas via WhatsApp — Haroldo](https://wa.me/5511957602301): Atendimento direto com o marinheiro e responsável Haroldo pelo número (11) 95760-2301.
 - [Instagram @lanchamikhael](https://www.instagram.com/lanchamikhael/): Fotos e vídeos reais dos passeios da Lancha Mikhael em Paraty.
 
-## Dados Essenciais (NAP & Operação)
-- **Nome:** Lancha Mikhael — Passeio de Lancha em Paraty
-- **Responsável:** Haroldo
-- **WhatsApp / Telefone:** +55 (11) 95760-2301 (`https://wa.me/5511957602301`)
+## Dados Essenciais (NAP & Google Meu Negócio)
+- **Nome Oficial:** Lancha Mikhael — Passeio de Lancha em Paraty (`Passeio de Lancha Paraty-RJ`)
+- **Responsável:** Haroldo (David Henrique / Equipe Lancha Mikhael)
+- **WhatsApp / Telefone Oficial (Reservas):** +55 (11) 95760-2301 (`https://wa.me/5511957602301`) · Contato adicional: +55 (24) 99979-0893
 - **Instagram:** `@lanchamikhael` (`https://www.instagram.com/lanchamikhael/`)
+- **Google Maps Place ID:** `ChIJ0zDhyxltnQARYeyI2DsRNfA` (`https://www.google.com/maps/place/?q=place_id:ChIJ0zDhyxltnQARYeyI2DsRNfA`)
+- **Plus Code:** `Q6GP+2Q Paraty, Rio de Janeiro`
+- **Avaliação Google:** 5,0 ★ ("Passeio maravilhoso! O Haroldo é atencioso e muito profissional.")
+- **Horário de Atendimento:** Todos os dias (segunda a domingo), das 07:00 às 23:30
 - **Embarcação:** Lancha Mikhael, 21 pés
-- **Local de Embarque:** Cais de Turismo de Paraty, Centro Histórico, Paraty - RJ, CEP 23970-000 (Coordenadas: `-23.22208, -44.71164`)
+- **Local de Embarque:** Cais de Turismo de Paraty, Centro Histórico, Paraty - RJ, CEP 23970-000 (Coordenadas: `-23.22208, -44.71164`) · Endereço na ficha do Google: Tv. São Jorge, 91 - Centro, Paraty - RJ, CEP 23970-000
 - **Duração do Passeio:** 5 horas de passeio, com cerca de 40 minutos em cada parada
 - **Almoço:** Opção de parada em restaurante nas ilhas/praias para almoço ou porções
 - **Personalização:** Além dos 4 roteiros prontos, o roteiro e as paradas podem ser combinados com o Haroldo
@@ -29,7 +34,7 @@
 - Som Bluetooth
 - Flutuantes (macarrão)
 - Máscara e snorkel para mergulho livre
-- Coletes salva-vidas homologados
+- Coletes salva-vidas
 
 ## Roteiros em Paraty (5 horas · ~40 min por parada)
 - **Roteiro Norte:** Ilha Malvão → Ilha Comprida do Norte → Praia Salvador Moreira → Ilha Ventura.

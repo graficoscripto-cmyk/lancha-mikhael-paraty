@@ -94,7 +94,7 @@
         "@type": ["LocalBusiness", "TravelAgency", "BoatTrip"],
         "@id": "https://lanchamkparaty.com.br/#negocio",
         "name": "Lancha Mikhael — Passeio de Lancha em Paraty",
-        "alternateName": ["Lancha Mikhael", "Lancha Mikhael Paraty", "Lancha MK Paraty", "Barco Paraty"],
+        "alternateName": ["Lancha Mikhael", "Passeio de Lancha Paraty-RJ", "Lancha Mikhael Paraty", "Lancha MK Paraty", "Barco Paraty"],
         "description": "Passeio de lancha em Paraty a bordo da Lancha Mikhael, de 21 pés. 5 horas pelas praias e ilhas de Paraty, 4 roteiros (Norte, Sul I, Sul II e Sul III) ou roteiro a combinar, saída do Cais de Turismo no Centro Histórico.",
         "url": "https://lanchamkparaty.com.br/",
         "logo": {
@@ -111,13 +111,29 @@
           "https://lanchamkparaty.com.br/img/mikhael-lateral-jardim.jpg"
         ],
         "telephone": "+55-11-95760-2301",
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+55-11-95760-2301",
+            "contactType": "reservations",
+            "areaServed": "BR-RJ",
+            "availableLanguage": ["Portuguese"]
+          },
+          {
+            "@type": "ContactPoint",
+            "telephone": "+55-24-99979-0893",
+            "contactType": "customer service",
+            "areaServed": "BR-RJ",
+            "availableLanguage": ["Portuguese"]
+          }
+        ],
         "priceRange": "$$",
         "currenciesAccepted": "BRL",
-        "paymentAccepted": "Pix",
+        "paymentAccepted": "Pix, Dinheiro",
         "founder": { "@type": "Person", "name": "Haroldo" },
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Cais de Turismo de Paraty, Centro Histórico",
+          "streetAddress": "Cais de Turismo de Paraty, Centro Histórico (Ficha Google: Tv. São Jorge, 91 - Centro)",
           "addressLocality": "Paraty",
           "addressRegion": "RJ",
           "postalCode": "23970-000",
@@ -128,7 +144,31 @@
           "latitude": -23.22208,
           "longitude": -44.71164
         },
-        "hasMap": "https://www.google.com/maps/search/?api=1&query=Cais+de+Turismo+de+Paraty",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "07:00",
+            "closes": "23:30"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "1",
+          "reviewCount": "1"
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Berenice Amorim Anez" },
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+            "reviewBody": "Passeio maravilhoso! O Haroldo é atencioso e muito profissional."
+          }
+        ],
+        "hasMap": "https://www.google.com/maps/place/?q=place_id:ChIJ0zDhyxltnQARYeyI2DsRNfA",
         "areaServed": [
           { "@type": "City", "name": "Paraty" },
           { "@type": "Place", "name": "Cais de Turismo de Paraty" },
@@ -145,6 +185,8 @@
         ],
         "sameAs": [
           "https://www.instagram.com/lanchamikhael/",
+          "https://www.google.com/maps/place/?q=place_id:ChIJ0zDhyxltnQARYeyI2DsRNfA",
+          "https://www.google.com/maps/place/?q=place_id:ChIJJQtlyPptnQARW0H5VrYN70o",
           "https://wa.me/5511957602301"
         ],
         "hasOfferCatalog": {
@@ -782,9 +824,9 @@
             </div>
             <ul class="facts">
               <li><small>Onde</small><b>Cais de Turismo · Centro Histórico, Paraty - RJ</b></li>
-              <li><small>Reservas</small><b>WhatsApp (11) 95760-2301 · Haroldo</b></li>
+              <li><small>Reservas</small><b>WhatsApp (11) 95760-2301 · Haroldo (07h às 23h30)</b></li>
             </ul>
-            <a href="https://www.google.com/maps/search/?api=1&query=Cais+de+Turismo+de+Paraty" target="_blank" rel="noopener" class="btn"><span>Abrir no Maps</span><i><svg aria-hidden="true"><use href="#i-arrow"/></svg></i></a>
+            <a href="https://www.google.com/maps/place/?q=place_id:ChIJ0zDhyxltnQARYeyI2DsRNfA" target="_blank" rel="noopener" class="btn"><span>Abrir no Google Maps</span><i><svg aria-hidden="true"><use href="#i-arrow"/></svg></i></a>
           </div>
           <div class="map rv" style="--d:100ms">
             <iframe title="Mapa do Cais de Turismo de Paraty, embarque da Lancha Mikhael" src="https://www.google.com/maps?q=Cais+de+Turismo+de+Paraty&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -826,7 +868,7 @@
           <div><b>Lancha Mikhael</b><small>Paraty - RJ</small></div>
         </div>
         <div><h4>Reservas</h4><ul><li><a href="https://wa.me/5511957602301" target="_blank" rel="noopener">WhatsApp (11) 95760-2301</a></li><li><a href="https://www.instagram.com/lanchamikhael/" target="_blank" rel="noopener">Instagram @lanchamikhael</a></li></ul></div>
-        <div><h4>Embarque</h4><ul><li><a href="https://www.google.com/maps/search/?api=1&query=Cais+de+Turismo+de+Paraty" target="_blank" rel="noopener">Cais de Turismo · Paraty - RJ</a></li></ul></div>
+        <div><h4>Embarque</h4><ul><li><a href="https://www.google.com/maps/place/?q=place_id:ChIJ0zDhyxltnQARYeyI2DsRNfA" target="_blank" rel="noopener">Cais de Turismo · Paraty - RJ</a></li></ul></div>
       </div>
       <p class="credit">© 2026 Lancha Mikhael · Fotos da lancha: Lancha Mikhael.</p>
     </div>
@@ -933,6 +975,8 @@
           counts[k] = Math.max(min, Math.min(10, counts[k] + Number(btn.dataset.d)));
           v.textContent = counts[k]; v.classList.remove('bump'); void v.offsetWidth; v.classList.add('bump');
           atualizar();
+        });
+      });
 
       // WebMCP progressive enhancement (seo-agentic) para agentes de IA e navegadores agênticos
       var mc = document.modelContext || navigator.modelContext;
@@ -972,8 +1016,6 @@
           });
         } catch (e) {}
       }
-        });
-      });
       dataEl.addEventListener('change', atualizar);
       document.getElementById('pickRoute').addEventListener('click', function () {
         pick(document.querySelector('[data-g="roteiro"]'), current); atualizar();
