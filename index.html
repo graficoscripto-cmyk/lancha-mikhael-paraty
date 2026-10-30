@@ -948,13 +948,13 @@
         var pessoas = [counts.adultos + ' adulto' + (counts.adultos > 1 ? 's' : '')];
         if (counts.criancas > 0) pessoas.push(counts.criancas + ' criança' + (counts.criancas > 1 ? 's' : ''));
         var d = dataEl.value ? dataEl.value.split('-').reverse().join('/') : 'a combinar';
-        return 'Olá, Haroldo! Tudo bem? Vim pelo site da *Lancha Mikhael* e gostaria de consultar disponibilidade:\n\n*Roteiro:* ' + active('roteiro') + '\n*Grupo:* ' + pessoas.join(' e ') + '\n*Almoço:* ' + active('almoco') + '\n*Data:* ' + d + '\n\nSei que a reserva é 50% no Pix e o restante no embarque.';
+        var _owner = window.__mkOwner || 'Haroldo'; return 'Olá, ' + _owner + '! Tudo bem? Vim pelo site da *Lancha Mikhael* e gostaria de consultar disponibilidade:\n\n*Roteiro:* ' + active('roteiro') + '\n*Grupo:* ' + pessoas.join(' e ') + '\n*Almoço:* ' + active('almoco') + '\n*Data:* ' + d + '\n\nSei que a reserva é 50% no Pix e o restante no embarque.';
       }
       function atualizar() {
         var msg = mensagem();
         document.getElementById('stopsLive').textContent = paradas[active('roteiro')];
         document.getElementById('preview').textContent = msg.replace(/\*/g, '');
-        document.getElementById('sendWa').href = 'https://wa.me/5511957602301?text=' + encodeURIComponent(msg);
+        var _wa = window.__mkWaPhone || '5511957602301'; document.getElementById('sendWa').href = 'https://wa.me/' + _wa + '?text=' + encodeURIComponent(msg);
         document.querySelectorAll('.c-btn').forEach(function (b) {
           var k = b.dataset.c, min = k === 'adultos' ? 1 : 0;
           b.disabled = Number(b.dataset.d) < 0 ? counts[k] <= min : counts[k] >= 10;
@@ -1084,6 +1084,227 @@
         document.querySelectorAll('.rv').forEach(function (el) { el.classList.add('in'); });
         play(document.getElementById('p-norte'));
       }
+
+      // Sincronização dinâmica com o Painel Lancha Mikhael (site-data.json)
+      function applySiteData(data) {
+        if (!data) return;
+
+        // 1. Hero & Vista
+        if (data.hero) {
+          var badgeEl = document.querySelector('.hero-photo .badge');
+          if (badgeEl && data.hero.badge) badgeEl.textContent = data.hero.badge;
+          var kickerEl = document.querySelector('.hero-copy .kicker');
+          if (kickerEl && data.hero.kicker) kickerEl.textContent = data.hero.kicker;
+          var h1El = document.querySelector('.hero h1');
+          if (h1El && data.hero.titleMain) {
+            h1El.innerHTML = data.hero.titleMain + ' <em class="it">' + (data.hero.titleItalic || '') + '</em>';
+          }
+          var leadEl = document.querySelector('.hero-lead');
+          if (leadEl && data.hero.lead) leadEl.textContent = data.hero.lead;
+          if (data.hero.image) {
+            var hPic = document.querySelector('.hero-photo picture');
+            if (hPic) {
+              var srcs = hPic.querySelectorAll('source');
+              if (srcs[0]) srcs[0].srcset = data.hero.webpMobile || data.hero.image;
+              if (srcs[1]) srcs[1].srcset = data.hero.webpDesktop || data.hero.image;
+              var hImg = hPic.querySelector('img');
+              if (hImg) hImg.src = data.hero.image;
+            }
+          }
+          if (data.hero.vistaImage) {
+            var vPic = document.querySelector('.vista-ph picture');
+            if (vPic) {
+              var vSrc = vPic.querySelector('source');
+              if (vSrc) vSrc.srcset = data.hero.vistaWebp || data.hero.vistaImage;
+              var vImg = vPic.querySelector('img');
+              if (vImg) vImg.src = data.hero.vistaImage;
+            }
+          }
+          var vTag = document.querySelector('.vista-ph .tag');
+          if (vTag && data.hero.vistaTag) vTag.textContent = data.hero.vistaTag;
+        }
+
+        // 2. A Lancha & O que tem a bordo
+        if (data.boat) {
+          var bTitle = document.querySelector('#lancha .sec-title');
+          if (bTitle && data.boat.titleMain) {
+            bTitle.innerHTML = data.boat.titleMain + ' <em class="it">' + (data.boat.titleItalic || '') + '</em>';
+          }
+          var bPhotos = document.querySelectorAll('#lancha .boat .ph');
+          if (bPhotos[0] && data.boat.photo1) {
+            var s0 = bPhotos[0].querySelectorAll('source');
+            if (s0[0]) s0[0].srcset = data.boat.photo1WebpMobile || data.boat.photo1;
+            if (s0[1]) s0[1].srcset = data.boat.photo1Webp || data.boat.photo1;
+            var i0 = bPhotos[0].querySelector('img');
+            if (i0) i0.src = data.boat.photo1;
+            var t0 = bPhotos[0].querySelector('.tag');
+            if (t0 && data.boat.photo1Tag) t0.textContent = data.boat.photo1Tag;
+          }
+          if (bPhotos[1] && data.boat.photo2) {
+            var s1 = bPhotos[1].querySelectorAll('source');
+            if (s1[0]) s1[0].srcset = data.boat.photo2WebpMobile || data.boat.photo2;
+            if (s1[1]) s1[1].srcset = data.boat.photo2Webp || data.boat.photo2;
+            var i1 = bPhotos[1].querySelector('img');
+            if (i1) i1.src = data.boat.photo2;
+          }
+          if (bPhotos[2] && data.boat.photo3) {
+            var s2 = bPhotos[2].querySelectorAll('source');
+            if (s2[0]) s2[0].srcset = data.boat.photo3WebpMobile || data.boat.photo3;
+            if (s2[1]) s2[1].srcset = data.boat.photo3Webp || data.boat.photo3;
+            var i2 = bPhotos[2].querySelector('img');
+            if (i2) i2.src = data.boat.photo3;
+          }
+          if (Array.isArray(data.boat.items) && data.boat.items.length > 0) {
+            var featEls = document.querySelectorAll('#lancha .feats .feat:not(.all)');
+            featEls.forEach(function (el, idx) {
+              if (data.boat.items[idx]) {
+                var b = el.querySelector('b');
+                if (b) b.textContent = data.boat.items[idx];
+                el.style.display = '';
+              } else {
+                el.style.display = 'none';
+              }
+            });
+          }
+          var featAll = document.querySelector('#lancha .feats .feat.all');
+          if (featAll) {
+            var fb = featAll.querySelector('b'), fs = featAll.querySelector('span');
+            if (fb && data.boat.highlightTitle) fb.textContent = data.boat.highlightTitle;
+            if (fs && data.boat.highlightSub) fs.textContent = data.boat.highlightSub;
+          }
+        }
+
+        // 3. Roteiros (Norte, Sul I, Sul II, Sul III)
+        if (Array.isArray(data.routes)) {
+          var panelIds = ['p-norte', 'p-sul1', 'p-sul2', 'p-sul3'];
+          var tabIds = ['t-norte', 't-sul1', 't-sul2', 't-sul3'];
+          data.routes.forEach(function (r, idx) {
+            var tabEl = document.getElementById(tabIds[idx]);
+            var panelEl = document.getElementById(panelIds[idx]);
+            if (tabEl) {
+              if (r.tabLabel) tabEl.textContent = r.tabLabel;
+              tabEl.style.display = r.enabled === false ? 'none' : '';
+            }
+            if (panelEl) {
+              if (r.title) panelEl.dataset.rot = r.title;
+              var h3 = panelEl.querySelector('.rt-head h3');
+              if (h3 && r.title) h3.textContent = r.title;
+              var pSub = panelEl.querySelector('.rt-head p');
+              if (pSub && r.subtitle) pSub.textContent = r.subtitle;
+              if (r.image) {
+                var rSrcs = panelEl.querySelectorAll('.ph source');
+                if (rSrcs[0]) rSrcs[0].srcset = r.webpMobile || r.image;
+                if (rSrcs[1]) rSrcs[1].srcset = r.webp || r.image;
+                var rImg = panelEl.querySelector('.ph img');
+                if (rImg) rImg.src = r.image;
+              }
+              if (Array.isArray(r.stops) && r.stops.length > 0) {
+                var ol = panelEl.querySelector('.route ol');
+                if (ol) {
+                  ol.innerHTML = r.stops.map(function (st, sIdx) {
+                    return '<li style="--k:' + sIdx + '"><small>' + (sIdx + 1) + '</small><b>' + st + '</b></li>';
+                  }).join('');
+                }
+                if (r.title) {
+                  paradas[r.title] = r.stops.join(' · ');
+                }
+              }
+            }
+          });
+        }
+
+        if (Array.isArray(data.routeNotes) && data.routeNotes.length > 0) {
+          var rnWrap = document.querySelector('#roteiros .rt-notes');
+          if (rnWrap) {
+            rnWrap.innerHTML = data.routeNotes.map(function (n) { return '<span>' + n + '</span>'; }).join('');
+          }
+        }
+
+        // 4. Contatos, WhatsApp & Embarque
+        if (data.contact) {
+          var w1 = (data.contact.whatsapp1 || '5511957602301').replace(/\D/g, '');
+          var l1 = data.contact.whatsapp1Label || '(11) 95760-2301';
+          var owner = data.contact.ownerName || 'Haroldo';
+          window.__mkWaPhone = w1;
+          window.__mkOwner = owner;
+
+          var noteEl = document.querySelector('#reservar .note');
+          if (noteEl && data.contact.bookingNote) {
+            noteEl.innerHTML = '<b>Reserva:</b> ' + data.contact.bookingNote;
+          }
+
+          var facts = document.querySelectorAll('#embarque .facts li');
+          if (facts[0] && data.contact.locationAddress) {
+            facts[0].innerHTML = '<small>Onde</small><b>' + data.contact.locationAddress + '</b>';
+          }
+          if (facts[1]) {
+            var sched = data.contact.scheduleText ? ' (' + data.contact.scheduleText + ')' : '';
+            facts[1].innerHTML = '<small>Reservas</small><b>WhatsApp ' + l1 + ' · ' + owner + sched + '</b>';
+          }
+
+          var fabEl = document.getElementById('fab');
+          if (fabEl) {
+            fabEl.href = 'https://wa.me/' + w1 + '?text=' + encodeURIComponent('Olá, ' + owner + '! Vi o site da Lancha Mikhael e quero consultar um passeio em Paraty.');
+          }
+
+          var footLinks = document.querySelectorAll('.footer .foot ul a');
+          if (footLinks[0]) {
+            footLinks[0].href = 'https://wa.me/' + w1;
+            footLinks[0].textContent = 'WhatsApp ' + l1;
+          }
+          if (footLinks[1] && (data.contact.instagram || data.contact.instagramHandle)) {
+            if (data.contact.instagram) footLinks[1].href = data.contact.instagram;
+            if (data.contact.instagramHandle) footLinks[1].textContent = 'Instagram ' + data.contact.instagramHandle;
+          }
+        }
+
+        // 5. Foto de Embarque & Final
+        if (data.embarque && data.embarque.image) {
+          var ePic = document.querySelector('#embarque .where-card .ph picture');
+          if (ePic) {
+            var eSrcs = ePic.querySelectorAll('source');
+            if (eSrcs[0]) eSrcs[0].srcset = data.embarque.webpMobile || data.embarque.image;
+            if (eSrcs[1]) eSrcs[1].srcset = data.embarque.webp || data.embarque.image;
+            var eImg = ePic.querySelector('img');
+            if (eImg) eImg.src = data.embarque.image;
+          }
+        }
+
+        if (data.final) {
+          var fTitle = document.querySelector('.final h2');
+          if (fTitle && data.final.titleMain) {
+            fTitle.innerHTML = data.final.titleMain + ' <em class="it">' + (data.final.titleItalic || '') + '</em>';
+          }
+          if (data.final.image) {
+            var fPic = document.querySelector('.final .ph picture');
+            if (fPic) {
+              var fSrcs = fPic.querySelectorAll('source');
+              if (fSrcs[0]) fSrcs[0].srcset = data.final.webpMobile || data.final.image;
+              if (fSrcs[1]) fSrcs[1].srcset = data.final.webp || data.final.image;
+              var fImg = fPic.querySelector('img');
+              if (fImg) fImg.src = data.final.image;
+            }
+          }
+        }
+
+        // 6. FAQ
+        if (Array.isArray(data.faq) && data.faq.length > 0) {
+          var faqWrap = document.getElementById('duvidas');
+          if (faqWrap) {
+            faqWrap.innerHTML = data.faq.map(function (f, idx) {
+              return '<details class="rv in"' + (idx === 0 ? ' open' : '') + '><summary>' + (f.question || '') + '</summary><p>' + (f.answer || '') + '</p></details>';
+            }).join('');
+          }
+        }
+
+        atualizar();
+      }
+
+      fetch('site-data.json?t=' + Date.now())
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (data) { if (data) applySiteData(data); })
+        .catch(function () {});
+
     })();
   </script>
 </body>

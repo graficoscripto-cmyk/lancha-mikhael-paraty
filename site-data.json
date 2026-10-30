@@ -1,0 +1,177 @@
+{
+  "hero": {
+    "badge": "Lancha 21 pés · Paraty",
+    "kicker": "Cais de Turismo · Paraty, RJ",
+    "titleMain": "Venha passear em Paraty a bordo da lancha",
+    "titleItalic": "Mikhael.",
+    "lead": "Praias e ilhas maravilhosas em 5 horas de passeio, com roteiros exclusivos.",
+    "btnPrimary": "Montar meu passeio",
+    "btnSecondary": "Ver os 4 roteiros",
+    "image": "img/mikhael-hero-m.jpg",
+    "webpMobile": "img/mikhael-hero-m.webp",
+    "webpDesktop": "img/mikhael-hero.webp",
+    "vistaImage": "img/mikhael-agua-paraty.jpg",
+    "vistaWebp": "img/mikhael-agua-paraty.webp",
+    "vistaTag": "Águas de Paraty"
+  },
+  "contact": {
+    "whatsapp1": "5511957602301",
+    "whatsapp1Label": "(11) 95760-2301",
+    "whatsapp2": "5524999790893",
+    "whatsapp2Label": "(24) 99979-0893",
+    "ownerName": "Haroldo",
+    "instagram": "https://www.instagram.com/lanchamikhael/",
+    "instagramHandle": "@lanchamikhael",
+    "locationTitle": "Cais de Turismo de Paraty",
+    "locationAddress": "Cais de Turismo · Centro Histórico, Paraty - RJ",
+    "scheduleText": "07h às 23h30",
+    "bookingNote": "50% no Pix para garantir a data e o restante no embarque."
+  },
+  "stats": [
+    { "number": 21, "unit": "pés", "label": "Lancha só para o seu grupo" },
+    { "number": 5, "unit": "horas", "label": "De passeio pelas ilhas" },
+    { "number": 4, "unit": "roteiros", "label": "Norte e Sul da baía" },
+    { "number": 40, "unit": "min", "label": "Em média em cada parada" }
+  ],
+  "boat": {
+    "kicker": "A lancha",
+    "titleMain": "Conforto do cais",
+    "titleItalic": "até a ilha.",
+    "photo1": "img/mikhael-cais-paraty-m.jpg",
+    "photo1WebpMobile": "img/mikhael-cais-paraty-m.webp",
+    "photo1Webp": "img/mikhael-cais-paraty.webp",
+    "photo1Tag": "No Cais de Turismo",
+    "photo2": "img/mikhael-conves-m.jpg",
+    "photo2WebpMobile": "img/mikhael-conves-m.webp",
+    "photo2Webp": "img/mikhael-conves.webp",
+    "photo3": "img/mikhael-pier-m.jpg",
+    "photo3WebpMobile": "img/mikhael-pier-m.webp",
+    "photo3Webp": "img/mikhael-pier.webp",
+    "onboardTitleMain": "Tudo isso",
+    "onboardTitleItalic": "a bordo.",
+    "items": [
+      "Cooler 26 litros com gelo",
+      "Água à vontade",
+      "Ducha de água doce",
+      "Som bluetooth",
+      "Flutuantes (macarrão)",
+      "Máscara e snorkel",
+      "Coletes salva-vidas"
+    ],
+    "highlightTitle": "Incluso no passeio",
+    "highlightSub": "É só trazer a turma."
+  },
+  "routes": [
+    {
+      "id": "norte",
+      "enabled": true,
+      "tabLabel": "Norte",
+      "kicker": "Roteiro 01",
+      "title": "Roteiro Norte",
+      "subtitle": "Ilhas e praias do lado norte da baía.",
+      "image": "img/paraty-ilha-m.jpg",
+      "webpMobile": "img/paraty-ilha-m.webp",
+      "webp": "img/paraty-ilha.webp",
+      "stops": [
+        "Ilha Malvão",
+        "Ilha Comprida do Norte",
+        "Praia Salvador Moreira",
+        "Ilha Ventura"
+      ]
+    },
+    {
+      "id": "sul1",
+      "enabled": true,
+      "tabLabel": "Sul I",
+      "kicker": "Roteiro 02",
+      "title": "Roteiro Sul I",
+      "subtitle": "Começa pela Praia da Lula.",
+      "image": "img/mikhael-ilha-m.jpg",
+      "webpMobile": "img/mikhael-ilha-m.webp",
+      "webp": "img/mikhael-ilha.webp",
+      "stops": [
+        "Praia da Lula",
+        "Ilha da Pescaria",
+        "Praia Vermelha",
+        "Ilha do Mantimento"
+      ]
+    },
+    {
+      "id": "sul2",
+      "enabled": true,
+      "tabLabel": "Sul II",
+      "kicker": "Roteiro 03",
+      "title": "Roteiro Sul II",
+      "subtitle": "Ilha dos Cocos e Saco da Velha.",
+      "image": "img/paraty-mirante-m.jpg",
+      "webpMobile": "img/paraty-mirante-m.webp",
+      "webp": "img/paraty-mirante.webp",
+      "stops": [
+        "Ilha dos Cocos",
+        "Enseada da Preguiça",
+        "Praia Saco da Velha",
+        "Ilha da Pescaria"
+      ]
+    },
+    {
+      "id": "sul3",
+      "enabled": true,
+      "tabLabel": "Sul III",
+      "kicker": "Roteiro 04",
+      "title": "Roteiro Sul III",
+      "subtitle": "Com parada na Lagoa Azul.",
+      "image": "img/paraty-agua-cristalina-m.jpg",
+      "webpMobile": "img/paraty-agua-cristalina-m.webp",
+      "webp": "img/paraty-agua-cristalina.webp",
+      "stops": [
+        "Ilha dos Cocos",
+        "Saco da Velha",
+        "Lagoa Azul",
+        "Praia Vermelha"
+      ]
+    }
+  ],
+  "routeNotes": [
+    "5 horas de passeio",
+    "~40 min por parada",
+    "Opção de almoço em restaurante"
+  ],
+  "embarque": {
+    "image": "img/paraty-centro-historico-m.jpg",
+    "webpMobile": "img/paraty-centro-historico-m.webp",
+    "webp": "img/paraty-centro-historico.webp"
+  },
+  "final": {
+    "titleMain": "Seu dia em Paraty",
+    "titleItalic": "começa no mar.",
+    "image": "img/paraty-rua-colonial-m.jpg",
+    "webpMobile": "img/paraty-rua-colonial-m.webp",
+    "webp": "img/paraty-rua-colonial.webp"
+  },
+  "faq": [
+    {
+      "question": "Quanto tempo dura?",
+      "answer": "5 horas de passeio, com cerca de 40 minutos em cada parada."
+    },
+    {
+      "question": "De onde sai?",
+      "answer": "Do Cais de Turismo de Paraty, no Centro Histórico."
+    },
+    {
+      "question": "Dá para almoçar no caminho?",
+      "answer": "Sim. Tem opção de parada em restaurante para almoço ou porções."
+    },
+    {
+      "question": "Posso escolher as paradas?",
+      "answer": "Pode. Além dos 4 roteiros, o roteiro e as paradas podem ser combinados."
+    },
+    {
+      "question": "Como funciona a reserva?",
+      "answer": "50% no Pix para garantir a data e o restante no embarque."
+    },
+    {
+      "question": "O que tem a bordo?",
+      "answer": "Cooler 26 L com gelo, água, ducha de água doce, som bluetooth, flutuantes, máscara e snorkel e coletes salva-vidas."
+    }
+  ]
+}

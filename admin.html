@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Painel Lancha Mikhael | Editar Site — lanchamkparaty.com.br</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0B1528;
+      --bg-card: #13223E;
+      --bg-input: #091224;
+      --border: rgba(67, 201, 156, 0.24);
+      --verde: #12765C;
+      --verde-l: #43C99C;
+      --ocre: #E0A526;
+      --red-500: #EF4444;
+      --text: #F5F2EB;
+      --text-dim: rgba(245, 242, 235, 0.72);
+      --font-display: 'DM Serif Display', Georgia, serif;
+      --font-sans: 'Onest', -apple-system, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: radial-gradient(900px 450px at 50% 0%, rgba(67, 201, 156, 0.14), transparent 70%), var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      line-height: 1.5;
+      min-height: 100vh;
+      padding-bottom: 110px;
+    }
+
+    /* LOGIN SCREEN */
+    .login-wrap {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .login-card {
+      width: 100%;
+      max-width: 420px;
+      background: linear-gradient(160deg, #16284A 0%, #0C172C 100%);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 32px 24px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65);
+      text-align: center;
+    }
+
+    .login-logo {
+      width: 68px;
+      height: 68px;
+      margin: 0 auto 14px;
+      display: block;
+    }
+
+    .login-card h1 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: 1.75rem;
+      margin-bottom: 6px;
+    }
+
+    .login-card p {
+      font-size: 0.9rem;
+      color: var(--text-dim);
+      margin-bottom: 22px;
+    }
+
+    .input {
+      width: 100%;
+      background: var(--bg-input);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 13px 15px;
+      color: #fff;
+      font: inherit;
+      font-size: 0.94rem;
+      outline: none;
+      transition: border-color 180ms ease;
+    }
+
+    .input:focus, textarea.input:focus {
+      border-color: var(--verde-l);
+      box-shadow: 0 0 0 3px rgba(67, 201, 156, 0.18);
+    }
+
+    textarea.input {
+      min-height: 82px;
+      resize: vertical;
+    }
+
+    .btn-main {
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--verde-l), var(--verde));
+      color: #081326;
+      font-weight: 800;
+      font-size: 0.96rem;
+      padding: 14px 22px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 12px 28px rgba(18, 118, 92, 0.4);
+      transition: transform 160ms ease, opacity 160ms ease;
+    }
+
+    .btn-main:active { transform: scale(0.98); }
+    .btn-main:disabled { opacity: 0.55; cursor: wait; }
+
+    .btn-sec {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: rgba(67, 201, 156, 0.13);
+      border: 1px solid var(--border);
+      color: var(--verde-l);
+      font-weight: 700;
+      font-size: 0.84rem;
+      padding: 10px 16px;
+      border-radius: 12px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn-danger {
+      background: rgba(239, 68, 68, 0.14);
+      border: 1px solid rgba(239, 68, 68, 0.35);
+      color: #FCA5A5;
+      font-weight: 700;
+      font-size: 0.78rem;
+      padding: 7px 12px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    /* ADMIN APP */
+    .admin-app { display: none; }
+    .admin-app.active { display: block; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(11, 21, 40, 0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 16px;
+    }
+
+    .topbar-inner {
+      max-width: 880px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .top-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .top-brand svg {
+      width: 38px;
+      height: 38px;
+      flex-shrink: 0;
+    }
+
+    .top-brand strong {
+      display: block;
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: 1.1rem;
+      line-height: 1.1;
+    }
+
+    .top-brand span {
+      font-size: 0.74rem;
+      color: var(--verde-l);
+    }
+
+    .container {
+      max-width: 880px;
+      margin: 22px auto 0;
+      padding: 0 16px;
+    }
+
+    /* TABS */
+    .tabs {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 8px;
+      margin-bottom: 18px;
+      scrollbar-width: none;
+    }
+    .tabs::-webkit-scrollbar { display: none; }
+
+    .tab-btn {
+      flex-shrink: 0;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(19, 34, 62, 0.85);
+      border: 1px solid var(--border);
+      color: var(--text-dim);
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
+
+    .tab-btn.active {
+      background: linear-gradient(135deg, var(--verde-l), var(--verde));
+      color: #081326;
+      border-color: transparent;
+    }
+
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    .card {
+      background: linear-gradient(160deg, #152747 0%, #0E1B33 100%);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 20px 18px;
+      margin-bottom: 16px;
+    }
+
+    .card-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+
+    .card-title {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: 1.25rem;
+      color: #fff;
+    }
+
+    .field { margin-bottom: 14px; }
+    .field:last-child { margin-bottom: 0; }
+
+    .field label {
+      display: block;
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--verde-l);
+      margin-bottom: 6px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    @media (min-width: 640px) {
+      .grid-2 { grid-template-columns: 1fr 1fr; }
+    }
+
+    /* SWITCH TOGGLE */
+    .switch-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      user-select: none;
+      font-size: 0.84rem;
+      font-weight: 700;
+    }
+
+    .switch-wrap input { display: none; }
+
+    .switch-pill {
+      width: 44px;
+      height: 24px;
+      background: rgba(255, 255, 255, 0.16);
+      border-radius: 999px;
+      position: relative;
+      transition: background 180ms ease;
+    }
+
+    .switch-pill::after {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #fff;
+      transition: transform 180ms ease;
+    }
+
+    .switch-wrap input:checked + .switch-pill {
+      background: var(--verde-l);
+    }
+
+    .switch-wrap input:checked + .switch-pill::after {
+      transform: translateX(20px);
+    }
+
+    /* PHOTO PREVIEW & UPLOAD */
+    .photo-box {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: rgba(9, 18, 36, 0.65);
+      border: 1px dashed rgba(67, 201, 156, 0.35);
+      border-radius: 16px;
+      padding: 12px;
+      margin-top: 8px;
+    }
+
+    .photo-box img {
+      width: 92px;
+      height: 70px;
+      object-fit: cover;
+      border-radius: 10px;
+      flex-shrink: 0;
+      background: #050B16;
+    }
+
+    .upload-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(67, 201, 156, 0.16);
+      border: 1px solid rgba(67, 201, 156, 0.45);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.8rem;
+      padding: 9px 14px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .upload-label input { display: none; }
+
+    .stop-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .stop-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(67, 201, 156, 0.18);
+      color: var(--verde-l);
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      font-size: 0.8rem;
+      flex-shrink: 0;
+    }
+
+    /* SAVE BAR FIXED BOTTOM */
+    .save-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 60;
+      background: rgba(11, 21, 40, 0.96);
+      backdrop-filter: blur(16px);
+      border-top: 1px solid var(--border);
+      padding: 12px 16px;
+    }
+
+    .save-bar-inner {
+      max-width: 880px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .status-msg {
+      font-size: 0.84rem;
+      color: var(--verde-l);
+      font-weight: 600;
+    }
+
+    .toast {
+      position: fixed;
+      top: 18px;
+      left: 50%;
+      transform: translateX(-50%) translateY(-130%);
+      z-index: 200;
+      background: #064E3B;
+      border: 1px solid #10B981;
+      color: #ECFDF5;
+      padding: 12px 20px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+      transition: transform 260ms ease;
+    }
+
+    .toast.show { transform: translateX(-50%) translateY(0); }
+    .toast.error { background: #7F1D1D; border-color: #EF4444; }
+  </style>
+</head>
+<body>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="mk" viewBox="0 0 64 64">
+        <circle cx="32" cy="32" r="32" fill="#15233F"/>
+        <path d="M8 41.5C20 32 36 25.5 57 20.5C47 28.5 33.5 37 21.5 44.5C16.5 45.4 11.5 44.4 8 41.5Z" fill="#FFFFFF"/>
+        <path d="M14.5 46.6 19 45l.9 3.5-4.5 1.6Z M21 44.3l4.5-1.6.9 3.5-4.5 1.6Z M27.5 42l4.5-1.6.9 3.5-4.5 1.6Z M34 39.7l4.5-1.6.9 3.5-4.5 1.6Z M18.2 51.5l4.5-1.6.9 3.5-4.5 1.6Z M24.7 49.2l4.5-1.6.9 3.5-4.5 1.6Z M31.2 46.9l4.5-1.6.9 3.5-4.5 1.6Z" fill="#43C99C"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <div id="toast" class="toast">Alterações salvas com sucesso!</div>
+
+  <!-- TELA DE LOGIN -->
+  <div class="login-wrap" id="loginScreen">
+    <div class="login-card">
+      <svg class="login-logo" viewBox="0 0 64 64" aria-hidden="true"><use href="#mk"/></svg>
+      <h1>Painel Lancha Mikhael</h1>
+      <p>Edite roteiros, paradas, fotos, WhatsApp e textos do site <strong>lanchamkparaty.com.br</strong> pelo celular ou computador.</p>
+      <form id="loginForm">
+        <div class="field" style="text-align: left;">
+          <label for="userInput">Usuário</label>
+          <input type="text" id="userInput" class="input" value="haroldo" placeholder="haroldo" autocomplete="username">
+        </div>
+        <div class="field" style="text-align: left;">
+          <label for="passInput">Senha de acesso</label>
+          <input type="password" id="passInput" class="input" placeholder="Digite sua senha..." autocomplete="current-password" required>
+        </div>
+        <button type="submit" class="btn-main" style="margin-top: 8px;">Entrar no Painel →</button>
+      </form>
+      <p id="loginErr" style="color: #FCA5A5; margin-top: 12px; margin-bottom: 0; display: none; font-weight: 600;">Senha incorreta. Tente novamente.</p>
+    </div>
+  </div>
+
+  <!-- APLICATIVO DO PAINEL -->
+  <div class="admin-app" id="adminApp">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="top-brand">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><use href="#mk"/></svg>
+          <div>
+            <strong>Painel Lancha Mikhael</strong>
+            <span>lanchamkparaty.com.br</span>
+          </div>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <a href="./" target="_blank" class="btn-sec">Ver Site ↗</a>
+          <button type="button" class="btn-sec" id="logoutBtn" style="padding: 10px 12px;">Sair</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- ABAS -->
+      <div class="tabs">
+        <button type="button" class="tab-btn active" data-tab="tab-roteiros">🚤 Roteiros (Norte e Sul)</button>
+        <button type="button" class="tab-btn" data-tab="tab-contatos">📱 WhatsApp &amp; Contatos</button>
+        <button type="button" class="tab-btn" data-tab="tab-textos">✏️ Textos &amp; A Lancha</button>
+        <button type="button" class="tab-btn" data-tab="tab-fotos">📸 Fotos do Site</button>
+        <button type="button" class="tab-btn" data-tab="tab-faq">❓ Perguntas (FAQ)</button>
+      </div>
+
+      <!-- ABA 1: ROTEIROS -->
+      <section class="tab-panel active" id="tab-roteiros">
+        <div class="card" style="background: rgba(67, 201, 156, 0.1); border-color: rgba(67, 201, 156, 0.35);">
+          <p style="font-size: 0.88rem; color: var(--text);">
+            💡 <strong>Dica:</strong> Aqui você pode editar o nome, a descrição, as paradas e a foto de cada um dos 4 roteiros (Norte, Sul I, Sul II e Sul III). O simulador do WhatsApp atualiza sozinho!
+          </p>
+        </div>
+        <div id="routesList"></div>
+
+        <div class="card">
+          <div class="card-head">
+            <h3 class="card-title">Etiquetas abaixo dos Roteiros</h3>
+          </div>
+          <div class="grid-2">
+            <div class="field">
+              <label>Etiqueta 1</label>
+              <input type="text" class="input" id="rn_0" placeholder="5 horas de passeio">
+            </div>
+            <div class="field">
+              <label>Etiqueta 2</label>
+              <input type="text" class="input" id="rn_1" placeholder="~40 min por parada">
+            </div>
+          </div>
+          <div class="field" style="margin-top:12px;">
+            <label>Etiqueta 3</label>
+            <input type="text" class="input" id="rn_2" placeholder="Opção de almoço em restaurante">
+          </div>
+        </div>
+      </section>
+
+      <!-- ABA 2: WHATSAPP & CONTATOS -->
+      <section class="tab-panel" id="tab-contatos">
+        <div class="card">
+          <div class="card-head">
+            <h2 class="card-title">WhatsApp e Atendimento</h2>
+          </div>
+          <div class="grid-2">
+            <div class="field">
+              <label>WhatsApp Principal de Reservas (só números c/ 55)</label>
+              <input type="text" class="input" id="c_wa1" placeholder="5511957602301">
+            </div>
+            <div class="field">
+              <label>Como aparece no site (WhatsApp 1)</label>
+              <input type="text" class="input" id="c_wa1Label" placeholder="(11) 95760-2301">
+            </div>
+            <div class="field">
+              <label>WhatsApp 2 / Contato Secundário (só números c/ 55)</label>
+              <input type="text" class="input" id="c_wa2" placeholder="5524999790893">
+            </div>
+            <div class="field">
+              <label>Como aparece (WhatsApp 2)</label>
+              <input type="text" class="input" id="c_wa2Label" placeholder="(24) 99979-0893">
+            </div>
+            <div class="field">
+              <label>Nome do Responsável (aparece na mensagem do WhatsApp)</label>
+              <input type="text" class="input" id="c_owner" placeholder="Haroldo">
+            </div>
+            <div class="field">
+              <label>Instagram (@usuario)</label>
+              <input type="text" class="input" id="c_igHandle" placeholder="@lanchamikhael">
+            </div>
+          </div>
+          <div class="field" style="margin-top: 12px;">
+            <label>Link do Instagram</label>
+            <input type="text" class="input" id="c_igUrl" placeholder="https://www.instagram.com/lanchamikhael/">
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <h2 class="card-title">Local de Embarque, Horários e Reserva</h2>
+          </div>
+          <div class="field">
+            <label>Local de Embarque</label>
+            <input type="text" class="input" id="c_address" placeholder="Cais de Turismo · Centro Histórico, Paraty - RJ">
+          </div>
+          <div class="field">
+            <label>Horário de Atendimento</label>
+            <input type="text" class="input" id="c_schedule" placeholder="07h às 23h30">
+          </div>
+          <div class="field">
+            <label>Aviso de Reserva no Simulador</label>
+            <input type="text" class="input" id="c_bookingNote" placeholder="50% no Pix para garantir a data e o restante no embarque.">
+          </div>
+        </div>
+      </section>
+
+      <!-- ABA 3: TEXTOS & A LANCHA -->
+      <section class="tab-panel" id="tab-textos">
+        <div class="card">
+          <div class="card-head">
+            <h2 class="card-title">Topo do Site (Primeira Dobra)</h2>
+          </div>
+          <div class="grid-2">
+            <div class="field">
+              <label>Selo na Foto Principal</label>
+              <input type="text" class="input" id="h_badge" placeholder="Lancha 21 pés · Paraty">
+            </div>
+            <div class="field">
+              <label>Linha Acima do Título (Kicker)</label>
+              <input type="text" class="input" id="h_kicker" placeholder="Cais de Turismo · Paraty, RJ">
+            </div>
+            <div class="field">
+              <label>Título Principal</label>
+              <input type="text" class="input" id="h_titleMain" placeholder="Venha passear em Paraty a bordo da lancha">
+            </div>
+            <div class="field">
+              <label>Palavra em Destaque (Verde Itálico)</label>
+              <input type="text" class="input" id="h_titleItalic" placeholder="Mikhael.">
+            </div>
+          </div>
+          <div class="field" style="margin-top: 12px;">
+            <label>Subtítulo de Apresentação</label>
+            <textarea class="input" id="h_lead"></textarea>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <h2 class="card-title">Seção: A Lancha &amp; O que tem a bordo</h2>
+          </div>
+          <div class="grid-2">
+            <div class="field">
+              <label>Título da Seção</label>
+              <input type="text" class="input" id="b_titleMain" placeholder="Conforto do cais">
+            </div>
+            <div class="field">
+              <label>Complemento em Itálico</label>
+              <input type="text" class="input" id="b_titleItalic" placeholder="até a ilha.">
+            </div>
+          </div>
+          <div class="field" style="margin-top: 12px;">
+            <label>Itens inclusos a bordo (1 por linha)</label>
+            <textarea class="input" id="b_items" style="min-height: 140px;" placeholder="Cooler 26 litros com gelo&#10;Água à vontade..."></textarea>
+          </div>
+          <div class="grid-2" style="margin-top: 12px;">
+            <div class="field">
+              <label>Card Destaque (Título)</label>
+              <input type="text" class="input" id="b_highTitle" placeholder="Incluso no passeio">
+            </div>
+            <div class="field">
+              <label>Card Destaque (Frase)</label>
+              <input type="text" class="input" id="b_highSub" placeholder="É só trazer a turma.">
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <h2 class="card-title">Chamada Final do Site</h2>
+          </div>
+          <div class="grid-2">
+            <div class="field">
+              <label>Frase Final (Parte 1)</label>
+              <input type="text" class="input" id="f_titleMain" placeholder="Seu dia em Paraty">
+            </div>
+            <div class="field">
+              <label>Frase Final (Itálico)</label>
+              <input type="text" class="input" id="f_titleItalic" placeholder="começa no mar.">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABA 4: FOTOS DO SITE -->
+      <section class="tab-panel" id="tab-fotos">
+        <div class="card" style="background: rgba(67, 201, 156, 0.1); border-color: rgba(67, 201, 156, 0.35);">
+          <p style="font-size: 0.88rem;">
+            📸 Troque qualquer foto do site enviando direto da galeria do seu celular ou computador.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-head"><h3 class="card-title">1. Foto Principal do Topo (Hero)</h3></div>
+          <div class="photo-box">
+            <img id="prev_hero" src="img/mikhael-hero-m.jpg" alt="Hero">
+            <div>
+              <label class="upload-label">
+                📷 Trocar foto do topo
+                <input type="file" accept="image/*" onchange="uploadPhoto(this, 'hero')">
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-head"><h3 class="card-title">2. Foto Vertical "Águas de Paraty"</h3></div>
+          <div class="field">
+            <label>Legenda do selo</label>
+            <input type="text" class="input" id="h_vistaTag" placeholder="Águas de Paraty">
+          </div>
+          <div class="photo-box">
+            <img id="prev_vista" src="img/mikhael-agua-paraty.jpg" alt="Águas de Paraty">
+            <div>
+              <label class="upload-label">
+                📷 Trocar foto
+                <input type="file" accept="image/*" onchange="uploadPhoto(this, 'vista')">
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-head"><h3 class="card-title">3. Fotos da seção "A Lancha" (3 fotos)</h3></div>
+          <div class="field">
+            <label>Legenda da Foto 1 (Grande)</label>
+            <input type="text" class="input" id="b_photo1Tag" placeholder="No Cais de Turismo">
+          </div>
+          <div class="photo-box">
+            <img id="prev_boat1" src="img/mikhael-cais-paraty-m.jpg" alt="Lancha 1">
+            <div>
+              <label class="upload-label">
+                📷 Trocar Foto 1 (Cais)
+                <input type="file" accept="image/*" onchange="uploadPhoto(this, 'boat1')">
+              </label>
+            </div>
+          </div>
+
+          <div class="grid-2" style="margin-top: 14px;">
+            <div>
+              <label style="font-size:0.76rem;font-weight:700;color:var(--verde-l);text-transform:uppercase;">Foto 2 (Convés)</label>
+              <div class="photo-box">
+                <img id="prev_boat2" src="img/mikhael-conves-m.jpg" alt="Lancha 2">
+                <div>
+                  <label class="upload-label">
+                    📷 Trocar Foto 2
+                    <input type="file" accept="image/*" onchange="uploadPhoto(this, 'boat2')">
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div>
+              <label style="font-size:0.76rem;font-weight:700;color:var(--verde-l);text-transform:uppercase;">Foto 3 (Píer)</label>
+              <div class="photo-box">
+                <img id="prev_boat3" src="img/mikhael-pier-m.jpg" alt="Lancha 3">
+                <div>
+                  <label class="upload-label">
+                    📷 Trocar Foto 3
+                    <input type="file" accept="image/*" onchange="uploadPhoto(this, 'boat3')">
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-head"><h3 class="card-title">4. Foto de Embarque &amp; Foto Final</h3></div>
+          <div class="grid-2">
+            <div>
+              <label style="font-size:0.76rem;font-weight:700;color:var(--verde-l);text-transform:uppercase;">Foto do Embarque (Paraty)</label>
+              <div class="photo-box">
+                <img id="prev_embarque" src="img/paraty-centro-historico-m.jpg" alt="Embarque">
+                <div>
+                  <label class="upload-label">
+                    📷 Trocar foto
+                    <input type="file" accept="image/*" onchange="uploadPhoto(this, 'embarque')">
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div>
+              <label style="font-size:0.76rem;font-weight:700;color:var(--verde-l);text-transform:uppercase;">Foto do Banner Final</label>
+              <div class="photo-box">
+                <img id="prev_final" src="img/paraty-rua-colonial-m.jpg" alt="Final">
+                <div>
+                  <label class="upload-label">
+                    📷 Trocar foto
+                    <input type="file" accept="image/*" onchange="uploadPhoto(this, 'final')">
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABA 5: FAQ -->
+      <section class="tab-panel" id="tab-faq">
+        <div id="faqList"></div>
+        <button type="button" class="btn-sec" id="addFaqBtn" style="width: 100%; padding: 14px; margin-bottom: 20px;">
+          + Adicionar pergunta frequente
+        </button>
+      </section>
+    </main>
+
+    <!-- BARRA FIXA DE SALVAR -->
+    <div class="save-bar">
+      <div class="save-bar-inner">
+        <span class="status-msg" id="saveStatus">Pronto para editar</span>
+        <button type="button" class="btn-main" id="saveAllBtn" style="width: auto; min-width: 220px;">
+          💾 Salvar e Atualizar Site
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const REPO_OWNER = 'graficoscripto-cmyk';
+    const REPO_NAME = 'lancha-mikhael-paraty';
+    const PASS_HAROLDO = 'haroldo2026';
+
+    function getGhToken() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const hashParams = new URLSearchParams(window.location.hash.replace(/^#/, ''));
+      const tkFromUrl = urlParams.get('chave') || hashParams.get('chave');
+      if (tkFromUrl) {
+        localStorage.setItem('mikhael_gh_token', tkFromUrl.trim());
+        if (window.history && window.history.replaceState) {
+          window.history.replaceState({}, document.title, window.location.pathname);
+        }
+        return tkFromUrl.trim();
+      }
+      return localStorage.getItem('mikhael_gh_token') || '';
+    }
+
+    let siteData = null;
+
+    function showToast(msg, isError = false) {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.classList.toggle('error', isError);
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 3800);
+    }
+
+    function checkAuth() {
+      getGhToken();
+      if (sessionStorage.getItem('mikhael_admin_ok') === '1' || localStorage.getItem('mikhael_admin_ok') === '1') {
+        document.getElementById('loginScreen').style.display = 'none';
+        document.getElementById('adminApp').classList.add('active');
+        loadSiteData();
+      }
+    }
+
+    document.getElementById('loginForm').addEventListener('submit', e => {
+      e.preventDefault();
+      const val = document.getElementById('passInput').value.trim().toLowerCase();
+      if (val === PASS_HAROLDO || val === 'haroldo' || val === 'mikhael2026') {
+        localStorage.setItem('mikhael_admin_ok', '1');
+        localStorage.setItem('mikhael_admin_pass', val);
+        sessionStorage.setItem('mikhael_admin_ok', '1');
+        document.getElementById('loginErr').style.display = 'none';
+        checkAuth();
+      } else {
+        document.getElementById('loginErr').style.display = 'block';
+      }
+    });
+
+    document.getElementById('logoutBtn').addEventListener('click', () => {
+      localStorage.removeItem('mikhael_admin_ok');
+      sessionStorage.removeItem('mikhael_admin_ok');
+      location.reload();
+    });
+
+    // Navegação por abas
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.tab).classList.add('active');
+      });
+    });
+
+    async function loadSiteData() {
+      const statusEl = document.getElementById('saveStatus');
+      statusEl.textContent = 'Carregando dados do site...';
+      try {
+        const res = await fetch('site-data.json?t=' + Date.now());
+        siteData = await res.json();
+        populateForm();
+        statusEl.textContent = 'Tudo carregado · Pronto para editar';
+      } catch (err) {
+        statusEl.textContent = 'Erro ao carregar dados';
+        showToast('Não foi possível carregar site-data.json', true);
+      }
+    }
+
+    function populateForm() {
+      if (!siteData) return;
+
+      // Contatos
+      const c = siteData.contact || {};
+      document.getElementById('c_wa1').value = c.whatsapp1 || '';
+      document.getElementById('c_wa1Label').value = c.whatsapp1Label || '';
+      document.getElementById('c_wa2').value = c.whatsapp2 || '';
+      document.getElementById('c_wa2Label').value = c.whatsapp2Label || '';
+      document.getElementById('c_owner').value = c.ownerName || '';
+      document.getElementById('c_igHandle').value = c.instagramHandle || '';
+      document.getElementById('c_igUrl').value = c.instagram || '';
+      document.getElementById('c_address').value = c.locationAddress || '';
+      document.getElementById('c_schedule').value = c.scheduleText || '';
+      document.getElementById('c_bookingNote').value = c.bookingNote || '';
+
+      // Hero
+      const h = siteData.hero || {};
+      document.getElementById('h_badge').value = h.badge || '';
+      document.getElementById('h_kicker').value = h.kicker || '';
+      document.getElementById('h_titleMain').value = h.titleMain || '';
+      document.getElementById('h_titleItalic').value = h.titleItalic || '';
+      document.getElementById('h_lead').value = h.lead || '';
+      document.getElementById('h_vistaTag').value = h.vistaTag || '';
+      if (h.image) document.getElementById('prev_hero').src = h.image;
+      if (h.vistaImage) document.getElementById('prev_vista').src = h.vistaImage;
+
+      // Lancha
+      const b = siteData.boat || {};
+      document.getElementById('b_titleMain').value = b.titleMain || '';
+      document.getElementById('b_titleItalic').value = b.titleItalic || '';
+      document.getElementById('b_items').value = (b.items || []).join('\n');
+      document.getElementById('b_highTitle').value = b.highlightTitle || '';
+      document.getElementById('b_highSub').value = b.highlightSub || '';
+      document.getElementById('b_photo1Tag').value = b.photo1Tag || '';
+      if (b.photo1) document.getElementById('prev_boat1').src = b.photo1;
+      if (b.photo2) document.getElementById('prev_boat2').src = b.photo2;
+      if (b.photo3) document.getElementById('prev_boat3').src = b.photo3;
+
+      // Embarque e Final
+      if (siteData.embarque && siteData.embarque.image) {
+        document.getElementById('prev_embarque').src = siteData.embarque.image;
+      }
+      if (siteData.final) {
+        document.getElementById('f_titleMain').value = siteData.final.titleMain || '';
+        document.getElementById('f_titleItalic').value = siteData.final.titleItalic || '';
+        if (siteData.final.image) document.getElementById('prev_final').src = siteData.final.image;
+      }
+
+      // Notas de roteiro
+      const rn = siteData.routeNotes || [];
+      document.getElementById('rn_0').value = rn[0] || '';
+      document.getElementById('rn_1').value = rn[1] || '';
+      document.getElementById('rn_2').value = rn[2] || '';
+
+      renderRoutes();
+      renderFaq();
+    }
+
+    function renderRoutes() {
+      const wrap = document.getElementById('routesList');
+      wrap.innerHTML = (siteData.routes || []).map((r, i) => `
+        <div class="card">
+          <div class="card-head">
+            <h3 class="card-title">${r.kicker || ('Roteiro 0' + (i + 1))}: ${r.title || ''}</h3>
+            <label class="switch-wrap">
+              <input type="checkbox" ${r.enabled !== false ? 'checked' : ''} onchange="siteData.routes[${i}].enabled = this.checked">
+              <span class="switch-pill"></span>
+              <span>Ativo no site</span>
+            </label>
+          </div>
+
+          <div class="grid-2">
+            <div class="field">
+              <label>Nome na Aba (curto)</label>
+              <input type="text" class="input" value="${(r.tabLabel || '').replace(/"/g, '&quot;')}" oninput="siteData.routes[${i}].tabLabel = this.value">
+            </div>
+            <div class="field">
+              <label>Título do Roteiro</label>
+              <input type="text" class="input" value="${(r.title || '').replace(/"/g, '&quot;')}" oninput="siteData.routes[${i}].title = this.value">
+            </div>
+          </div>
+
+          <div class="field" style="margin-top: 10px;">
+            <label>Descrição Curta do Roteiro</label>
+            <input type="text" class="input" value="${(r.subtitle || '').replace(/"/g, '&quot;')}" oninput="siteData.routes[${i}].subtitle = this.value">
+          </div>
+
+          <div class="field" style="margin-top: 12px;">
+            <label>Paradas deste Roteiro (na ordem do passeio)</label>
+            ${(r.stops || []).map((st, sIdx) => `
+              <div class="stop-row">
+                <span class="stop-num">${sIdx + 1}</span>
+                <input type="text" class="input" value="${(st || '').replace(/"/g, '&quot;')}" oninput="siteData.routes[${i}].stops[${sIdx}] = this.value">
+                <button type="button" class="btn-danger" onclick="removeRouteStop(${i}, ${sIdx})" title="Remover parada">✕</button>
+              </div>
+            `).join('')}
+            <button type="button" class="btn-sec" style="margin-top: 6px;" onclick="addRouteStop(${i})">+ Adicionar parada neste roteiro</button>
+          </div>
+
+          <div class="field" style="margin-top: 12px;">
+            <label>Foto do ${r.title || 'Roteiro'}</label>
+            <div class="photo-box">
+              <img id="route_img_${i}" src="${r.image || 'img/paraty-ilha-m.jpg'}" alt="${r.title || ''}">
+              <div>
+                <label class="upload-label">
+                  📷 Escolher nova foto do celular/PC
+                  <input type="file" accept="image/*" onchange="uploadPhoto(this, 'route', ${i})">
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    window.addRouteStop = function(routeIdx) {
+      if (!siteData.routes[routeIdx].stops) siteData.routes[routeIdx].stops = [];
+      siteData.routes[routeIdx].stops.push('Nova parada');
+      renderRoutes();
+    };
+
+    window.removeRouteStop = function(routeIdx, stopIdx) {
+      if (siteData.routes[routeIdx].stops.length <= 1) {
+        showToast('O roteiro precisa ter pelo menos 1 parada.', true);
+        return;
+      }
+      siteData.routes[routeIdx].stops.splice(stopIdx, 1);
+      renderRoutes();
+    };
+
+    function renderFaq() {
+      const wrap = document.getElementById('faqList');
+      wrap.innerHTML = (siteData.faq || []).map((f, i) => `
+        <div class="card">
+          <div class="card-head">
+            <h3 class="card-title">Pergunta ${i + 1}</h3>
+            <button type="button" class="btn-danger" onclick="siteData.faq.splice(${i},1); renderFaq();">Excluir</button>
+          </div>
+          <div class="field">
+            <label>Pergunta</label>
+            <input type="text" class="input" value="${(f.question || '').replace(/"/g, '&quot;')}" oninput="siteData.faq[${i}].question = this.value">
+          </div>
+          <div class="field">
+            <label>Resposta</label>
+            <textarea class="input" oninput="siteData.faq[${i}].answer = this.value">${f.answer || ''}</textarea>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    document.getElementById('addFaqBtn').addEventListener('click', () => {
+      siteData.faq.push({
+        question: 'Nova pergunta?',
+        answer: 'Digite a resposta aqui.'
+      });
+      renderFaq();
+    });
+
+    window.uploadPhoto = async function(inputEl, targetType, idx) {
+      const file = inputEl.files && inputEl.files[0];
+      if (!file) return;
+
+      const statusEl = document.getElementById('saveStatus');
+      statusEl.textContent = 'Otimizando e enviando foto...';
+      showToast('Enviando foto, aguarde alguns segundos...');
+
+      try {
+        const base64Content = await compressImageToBase64(file, 1920, 0.86);
+        const cleanName = file.name.toLowerCase().replace(/[^a-z0-9.]/g, '-').replace(/\.[^.]+$/, '') + '-' + Date.now() + '.jpg';
+        const repoPath = `img/${cleanName}`;
+
+        await saveFileToRepo(repoPath, base64Content, `Foto enviada pelo Painel Lancha Mikhael: ${cleanName}`, true);
+
+        const dataUri = 'data:image/jpeg;base64,' + base64Content;
+        if (targetType === 'route') {
+          siteData.routes[idx].image = repoPath;
+          siteData.routes[idx].webpMobile = repoPath;
+          siteData.routes[idx].webp = repoPath;
+          const imgEl = document.getElementById(`route_img_${idx}`);
+          if (imgEl) imgEl.src = dataUri;
+        } else if (targetType === 'hero') {
+          siteData.hero.image = repoPath;
+          siteData.hero.webpMobile = repoPath;
+          siteData.hero.webpDesktop = repoPath;
+          document.getElementById('prev_hero').src = dataUri;
+        } else if (targetType === 'vista') {
+          siteData.hero.vistaImage = repoPath;
+          siteData.hero.vistaWebp = repoPath;
+          document.getElementById('prev_vista').src = dataUri;
+        } else if (targetType === 'boat1') {
+          siteData.boat.photo1 = repoPath;
+          siteData.boat.photo1WebpMobile = repoPath;
+          siteData.boat.photo1Webp = repoPath;
+          document.getElementById('prev_boat1').src = dataUri;
+        } else if (targetType === 'boat2') {
+          siteData.boat.photo2 = repoPath;
+          siteData.boat.photo2WebpMobile = repoPath;
+          siteData.boat.photo2Webp = repoPath;
+          document.getElementById('prev_boat2').src = dataUri;
+        } else if (targetType === 'boat3') {
+          siteData.boat.photo3 = repoPath;
+          siteData.boat.photo3WebpMobile = repoPath;
+          siteData.boat.photo3Webp = repoPath;
+          document.getElementById('prev_boat3').src = dataUri;
+        } else if (targetType === 'embarque') {
+          siteData.embarque = { image: repoPath, webpMobile: repoPath, webp: repoPath };
+          document.getElementById('prev_embarque').src = dataUri;
+        } else if (targetType === 'final') {
+          siteData.final.image = repoPath;
+          siteData.final.webpMobile = repoPath;
+          siteData.final.webp = repoPath;
+          document.getElementById('prev_final').src = dataUri;
+        }
+
+        statusEl.textContent = 'Foto enviada! Clique em "Salvar e Atualizar Site"';
+        showToast('Foto carregada! Agora clique em Salvar.');
+      } catch (err) {
+        console.error(err);
+        statusEl.textContent = 'Erro ao enviar foto';
+        showToast('Erro ao subir foto: ' + err.message, true);
+      }
+    };
+
+    function compressImageToBase64(file, maxW, quality) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = e => {
+          const img = new Image();
+          img.onload = () => {
+            let w = img.width;
+            let h = img.height;
+            if (w > maxW) {
+              h = Math.round((h * maxW) / w);
+              w = maxW;
+            }
+            const canvas = document.createElement('canvas');
+            canvas.width = w;
+            canvas.height = h;
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(img, 0, 0, w, h);
+            const dataUrl = canvas.toDataURL('image/jpeg', quality);
+            resolve(dataUrl.split(',')[1]);
+          };
+          img.onerror = reject;
+          img.src = e.target.result;
+        };
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+      });
+    }
+
+    async function saveFileToRepo(path, content, message, isAlreadyBase64 = false) {
+      const token = getGhToken();
+      const savedPass = localStorage.getItem('mikhael_admin_pass') || PASS_HAROLDO;
+
+      // 1) Tenta via endpoint serverless /api/save (não exige token no navegador)
+      try {
+        const apiRes = await fetch('/api/save', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            password: savedPass,
+            token: token || undefined,
+            path,
+            content,
+            message,
+            isBase64: isAlreadyBase64
+          })
+        });
+        if (apiRes.ok) {
+          return await apiRes.json();
+        }
+      } catch (_) {}
+
+      // 2) Fallback direto para GitHub API (igual ao Painel da Kelli Roque)
+      if (!token) {
+        throw new Error('Chave de publicação não encontrada. Abra o link completo enviado pelo suporte.');
+      }
+
+      const apiUrl = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${path}`;
+      let sha = undefined;
+      const getRes = await fetch(apiUrl, {
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Accept': 'application/vnd.github+json'
+        }
+      });
+      if (getRes.ok) {
+        const existing = await getRes.json();
+        sha = existing.sha;
+      }
+
+      const b64 = isAlreadyBase64
+        ? content
+        : btoa(unescape(encodeURIComponent(content)));
+
+      const putRes = await fetch(apiUrl, {
+        method: 'PUT',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Accept': 'application/vnd.github+json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          message,
+          content: b64,
+          sha,
+          branch: 'main'
+        })
+      });
+
+      if (!putRes.ok) {
+        const errTxt = await putRes.text();
+        throw new Error(`HTTP ${putRes.status}: ${errTxt}`);
+      }
+      return putRes.json();
+    }
+
+    document.getElementById('saveAllBtn').addEventListener('click', async () => {
+      if (!siteData) return;
+
+      siteData.contact = {
+        ...siteData.contact,
+        whatsapp1: document.getElementById('c_wa1').value.trim(),
+        whatsapp1Label: document.getElementById('c_wa1Label').value.trim(),
+        whatsapp2: document.getElementById('c_wa2').value.trim(),
+        whatsapp2Label: document.getElementById('c_wa2Label').value.trim(),
+        ownerName: document.getElementById('c_owner').value.trim(),
+        instagramHandle: document.getElementById('c_igHandle').value.trim(),
+        instagram: document.getElementById('c_igUrl').value.trim(),
+        locationAddress: document.getElementById('c_address').value.trim(),
+        scheduleText: document.getElementById('c_schedule').value.trim(),
+        bookingNote: document.getElementById('c_bookingNote').value.trim()
+      };
+
+      siteData.hero = {
+        ...siteData.hero,
+        badge: document.getElementById('h_badge').value.trim(),
+        kicker: document.getElementById('h_kicker').value.trim(),
+        titleMain: document.getElementById('h_titleMain').value.trim(),
+        titleItalic: document.getElementById('h_titleItalic').value.trim(),
+        lead: document.getElementById('h_lead').value.trim(),
+        vistaTag: document.getElementById('h_vistaTag').value.trim()
+      };
+
+      siteData.boat = {
+        ...siteData.boat,
+        titleMain: document.getElementById('b_titleMain').value.trim(),
+        titleItalic: document.getElementById('b_titleItalic').value.trim(),
+        items: document.getElementById('b_items').value.split('\n').map(s => s.trim()).filter(Boolean),
+        highlightTitle: document.getElementById('b_highTitle').value.trim(),
+        highlightSub: document.getElementById('b_highSub').value.trim(),
+        photo1Tag: document.getElementById('b_photo1Tag').value.trim()
+      };
+
+      siteData.final = {
+        ...siteData.final,
+        titleMain: document.getElementById('f_titleMain').value.trim(),
+        titleItalic: document.getElementById('f_titleItalic').value.trim()
+      };
+
+      siteData.routeNotes = [
+        document.getElementById('rn_0').value.trim(),
+        document.getElementById('rn_1').value.trim(),
+        document.getElementById('rn_2').value.trim()
+      ].filter(Boolean);
+
+      const btn = document.getElementById('saveAllBtn');
+      const statusEl = document.getElementById('saveStatus');
+      btn.disabled = true;
+      btn.textContent = 'Salvando no site...';
+      statusEl.textContent = 'Publicando alterações...';
+
+      const jsonString = JSON.stringify(siteData, null, 2);
+      try {
+        localStorage.setItem('mikhael_site_data_override', jsonString);
+      } catch (_) {}
+
+      try {
+        await saveFileToRepo('site-data.json', jsonString, 'Atualização pelo Painel Lancha Mikhael', false);
+        statusEl.textContent = '✅ Salvo! O site atualiza em ~30 segundos.';
+        showToast('✅ Site atualizado com sucesso!');
+      } catch (err) {
+        console.error(err);
+        statusEl.textContent = 'Erro ao salvar no servidor';
+        showToast('Erro ao salvar: ' + err.message, true);
+      } finally {
+        btn.disabled = false;
+        btn.textContent = '💾 Salvar e Atualizar Site';
+      }
+    });
+
+    checkAuth();
+  </script>
+</body>
+</html>
