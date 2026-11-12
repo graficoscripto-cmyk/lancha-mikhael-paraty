@@ -28,10 +28,26 @@
     "bookingNote": "50% no Pix para garantir a data e o restante no embarque."
   },
   "stats": [
-    { "number": 21, "unit": "pés", "label": "Lancha só para o seu grupo" },
-    { "number": 5, "unit": "horas", "label": "De passeio pelas ilhas" },
-    { "number": 4, "unit": "roteiros", "label": "Norte e Sul da baía" },
-    { "number": 40, "unit": "min", "label": "Em média em cada parada" }
+    {
+      "number": 21,
+      "unit": "pés",
+      "label": "Lancha só para o seu grupo"
+    },
+    {
+      "number": 5,
+      "unit": "horas",
+      "label": "De passeio pelas ilhas"
+    },
+    {
+      "number": 4,
+      "unit": "roteiros",
+      "label": "Norte e Sul da baía"
+    },
+    {
+      "number": 40,
+      "unit": "min",
+      "label": "Em média em cada parada"
+    }
   ],
   "boat": {
     "kicker": "A lancha",
@@ -103,9 +119,9 @@
       "kicker": "Roteiro 03",
       "title": "Roteiro Sul II",
       "subtitle": "Ilha dos Cocos e Saco da Velha.",
-      "image": "img/paraty-mirante-m.jpg",
-      "webpMobile": "img/paraty-mirante-m.webp",
-      "webp": "img/paraty-mirante.webp",
+      "image": "img/1002424663-1794497820620.jpg",
+      "webpMobile": "img/1002424663-1794497820620.jpg",
+      "webp": "img/1002424663-1794497820620.jpg",
       "stops": [
         "Ilha dos Cocos",
         "Enseada da Preguiça",
