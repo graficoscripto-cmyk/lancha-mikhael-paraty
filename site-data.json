@@ -119,14 +119,15 @@
       "kicker": "Roteiro 03",
       "title": "Roteiro Sul II",
       "subtitle": "Ilha dos Cocos e Saco da Velha.",
-      "image": "img/1000701978-1794580996571.jpg",
-      "webpMobile": "img/1000701978-1794580996571.jpg",
-      "webp": "img/1000701978-1794580996571.jpg",
+      "image": "img/paraty-mirante-m.jpg",
+      "webpMobile": "img/paraty-mirante-m.webp",
+      "webp": "img/paraty-mirante.webp",
       "stops": [
         "Ilha dos Cocos",
         "Enseada da Preguiça",
         "Praia Saco da Velha",
-        "Ilha da Pescaria"
+        "Ilha da Pescaria",
+        "Nova parada"
       ]
     },
     {
@@ -148,7 +149,7 @@
     }
   ],
   "routeNotes": [
-    "5 horas de passeio",
+    "Passeio de 2hs a 5hs Flexível",
     "~40 min por parada",
     "Opção de almoço em restaurante"
   ],
