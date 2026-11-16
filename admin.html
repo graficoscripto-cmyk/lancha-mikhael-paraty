@@ -564,8 +564,20 @@
             <h2 class="card-title">Local de Embarque, Horários e Reserva</h2>
           </div>
           <div class="field">
-            <label>Local de Embarque</label>
-            <input type="text" class="input" id="c_address" placeholder="Cais de Turismo · Centro Histórico, Paraty - RJ">
+            <label>Título do Local de Embarque</label>
+            <input type="text" class="input" id="c_locationTitle" placeholder="Estacionamento - Pontal, Paraty">
+          </div>
+          <div class="field">
+            <label>Endereço Completo do Embarque</label>
+            <input type="text" class="input" id="c_address" placeholder="Estacionamento - Pontal, Paraty - RJ, CEP 23970-000">
+          </div>
+          <div class="field">
+            <label>Link do Google Maps</label>
+            <input type="text" class="input" id="c_mapsUrl" placeholder="https://maps.app.goo.gl/Q5iq6VqLpSURiu3f6?g_st=aw">
+          </div>
+          <div class="field">
+            <label>Iframe / Coordenadas do Mapa</label>
+            <input type="text" class="input" id="c_mapEmbedUrl" placeholder="https://www.google.com/maps?q=-23.2165027,-44.7132125&z=17&output=embed">
           </div>
           <div class="field">
             <label>Horário de Atendimento</label>
@@ -882,7 +894,10 @@
       document.getElementById('c_owner').value = c.ownerName || '';
       document.getElementById('c_igHandle').value = c.instagramHandle || '';
       document.getElementById('c_igUrl').value = c.instagram || '';
+      if (document.getElementById('c_locationTitle')) document.getElementById('c_locationTitle').value = c.locationTitle || '';
       document.getElementById('c_address').value = c.locationAddress || '';
+      if (document.getElementById('c_mapsUrl')) document.getElementById('c_mapsUrl').value = c.mapsUrl || '';
+      if (document.getElementById('c_mapEmbedUrl')) document.getElementById('c_mapEmbedUrl').value = c.mapEmbedUrl || '';
       document.getElementById('c_schedule').value = c.scheduleText || '';
       document.getElementById('c_bookingNote').value = c.bookingNote || '';
 
@@ -1201,7 +1216,10 @@
         ownerName: document.getElementById('c_owner').value.trim(),
         instagramHandle: document.getElementById('c_igHandle').value.trim(),
         instagram: document.getElementById('c_igUrl').value.trim(),
+        locationTitle: document.getElementById('c_locationTitle') ? document.getElementById('c_locationTitle').value.trim() : (siteData.contact.locationTitle || ''),
         locationAddress: document.getElementById('c_address').value.trim(),
+        mapsUrl: document.getElementById('c_mapsUrl') ? document.getElementById('c_mapsUrl').value.trim() : (siteData.contact.mapsUrl || ''),
+        mapEmbedUrl: document.getElementById('c_mapEmbedUrl') ? document.getElementById('c_mapEmbedUrl').value.trim() : (siteData.contact.mapEmbedUrl || ''),
         scheduleText: document.getElementById('c_schedule').value.trim(),
         bookingNote: document.getElementById('c_bookingNote').value.trim()
       };
